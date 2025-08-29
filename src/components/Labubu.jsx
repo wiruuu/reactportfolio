@@ -1,6 +1,6 @@
 export const Labubu = () => {
   return (
-    <div className="min-h-screen w-full  flex items-center justify-center p-10">
+    <div className=" p-10 flex">
       {/* Canvas wrapper */}
       <div
         className="relative drop-shadow-xl"
@@ -26,7 +26,8 @@ export const Labubu = () => {
         {/* ===== HEAD ===== */}
         <div className="absolute top-16 left-1/2 -translate-x-1/2 w-[300px] h-[260px] bg-[#FBE3C8] rounded-full border-4 border-[#D9BBA3]">
           {/* Forehead shine */}
-          <div className="absolute left-16 top-8 w-24 h-10 bg-white/50 rounded-full blur-[2px]" />
+          <div className="absolute left-12 top-8 w-22 h-10 bg-white/50 rounded-full blur-[2px] rotate-[-6deg]" />
+          <div className="absolute left-40 top-8 w-22 h-10 bg-white/50 rounded-full blur-[2px] rotate-[6deg]" />
 
           {/* Eyes */}
           <div className="absolute left-[58px] top-[76px] w-20 h-18 bg-black rounded-full rotate-6">
@@ -39,8 +40,8 @@ export const Labubu = () => {
           </div>
 
           {/* Brows / eye ridge (subtle) */}
-          <div className="absolute left-16 top-[56px] w-24 h-6 bg-[#EFD3B6] rounded-full -rotate-6" />
-          <div className="absolute right-16 top-[56px] w-24 h-6 bg-[#EFD3B6] rounded-full rotate-6" />
+          <div className="absolute left-12 top-[56px] w-28 h-6 bg-[#EFD3B6] rounded-full -rotate-6" />
+          <div className="absolute right-12 top-[56px] w-28 h-6 bg-[#EFD3B6] rounded-full rotate-6" />
 
           {/* Nose */}
           <div className="absolute top-[140px] left-1/2 -translate-x-1/2 w-4 h-4 bg-[#FFB4C0] rounded-full" />
