@@ -5,9 +5,9 @@ export const HeroSection = () => {
   return(
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-8 md:py-12 bg-gradient-to-br from-background via-background to-muted/20">
       <div className="container max-w-2xl mx-auto relative">
-        <Star className="absolute -top-5 -left-3 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-40" />
+        <Star className="absolute -top-10 -left-0  w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-40" />
         
-        <Star className="absolute -bottom-5 -right-3 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-320" style={{ animationDelay: '1s' }} />
+        <Star className="absolute -bottom-10 -right-0 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-320" style={{ animationDelay: '1s' }} />
         <div className="border-2 border-muted-foreground/40 rounded-lg text-center bg-background/80 backdrop-blur-md shadow-2xl shadow-primary/5 hover:shadow-primary/10 transition-shadow duration-500">
           
           <div className="w-full h-15 flex items-center justify-start pl-6 border-b-2 border-muted-foreground/40 bg-primary/40 rounded-t-md">
@@ -37,13 +37,13 @@ export const HeroSection = () => {
           </div>
 
             <div className="flex flex-wrap justify-center gap-3 md:gap-4 text-sm md:text-base text-foreground/90 border-t-2 border-muted-foreground/40 pt-6 mt-6">
-              <a href="/about" className="hover:text-primary transition-colors duration-300 px-2 py-1 hover:bg-muted/30 rounded-md font-medium">about</a>
+              <a href="/about" className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md font-medium">about</a>
               <span className="text-muted-foreground/40">•</span>
-              <a href="/blog" className="hover:text-primary transition-colors duration-300 px-2 py-1 hover:bg-muted/30 rounded-md font-medium">blog</a>
+              <a href="/blog" className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md font-medium">blog</a>
               <span className="text-muted-foreground/40">•</span>
-              <a href="/projects" className="hover:text-primary transition-colors duration-300 px-2 py-1 hover:bg-muted/30 rounded-md font-medium">projects</a>
+              <a href="/projects" className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md font-medium">projects</a>
               <span className="text-muted-foreground/40">•</span>
-              <a href="/contact" className="hover:text-primary transition-colors duration-300 px-2 py-1 hover:bg-muted/30 rounded-md font-medium">contact</a>
+              <a href="/contact" className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md font-medium">contact</a>
             </div>
           </div>
 

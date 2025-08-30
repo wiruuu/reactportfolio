@@ -39,7 +39,7 @@ export const Navbar = () => {
                 </div>
                 </a>  
                 {/* desktop nav */}
-                <div className="hidden md:flex space-x-8 justify-center items-center">
+                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8">
                     {navItems.map((item) => (
                     <a key={item.name} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
                     {item.name}
