@@ -13,7 +13,6 @@ export const ThemeToggle = () => {
         }
     }, []);
 
-    // 2. Toggle function
     const toggleTheme = () => {
         const newMode = !isDarkMode;
         setIsDarkMode(newMode);
@@ -24,14 +23,18 @@ export const ThemeToggle = () => {
     return (
         <button onClick={toggleTheme}
             className={cn(
-                "fixed max-sm:hidden top-5 right-5 z-50 p-1.5 rounded-full hover:bg-gray-800 dark:hover:bg-gray-300",
-                "focus:outlin-hidden transition-colors duration-300"
+                "p-2 rounded-full",
+                "bg-white dark:bg-gray-800",
+                "border border-gray-300 dark:border-gray-600",
+                "hover:bg-gray-100 dark:hover:bg-gray-700",
+                "focus:outline-none transition-all duration-300",
+                "shadow-lg hover:shadow-xl"
             )}
         >
             {isDarkMode ? (
-                <Sun className="h-6 w-6 text-yellow-300" />
+                <Sun className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-300" />
             ) : (
-                <Moon className="h-6 w-6 text-gray-900" />
+                <Moon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-200" />
             )}
         </button>
     );

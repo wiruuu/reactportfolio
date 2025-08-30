@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optional: Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));

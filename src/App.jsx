@@ -10,6 +10,7 @@ import { AboutSection } from "@/pages/AboutSection";
 import { BlogPage } from "@/pages/BlogPage";
 import { BlogPostPage } from "@/pages/BlogPostPage";
 import { NotFound } from "@/pages/NotFound";
+import { Labubu } from './components/Labubu';
 import { StarBackground } from './components/StarBackground';
 
 function App() {
@@ -17,7 +18,6 @@ function App() {
     <div className="min-h-screen flex flex-col">
       <Toaster /> 
       <Navbar />
-      <ThemeToggle />
       <StarBackground />
       <BrowserRouter>
         <main className="flex-1">

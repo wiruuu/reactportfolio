@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return(
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-8 md:py-12 bg-gradient-to-br from-background via-background to-muted/20">
       <div className="container max-w-2xl mx-auto relative">
-        <Star className="absolute -top-5 -left-5 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-40" />
+        <Star className="absolute -top-4 -left-5 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-40" />
         
         <Star className="absolute -bottom-5 -right-5 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-320" style={{ animationDelay: '1s' }} />
         <div className="border-2 border-muted-foreground/40 rounded-lg text-center bg-background/80 backdrop-blur-md shadow-2xl shadow-primary/5 hover:shadow-primary/10 transition-shadow duration-500">
