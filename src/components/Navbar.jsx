@@ -39,24 +39,37 @@ export const Navbar = () => {
                 </div>
                 </a>  
                 {/* desktop nav */}
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8">
-                    {navItems.map((item) => (
-                    <a key={item.name} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                    {item.name}
-                    </a>
-                ))}
-                </div>
-                <div>
-                    <ThemeToggle />
+                <div className="hidden md:flex w-full justify-between items-center">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
+                        {navItems.map((item) => (
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                            >
+                                {item.name}
+                            </a>
+                        ))}
+                    </div>
+
+                    <div className="ml-auto">
+                        <ThemeToggle />
+                    </div>
                 </div>
                 {/* mobile nav */}
-                <button onClick={() => setIsMenuOpen((prev) => !prev)} 
-                className="md:hidden p-2 text-foreground z-50" 
-                aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}> 
-                    {" "}
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-                    
-                </button>
+                <div className="flex">
+                    <button onClick={() => setIsMenuOpen((prev) => !prev)}
+                        className="md:hidden p-2 text-foreground z-50"
+                        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
+                        {" "}
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+
+                    </button>
+                    <div className="md:hidden ml-auto justify-between">
+                        <ThemeToggle />
+                    </div>
+                </div>
+                
 
                 <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
                     "transition-all duration-300 md:hidden",

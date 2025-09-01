@@ -87,7 +87,7 @@ export const AboutSection = () => {
               kodor
             </h3>
 
-            <p> i do backend ml with an interest in neural networks and clustering </p>
+            <p>  </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
