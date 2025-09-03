@@ -27,20 +27,16 @@ export const BlogCard = ({ post }) => {
         </p>
 
         {/* Meta Info */}
-        <div className="flex items-center justify-between text-sm text-muted-foreground mb-4 flex-wrap gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
+        <div className="flex items-center text-sm text-muted-foreground mb-4 flex-wrap gap-2">
+          <div className="flex items-center gap-4 flex-wrap w-full">
             <div className="flex items-center gap-1">
               <Calendar className="h-4 w-4" />
               <span>{new Date(post.date).toLocaleDateString()}</span>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 ml-auto">
               <Clock className="h-4 w-4" />
               <span>{post.readTime}</span>
             </div>
-          </div>
-          <div className="flex items-center gap-1">
-            <User className="h-4 w-4" />
-            <span>{post.author}</span>
           </div>
         </div>
 

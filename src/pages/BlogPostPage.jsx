@@ -17,7 +17,7 @@ export const BlogPostPage = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post not found</h1>
           <Link to="/blog" className="text-primary hover:underline">
-            Back to Blog
+            Back to blog
           </Link>
         </div>
       </div>
@@ -54,10 +54,6 @@ export const BlogPostPage = () => {
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
               <span>{post.readTime}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <User className="h-4 w-4" />
-              <span>{post.author}</span>
             </div>
           </div>
         </div>

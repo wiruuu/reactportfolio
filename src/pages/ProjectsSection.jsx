@@ -14,7 +14,7 @@ const projects = [
     id: 2,
     title: "proj2",
     description:
-      "edging2",
+      "skibidi",
     image: "/projects/project2.png",
     tags: ["TypeScript", "D3.js", "Next.js"],
     demoUrl: "#",
@@ -22,11 +22,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "what",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "haha",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["React", "Node.js", "Scikit-learn"],
     demoUrl: "#",
     githubUrl: "#",
   },

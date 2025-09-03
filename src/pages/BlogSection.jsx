@@ -3,70 +3,6 @@ import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 
 export const BlogSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  
-  // Sample blog data
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Getting Started with React Hooks",
-      excerpt: "Learn how to use React Hooks to simplify your functional components and manage state effectively.",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      author: "John Doe",
-      category: "React",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      id: 2,
-      title: "Mastering CSS Grid Layout",
-      excerpt: "A comprehensive guide to CSS Grid Layout and how to create complex responsive designs with ease.",
-      date: "2024-01-10",
-      readTime: "8 min read",
-      author: "Jane Smith",
-      category: "CSS",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      id: 3,
-      title: "TypeScript Best Practices",
-      excerpt: "Discover the best practices for writing clean and maintainable TypeScript code in your projects.",
-      date: "2024-01-05",
-      readTime: "6 min read",
-      author: "Mike Johnson",
-      category: "TypeScript",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      id: 4,
-      title: "Building Scalable APIs with Node.js",
-      excerpt: "Learn how to build robust and scalable RESTful APIs using Node.js and Express framework.",
-      date: "2023-12-28",
-      readTime: "10 min read",
-      author: "Sarah Wilson",
-      category: "Node.js",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      id: 5,
-      title: "Introduction to Machine Learning",
-      excerpt: "A beginner's guide to understanding machine learning concepts and algorithms.",
-      date: "2023-12-20",
-      readTime: "12 min read",
-      author: "David Brown",
-      category: "ML",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      id: 6,
-      title: "Web Performance Optimization",
-      excerpt: "Techniques and strategies to optimize your website performance and improve user experience.",
-      date: "2023-12-15",
-      readTime: "7 min read",
-      author: "Emily Davis",
-      category: "Performance",
-      image: "/api/placeholder/400/250"
-    }
-  ];
 
   const filteredPosts = blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -77,16 +13,6 @@ export const BlogSection = () => {
   return (
     <section className="pt-40 px-4 bg-background items-center justify-center">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Blog & Articles
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover the latest insights, tutorials, and thoughts on web development, 
-            design, and technology.
-          </p>
-        </div>
 
         {/* Search Bar */}
         <div className="mb-12 max-w-md mx-auto">
@@ -184,3 +110,66 @@ export const BlogSection = () => {
     </section>
   );
 };
+
+  // const blogPosts = [
+  //   {
+  //     id: 1,
+  //     title: "Getting Started with React Hooks",
+  //     excerpt: "Learn how to use React Hooks to simplify your functional components and manage state effectively.",
+  //     date: "2024-01-15",
+  //     readTime: "5 min read",
+  //     author: "John Doe",
+  //     category: "React",
+  //     image: "/api/placeholder/400/250"
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Mastering CSS Grid Layout",
+  //     excerpt: "A comprehensive guide to CSS Grid Layout and how to create complex responsive designs with ease.",
+  //     date: "2024-01-10",
+  //     readTime: "8 min read",
+  //     author: "Jane Smith",
+  //     category: "CSS",
+  //     image: "/api/placeholder/400/250"
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "TypeScript Best Practices",
+  //     excerpt: "Discover the best practices for writing clean and maintainable TypeScript code in your projects.",
+  //     date: "2024-01-05",
+  //     readTime: "6 min read",
+  //     author: "Mike Johnson",
+  //     category: "TypeScript",
+  //     image: "/api/placeholder/400/250"
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Building Scalable APIs with Node.js",
+  //     excerpt: "Learn how to build robust and scalable RESTful APIs using Node.js and Express framework.",
+  //     date: "2023-12-28",
+  //     readTime: "10 min read",
+  //     author: "Sarah Wilson",
+  //     category: "Node.js",
+  //     image: "/api/placeholder/400/250"
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Introduction to Machine Learning",
+  //     excerpt: "A beginner's guide to understanding machine learning concepts and algorithms.",
+  //     date: "2023-12-20",
+  //     readTime: "12 min read",
+  //     author: "David Brown",
+  //     category: "ML",
+  //     image: "/api/placeholder/400/250"
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Web Performance Optimization",
+  //     excerpt: "Techniques and strategies to optimize your website performance and improve user experience.",
+  //     date: "2023-12-15",
+  //     readTime: "7 min read",
+  //     author: "Emily Davis",
+  //     category: "Performance",
+  //     image: "/api/placeholder/400/250"
+  //   }
+  // ];
