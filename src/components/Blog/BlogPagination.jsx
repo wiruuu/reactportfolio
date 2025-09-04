@@ -17,7 +17,7 @@ export const BlogPagination = ({ currentPage, totalPages, onPageChange }) => {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`w-10 h-10 rounded-lg border transition-colors ${
+          className={`w-10 h-10 cursor-pointer rounded-lg border transition-colors ${
             currentPage === page
               ? 'bg-primary text-primary-foreground border-primary'
               : 'border-border hover:bg-accent'

@@ -5,32 +5,25 @@ export const AboutSection = () => {
     <section id="about" className="py-40 px-4 relative">
       {" "}
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          <span className="text-primary"> about me</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Get to know <span className="text-primary">me</span>
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              kodor
+        <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
+        <p className="justify-center flex text-xl pb-8 text-gray-500">
+          I'm a sophomore stuyding economics in London with quantitative interests in econometrics and quant finance. I'm also an algo trader and quant developer specialising in ML and statistical arbitrage and like building nice web apps. I write on philosophy and the human sciences and have also written 2 maths textbooks.
+        </p>
+        <div className="space-y-6">
+            <h3 className="text-2xl font-semibold text-left">
+              Introduction
             </h3>
-
-            <p>  </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                {" "}
-                grape
-              </a>
-
-              <a
-                href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                now
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 pb-10 text-gray-500">
+              <p className="text-left flex">
+                skibidi
+              </p>
             </div>
           </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
 
           <div className="grid grid-cols-1 gap-6">
             <div className="gradient-border p-6 card-hover">

@@ -36,11 +36,11 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-40 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           {" "}
-          Featured <span className="text-primary"> Projects </span>
+          <span className="text-primary"> Projects </span>
         </h2>
-
+        <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div

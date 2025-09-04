@@ -24,12 +24,12 @@ export const ContactSection = () => {
     <section id="contact" className="py-40 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
 
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 pb-15 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           Get in <span className="text-primary"> touch </span>
         </h2>
 
         {/* Divider */}
-        <div className="w-20 h-1 bg-primary/30 mx-auto mb-12 rounded-full"></div>
+        <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
 
         <div className="flex justify-center">
           <div className="text-center">
