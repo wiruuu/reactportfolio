@@ -1,9 +1,14 @@
-import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const BlogCard = ({ post }) => {
   return (
-    <article className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/20">
+    <Link
+      to={`/blog/${post.slug}`}
+      className="relative z-10 bg-card group rounded-xl overflow-hidden shadow-xs card-hover shadow-lg hover:shadow-xl 
+                 transition-all duration-300 border border-border hover:border-primary/20 block
+                 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
+    >
       {/* Image/Icon */}
       <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
         <div className="text-6xl">{post.image}</div>
@@ -17,7 +22,7 @@ export const BlogCard = ({ post }) => {
         </span>
 
         {/* Title */}
-        <h2 className="text-xl font-semibold text-foreground mb-3 line-clamp-2 hover:text-primary transition-colors">
+        <h2 className="text-xl font-semibold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
           {post.title}
         </h2>
 
@@ -40,15 +45,12 @@ export const BlogCard = ({ post }) => {
           </div>
         </div>
 
-        {/* Read More Button */}
-        <Link
-          to={`/blog/${post.slug}`}
-          className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors duration-200 flex items-center justify-center gap-2 font-medium"
-        >
+        {/* Read More Indicator */}
+        <div className="w-full py-2 px-4 rounded-lg flex items-center justify-center gap-2 font-medium text-primary">
           Read More
           <ArrowRight className="h-4 w-4" />
-        </Link>
+        </div>
       </div>
-    </article>
+    </Link>
   );
 };

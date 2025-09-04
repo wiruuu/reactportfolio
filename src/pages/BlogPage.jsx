@@ -10,7 +10,12 @@ import { BlogList } from "../components/Blog/BlogList";
 export const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [viewMode, setViewMode] = useState("grid"); 
+
+  // Load initial viewMode from localStorage (default "grid")
+  const [viewMode, setViewMode] = useState(() => {
+    return localStorage.getItem("viewMode") || "grid";
+  });
+
   const postsPerPage = 6;
 
   const filteredPosts = useMemo(() => {
@@ -30,6 +35,11 @@ export const BlogPage = () => {
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm]);
+
+  // Save viewMode to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("viewMode", viewMode);
+  }, [viewMode]);
 
   const navigate = useNavigate();
 
@@ -51,27 +61,26 @@ export const BlogPage = () => {
           <BlogSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </div>
 
-          {/* View Toggle Button */}
-        
+        {/* View Toggle Button */}
         <div className="flex items-center gap-2 justify-center py-5">
-            <span className="text-sm text-muted-foreground">View:</span>
-            <div className="flex bg-muted rounded-md p-1">
-              <button
-                onClick={() => setViewMode("grid")}
-                className={`p-2 rounded-md ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                aria-label="Grid view"
-              >
-                <Grid size={18} />
-              </button>
-              <button
-                onClick={() => setViewMode("list")}
-                className={`p-2 rounded-md ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                aria-label="List view"
-              >
-                <List size={18} />
-              </button>
-            </div>
+          <span className="text-sm text-muted-foreground">View:</span>
+          <div className="flex bg-muted rounded-md p-1">
+            <button
+              onClick={() => setViewMode("grid")}
+              className={`p-2 rounded-md ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+              aria-label="Grid view"
+            >
+              <Grid size={18} />
+            </button>
+            <button
+              onClick={() => setViewMode("list")}
+              className={`p-2 rounded-md ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+              aria-label="List view"
+            >
+              <List size={18} />
+            </button>
           </div>
+        </div>
 
         <div className="text-center mb-8">
           {searchTerm && (
