@@ -5,11 +5,7 @@ export const StarBackground = () => {
 
   useEffect(() => {
     generateStars();
-
-    const handleResize = () => {
-      generateStars();
-    };
-
+    const handleResize = () => generateStars();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -34,18 +30,18 @@ export const StarBackground = () => {
   };
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute rounded-full animate-pulse-subtle bg-transparent dark:bg-white"
+          className="absolute rounded-full animate-pulse-subtle bg-gray-400 dark:bg-white star"
           style={{
-            width: star.size + "px",
-            height: star.size + "px",
-            left: star.x + "%",
-            top: star.y + "%",
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            left: `${star.x}%`,
+            top: `${star.y}%`,
             opacity: star.opacity,
-            animationDuration: star.animationDuration + "s",
+            animationDuration: `${star.animationDuration}s`,
           }}
         />
       ))}

@@ -13,6 +13,7 @@ import { NotFound } from "@/pages/NotFound";
 import { Labubu } from './components/Labubu';
 import { StarBackground } from './components/StarBackground';
 
+
 function App() {
   return (
     <div className="min-h-screen flex flex-col ">

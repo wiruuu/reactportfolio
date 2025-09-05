@@ -7,6 +7,7 @@ import { HeartCrack, Grid, List } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { BlogList } from "../components/Blog/BlogList";
 
+
 export const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -92,41 +93,48 @@ export const BlogPage = () => {
         </div>
 
         {/* View & Posts Per Page Toggles */}
-        <div className="flex flex-col md:flex-row items-center gap-10 justify-center">
-          {/* View Toggle */}
-          <div className="flex items-center gap-2">
-            <div className="flex bg-muted rounded-md p-1">
-              <button
-                onClick={() => setViewMode("grid")}
-                className={`p-2 rounded-md cursor-pointer ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                aria-label="Grid view"
-              >
-                <Grid size={18} />
-              </button>
-              <button
-                onClick={() => setViewMode("list")}
-                className={`p-2 rounded-md cursor-pointer ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                aria-label="List view"
-              >
-                <List size={18} />
-              </button>
+        <div className="flex flex-col md:flex-row items-center gap-2 justify-center">
+          <div className="flex flex-col md:flex-row items-center gap-2 justify-center">
+
+            {/* Top Controls */}
+            <div className="flex flex-row flex-wrap items-center gap-4">
+              {/* View Toggle */}
+              <div className="flex items-center gap-2">
+                <div className="flex bg-muted rounded-md p-1">
+                  <button
+                    onClick={() => setViewMode("grid")}
+                    className={`p-2 rounded-md cursor-pointer ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                    aria-label="Grid view"
+                  >
+                    <Grid size={18} />
+                  </button>
+                  <button
+                    onClick={() => setViewMode("list")}
+                    className={`p-2 rounded-md cursor-pointer ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                    aria-label="List view"
+                  >
+                    <List size={18} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Posts Per Page Toggle */}
+              <div className="flex items-center gap-2">
+                <div className="flex bg-muted rounded-md p-1">
+                  {[3, 6, 12].map((n) => (
+                    <button
+                      key={n}
+                      onClick={() => setPostsPerPage(n)}
+                      className={`px-3 py-2 rounded-md cursor-pointer ${postsPerPage === n ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                    >
+                      {n}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Posts Per Page Toggle */}
-          <div className="flex items-center gap-2">
-            <div className="flex bg-muted rounded-md p-1">
-              {[3, 6, 12].map((n) => (
-                <button
-                  key={n}
-                  onClick={() => setPostsPerPage(n)}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${postsPerPage === n ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                >
-                  {n}
-                </button>
-              ))}
-            </div>
-          </div>
 
           {/* Sort Toggle */}
           <div className="flex items-center gap-2">

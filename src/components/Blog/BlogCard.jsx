@@ -46,7 +46,7 @@ export const BlogCard = ({ post }) => {
         </div>
 
         {/* Read More Indicator */}
-        <div className="w-full py-2 px-4 rounded-lg flex items-center justify-center gap-2 font-medium text-primary">
+        <div className="w-full py-2 px-4 rounded-lg flex items-center justify-center gap-2 font-medium text-card bg-primary">
           Read More
           <ArrowRight className="h-4 w-4" />
         </div>

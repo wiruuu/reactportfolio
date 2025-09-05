@@ -30,7 +30,7 @@ export const Navbar = () => {
             isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
         )}>
             <div className="container flex items-center justify-between">
-                <a className="text-xl font-bold text-primary flex items-center gap-2" href="#hero">
+                <a className="text-xl font-bold text-primary flex items-center gap-2" href="/">
                 <span className="relative z-10">
                     <span className="text-glow text-foreground">wiru</span>
                 </span>
@@ -65,7 +65,7 @@ export const Navbar = () => {
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
 
                     </button>
-                    <div className="md:hidden ml-auto justify-between">
+                    <div className="md:hidden ml-auto justify-between pl-3">
                         <ThemeToggle />
                     </div>
                 </div>
