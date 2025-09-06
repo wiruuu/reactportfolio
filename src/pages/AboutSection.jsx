@@ -67,12 +67,12 @@ export const AboutSection = () => {
                   </a>
                 </sup> It is also useful for traders as they navigate these flaws and adjust their risk exposures accordingly. “Better” option pricing models are, by and large, propelled by Black-Scholes. A similar analogy can be made for economics models.</p>
 
-              <p className="text-xl font-semibold text-left text-black">Two questions I receive a lot:</p>
+              <p className="text-xl font-semibold text-left text-foreground">Two questions I receive a lot:</p>
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
                 <li>“Why do you study economics if you’re more proficient in mathematics?”</li>
                 <li>“Why did you choose an economics degree if you’re heading for quant?”</li>
               </ol>
-              <p className="text-black font-semibold">My responses:</p>
+              <p className="text-foreground font-semibold">My responses:</p>
 
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
                 <li> It’s what I enjoy studying. It keeps me connected and aware with the world around me. It compels me to be largely abreast of global events and to know the reasons and rationales behind them. While abstract, it is often not abstract for abstraction’s sake. </li>
@@ -81,7 +81,7 @@ export const AboutSection = () => {
               </ol>
               <p>When I’m not working or studying, I’m usually performing, producing, arranging, or composing music, watching a movie, or writing this blog. I also hike, climb, and swim, and do about a million random side quests.</p>
 
-              <p className="text-xl font-semibold text-left text-black"> Two truths and one lie</p>
+              <p className="text-xl font-semibold text-left text-foreground"> Two truths and one lie</p>
 
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
                 <li>I used to catch creeps on the internet as a kid</li>
