@@ -5,6 +5,14 @@ import { content as blog4 } from '../content/20250815';
 import { content as blog5 } from '../content/20250830';
 import { content as blog6 } from '../content/20250901';
 
+const getWordCount = (text) => {
+  if (!text) return 0;
+  return text
+    .replace(/[#_*`>~\-]/g, "") // strip simple markdown
+    .trim()
+    .split(/\s+/).length;
+};
+
 export const blogPosts = [
   {
     id: 1,
@@ -12,7 +20,6 @@ export const blogPosts = [
     excerpt: "1",
     content: blog1,
     date: "2025-07-31",
-    readTime: "5 min read",
     category: "Philosophy",
     slug: "getting-started-with-react-hooks",
     image: ""
@@ -23,7 +30,6 @@ export const blogPosts = [
     excerpt: "2",
     content: blog2,
     date: "2025-08-04",
-    readTime: "8 min read",
     category: "Economics",
     slug: "mastering-css-grid-layout",
     image: "🎨"
@@ -34,7 +40,6 @@ export const blogPosts = [
     excerpt: "3",
     content: blog3,
     date: "2025-08-12",
-    readTime: "6 min read",
     category: "Data Science",
     slug: "typescript-best-practices",
     image: "🔒"
@@ -45,7 +50,6 @@ export const blogPosts = [
     excerpt: "4",
     content: blog4,
     date: "2025-08-15",
-    readTime: "10 min read",
     category: "Quantitative Finance",
     slug: "building-scalable-apis-nodejs",
     image: "🚀"
@@ -56,7 +60,6 @@ export const blogPosts = [
     excerpt: "5",
     content: blog5,
     date: "2025-08-30",
-    readTime: "12 min read",
     category: "Algo Trading",
     slug: "introduction-machine-learning",
     image: "🤖"
@@ -67,9 +70,14 @@ export const blogPosts = [
     excerpt: "6",
     content: blog6,
     date: "2025-09-01",
-    readTime: "7 min read",
     category: "Machine Learning",
     slug: "web-performance-optimization",
     image: "⚡"
   }
-];
+].map((post) => {
+  const wordCount = getWordCount(post.content);
+  return {
+    ...post,
+    wordCount,
+  };
+});

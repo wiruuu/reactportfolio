@@ -1,1 +1,1 @@
-export const content = "lmao"
+export const content = "lmao skibidi"

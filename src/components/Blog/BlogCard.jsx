@@ -1,4 +1,4 @@
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, WholeWord } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const BlogCard = ({ post }) => {
@@ -39,8 +39,9 @@ export const BlogCard = ({ post }) => {
               <span>{new Date(post.date).toLocaleDateString()}</span>
             </div>
             <div className="flex items-center gap-1 ml-auto">
-              <Clock className="h-4 w-4" />
-              <span>{post.readTime}</span>
+              <WholeWord className="h-4 w-4" />
+              <span>{post.wordCount}</span>
+              <p> words</p>
             </div>
           </div>
         </div>
