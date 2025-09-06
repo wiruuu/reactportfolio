@@ -25,22 +25,28 @@ export const Navbar = () => {
     }, [])
 
     return (
-        <nav className={cn(
-            "fixed w-full z-40 transition-all duration-300",
-            isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-        )}>
+        <nav
+          className={cn(
+            "fixed top-0 w-full z-50 transition-all duration-300",
+            isScrolled && !isMenuOpen
+              ? "py-3 bg-background/80 backdrop-blur-md shadow-sm"
+              : "py-5"
+          )}
+        >
             <div className="container flex items-center justify-between">
+                {/* Logo */}
                 <a className="text-xl font-bold text-primary flex items-center gap-2" href="/">
-                <span className="relative z-10">
+                  <span className="relative z-10">
                     <span className="text-glow text-foreground">wiru</span>
-                </span>
-                <div className="flex items-center justify-center w-flex h-flex px-2 py-0.5 rounded-lg bg-foreground border border-background/20">
+                  </span>
+                  <div className="flex items-center justify-center px-2 py-0.5 rounded-lg bg-foreground border border-background/20">
                     <span className="text-glow text-background text-lg font-bold relative top-[1px]">writes</span>
-                </div>
+                  </div>
                 </a>  
-                {/* desktop nav */}
+
+                {/* Desktop nav */}
                 <div className="hidden md:flex w-full justify-between items-center">
-                    <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
+                    <div className="absolute left-1/2 -translate-x-1/2 flex space-x-8">
                         {navItems.map((item) => (
                             <a
                                 key={item.name}
@@ -51,43 +57,42 @@ export const Navbar = () => {
                             </a>
                         ))}
                     </div>
-
                     <div className="ml-auto">
                         <ThemeToggle />
                     </div>
                 </div>
-                {/* mobile nav */}
-                <div className="flex">
-                    <button onClick={() => setIsMenuOpen((prev) => !prev)}
-                        className="md:hidden p-2 text-foreground z-50"
-                        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
-                        {" "}
-                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
 
+                {/* Mobile nav button + theme toggle */}
+                <div className="flex md:hidden items-center gap-2">
+                    <button
+                      onClick={() => setIsMenuOpen((prev) => !prev)}
+                      className="p-2 text-foreground z-50"
+                      aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+                    >
+                      {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
-                    <div className="md:hidden ml-auto justify-between pl-3">
-                        <ThemeToggle />
-                    </div>
+                    <ThemeToggle />
                 </div>
-                
 
-                <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-                    "transition-all duration-300 md:hidden",
+                <div
+                  className={cn(
+                    "fixed inset-0 z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden",
                     isMenuOpen
-                    ? "opacity-100 pointer-events-auto" 
-                    : "opacity-0 pointer-events-none"
-                )}>
+                      ? "opacity-100 pointer-events-auto bg-background/95 backdrop-blur-md"
+                      : "opacity-0 pointer-events-none"
+                  )}
+                >
                     <div className="flex flex-col space-y-8 text-xl">
                         {navItems.map((item) => (
-                        <a 
-                            key={item.name} 
-                            href={item.href} 
-                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                        {item.name}
-                        </a>
-                    ))}
+                          <a 
+                              key={item.name} 
+                              href={item.href} 
+                              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                              onClick={() => setIsMenuOpen(false)}
+                          >
+                            {item.name}
+                          </a>
+                        ))}
                     </div>
                 </div>    
             </div>
