@@ -48,7 +48,7 @@ export const AboutSection = () => {
 
               <p>Didactic lecture over. Now a bit about myself:</p>
               <p>
-                When I was around 15, I wanted to be a maths researcher. I loved reading up on pure mathematics, specialising in number theory and algebra. But then all that abstraction with homological algebra and automorphic forms and whatnot made me lose touch with the world. Although this was very fun, very day working with said maths felt like I was tinkering with an entangled system of cogs, strings, and screws — while I did get the bigger picture, not everyone comes to truly appreciate abstract art.<sup id="fnref-1">
+                When I was around 15, I wanted to be a maths researcher. I loved reading up on pure mathematics, specialising in number theory and algebra. But then all that abstraction with homological algebra and automorphic forms and whatnot made me lose touch with the world. Although this was very fun, very day working with said maths felt like I was tinkering with an entangled system of cogs, strings, and screws in a contemporary art exhibit — while I did get the bigger picture, not everyone comes to truly appreciate abstract art even if they've worked with it for a while.<sup id="fnref-1">
                   <a href="#fn-1" className="hover:underline text-body">
                     1
                   </a>

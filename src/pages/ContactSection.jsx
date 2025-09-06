@@ -28,11 +28,11 @@ export const ContactSection = () => {
         {/* Divider */}
         <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
 
-        <div className="flex justify-center">
-          <div className="text-center w-full max-w-md space-y-6">
+        <div className="flex justify-center ">
+          <div className="text-center w-full max-w-md space-y-6 ">
             {/* Email */}
-            <div className="flex items-start space-x-4 py-4 px-6 bg-card rounded-lg border border-primary/50 w-full transition-colors duration-300 bg-primary/10">
-              <div className="p-3 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
+            <div className="flex group py-4 px-6 border border-primary/50 items-start bg-card rounded-lg overflow-hidden shadow-xs card-hover shadow-xs shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/20 block">
+              <div className="p-3 mr-5 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div className="flex flex-col flex-1 min-w-0 text-left">
@@ -47,8 +47,8 @@ export const ContactSection = () => {
             </div>
 
             {/* Phone */}
-            <div className="flex items-start space-x-4 py-4 px-6 bg-card rounded-lg border border-primary/50 w-full transition-colors duration-300 bg-primary/10">
-              <div className="p-3 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
+            <div className="flex group py-4 px-6 border border-primary/50 items-start bg-card rounded-lg overflow-hidden shadow-xs card-hover shadow-xs shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/20 block">
+              <div className="p-3 mr-5 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
                 <Phone className="h-6 w-6 text-primary " />
               </div>
               <div className="flex flex-col flex-1 min-w-0 text-left">
@@ -63,8 +63,8 @@ export const ContactSection = () => {
             </div>
 
             {/* Location */}
-            <div className="flex items-start space-x-4 py-4 px-6 bg-card rounded-lg border border-primary/50 w-full transition-colors duration-300 bg-primary/10">
-              <div className="p-3 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
+            <div className="flex group py-4 px-6 border border-primary/50 items-start bg-card rounded-lg overflow-hidden shadow-xs card-hover shadow-xs shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/20 block">
+              <div className="p-3 mr-5 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <div className="flex flex-col flex-1 min-w-0 text-left">

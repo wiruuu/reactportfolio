@@ -7,12 +7,11 @@ import { HeartCrack, Grid, List } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { BlogList } from "../components/Blog/BlogList";
 
-
 export const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [browseMode, setBrowseMode] = useState("tags");
 
-  // Load initial viewMode from localStorage (default "grid")
   const [viewMode, setViewMode] = useState(() => {
     return localStorage.getItem("viewMode") || "grid";
   });
@@ -23,40 +22,54 @@ export const BlogPage = () => {
   });
 
   // Sort by date
-
   const [sortOrder, setSortOrder] = useState(() => {
     return localStorage.getItem("sortOrder") || "newest"; // default newest
   });
 
+  // Category filter
+  const [categoryFilter, setCategoryFilter] = useState("");
+  const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
 
+  const [showAllCategories, setShowAllCategories] = useState(false);
+
+  // Apply filtering + sorting
   const filteredPosts = useMemo(() => {
-    let posts = blogPosts.filter(post =>
-      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.content.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    let posts = blogPosts.filter(post => {
+      const matchesSearch =
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.content.toLowerCase().includes(searchTerm.toLowerCase());
 
+      const matchesCategory = categoryFilter
+        ? post.category === categoryFilter
+        : true;
+
+      return matchesSearch && matchesCategory;
+    });
+
+    // Sort newest/oldest
     posts.sort((a, b) => {
-      const dateA = new Date(a.date);
-      const dateB = new Date(b.date);
-      return sortOrder === "newest"
-        ? dateB - dateA // newest first
-        : dateA - dateB; // oldest first
-
+      if (sortOrder === "newest") {
+        return new Date(b.date) - new Date(a.date);
+      } else {
+        return new Date(a.date) - new Date(b.date);
+      }
     });
 
     return posts;
-  }, [searchTerm, sortOrder]);
+  }, [searchTerm, categoryFilter, sortOrder]);
 
+  // Pagination
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
+  // Reset page when filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, postsPerPage]);
+  }, [searchTerm, postsPerPage, categoryFilter, sortOrder]);
 
   // Save preferences to localStorage
   useEffect(() => {
@@ -71,9 +84,7 @@ export const BlogPage = () => {
     localStorage.setItem("sortOrder", sortOrder);
   }, [sortOrder]);
 
-
   const navigate = useNavigate();
-
   const handlePostClick = (postSlug) => {
     navigate(`/blog/${postSlug}`);
   };
@@ -88,15 +99,52 @@ export const BlogPage = () => {
           </h1>
         </div>
         <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
-        <div className="flex flex-col md:flex-row justify-center items-center mb-6 gap-4 w-full">
-          <BlogSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        </div>
 
-        {/* View & Posts Per Page Toggles */}
-        <div className="flex flex-col md:flex-row items-center gap-2 justify-center">
+        {/* Search */}
+        {browseMode === "search" ? (
+          <div className="flex flex-col md:flex-row justify-center items-center mb-6 gap-4 w-full">
+            <BlogSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-3 mb-6">
+            <div className="flex flex-wrap gap-2 justify-center">
+              <button
+                onClick={() => setCategoryFilter("")}
+                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${categoryFilter === ""
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                  }`}
+              >
+                All
+              </button>
+
+              {(showAllCategories ? categories : categories.slice(0, 4)).map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setCategoryFilter(cat)}
+                  className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${categoryFilter === cat
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                    }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {categories.length > 4 && (
+              <button
+                onClick={() => setShowAllCategories(!showAllCategories)}
+                className="text-sm text-body hover:underline hover:text-primary hover:bg-primary/10 border-2 border-primary/10 rounded-full px-3 py-1"
+              >
+                {showAllCategories ? "Show less" : "Show more"}
+              </button>
+            )}
+          </div>
+        )}
+
+        <div className="flex flex-col md:flex-row items-center gap-4 justify-center mb-6">
           <div className="flex flex-col md:flex-row items-center gap-2 justify-center">
-
-            {/* Top Controls */}
             <div className="flex flex-row flex-wrap items-center gap-4">
               {/* View Toggle */}
               <div className="flex items-center gap-2">
@@ -104,21 +152,19 @@ export const BlogPage = () => {
                   <button
                     onClick={() => setViewMode("grid")}
                     className={`p-2 rounded-md cursor-pointer ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                    aria-label="Grid view"
                   >
                     <Grid size={18} />
                   </button>
                   <button
                     onClick={() => setViewMode("list")}
                     className={`p-2 rounded-md cursor-pointer ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
-                    aria-label="List view"
                   >
                     <List size={18} />
                   </button>
                 </div>
               </div>
 
-              {/* Posts Per Page Toggle */}
+              {/* Posts Per Page */}
               <div className="flex items-center gap-2">
                 <div className="flex bg-muted rounded-md p-1">
                   {[3, 6, 12].map((n) => (
@@ -135,55 +181,72 @@ export const BlogPage = () => {
             </div>
           </div>
 
-
-          {/* Sort Toggle */}
+          {/* Sort */}
           <div className="flex items-center gap-2">
             <div className="flex bg-muted rounded-md p-1">
               <button
                 onClick={() => setSortOrder("newest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "newest"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground"
-                  }`}
+                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "newest" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
               >
                 Newest
               </button>
               <button
                 onClick={() => setSortOrder("oldest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "oldest"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground"
-                  }`}
+                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "oldest" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
               >
                 Oldest
               </button>
             </div>
+            {/* Search/Browse Toggle */}
+            
+            <div className="flex justify-center gap-2 items-center">
+              <div className="flex bg-muted rounded-md p-1">
+                <button
+                  onClick={() => setBrowseMode("tags")}
+                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "tags"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground"
+                    }`}
+                >
+                  Tags
+                </button>
+                <button
+                  onClick={() => setBrowseMode("search")}
+                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "search"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground"
+                    }`}
+                >
+                  Search
+                </button>
+              </div>
+            </div>
           </div>
 
-
         </div>
+
+        {/* Search results */}
         <div className="text-center mb-8">
-          {searchTerm && (
+          {(searchTerm) && (
             <p className="text-muted-foreground">
-              {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found
+              {filteredPosts.length} article{filteredPosts.length !== 1 ? "s" : ""} found
               {searchTerm && ` for "${searchTerm}"`}
             </p>
           )}
         </div>
 
+        {/* Posts */}
         {viewMode === "grid" ? (
-          /* Grid View */
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {currentPosts.map((post) => (
               <BlogCard key={post.id} post={post} />
             ))}
           </div>
         ) : (
-          /* List View */
           <BlogList posts={currentPosts} onPostClick={handlePostClick} />
         )}
 
-        {/* Empty State */}
+        {/* Empty */}
         {filteredPosts.length === 0 && (
           <div className="text-center py-16">
             <div className="mb-5 flex justify-center">
@@ -193,7 +256,7 @@ export const BlogPage = () => {
               No articles found
             </h3>
             <p className="text-muted-foreground">
-              Try adjusting your search terms or browse all categories.
+              We couldn't find what you were looking for.
             </p>
           </div>
         )}
