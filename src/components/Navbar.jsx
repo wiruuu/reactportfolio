@@ -2,6 +2,9 @@ import { cn } from "@/lib/utils"
 import { useState, useEffect } from "react";
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from "./ThemeToggle";
+import { useCallback } from "react";
+import { PartyPopper } from "lucide-react";
+import confetti from "canvas-confetti";
 
 const navItems = [
     {name: "Home", href: "/"},
@@ -10,6 +13,43 @@ const navItems = [
     {name: "Projects", href: "/projects"},
     {name: "Contact", href: "/contact"},
 ]
+
+export const ConfettiButton = () => {
+  const handleConfetti = useCallback(() => {
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      startVelocity: 60,
+      origin: { x: 0.5, y: 0.9 },
+    });
+
+    setTimeout(() => {
+      confetti({
+        particleCount: 150,
+        angle: 60,
+        spread: 80,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.9 },
+      });
+      confetti({
+        particleCount: 150,
+        angle: 120,
+        spread: 80,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.9 },
+      });
+    }, 250);
+  }, []);
+
+  return (
+    <button
+      onClick={handleConfetti}
+      className="p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors border border-body"
+    >
+      <PartyPopper />
+    </button>
+  );
+};
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -57,7 +97,8 @@ export const Navbar = () => {
                             </a>
                         ))}
                     </div>
-                    <div className="ml-auto">
+                    <div className="ml-auto flex items-center gap-2">
+                        <ConfettiButton />
                         <ThemeToggle />
                     </div>
                 </div>
@@ -71,6 +112,7 @@ export const Navbar = () => {
                     >
                       {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
+                    <ConfettiButton />
                     <ThemeToggle />
                 </div>
 

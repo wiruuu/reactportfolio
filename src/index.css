@@ -6,12 +6,9 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Optional: Prevent horizontal scrolling */
 body {
   overflow-x: hidden;
 }
-
-
 
 @theme {
   --color-border: hsl(var(--border));

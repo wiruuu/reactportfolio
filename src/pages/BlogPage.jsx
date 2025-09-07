@@ -36,10 +36,7 @@ export const BlogPage = () => {
   const filteredPosts = useMemo(() => {
     let posts = blogPosts.filter(post => {
       const matchesSearch =
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.content.toLowerCase().includes(searchTerm.toLowerCase());
+        post.title.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesCategory = categoryFilter
         ? post.category === categoryFilter
@@ -151,13 +148,13 @@ export const BlogPage = () => {
                 <div className="flex bg-muted rounded-md p-1">
                   <button
                     onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded-md cursor-pointer ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                    className={`p-2 rounded-md cursor-pointer ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
                   >
                     <Grid size={18} />
                   </button>
                   <button
                     onClick={() => setViewMode("list")}
-                    className={`p-2 rounded-md cursor-pointer ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                    className={`p-2 rounded-md cursor-pointer ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
                   >
                     <List size={18} />
                   </button>
@@ -171,7 +168,7 @@ export const BlogPage = () => {
                     <button
                       key={n}
                       onClick={() => setPostsPerPage(n)}
-                      className={`px-3 py-2 rounded-md cursor-pointer ${postsPerPage === n ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                      className={`px-3 py-2 rounded-md cursor-pointer ${postsPerPage === n ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
                     >
                       {n}
                     </button>
@@ -183,16 +180,16 @@ export const BlogPage = () => {
 
           {/* Sort */}
           <div className="flex items-center gap-2">
-            <div className="flex bg-muted rounded-md p-1">
+            <div className="flex bg-muted rounded-md p-1 ">
               <button
                 onClick={() => setSortOrder("newest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "newest" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "newest" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
               >
                 Newest
               </button>
               <button
                 onClick={() => setSortOrder("oldest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "oldest" ? "bg-primary text-primary-foreground" : "text-muted-foreground"}`}
+                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "oldest" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
               >
                 Oldest
               </button>
@@ -205,7 +202,7 @@ export const BlogPage = () => {
                   onClick={() => setBrowseMode("tags")}
                   className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "tags"
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground hover:text-primary hover:underline"
                     }`}
                 >
                   Tags
@@ -214,7 +211,7 @@ export const BlogPage = () => {
                   onClick={() => setBrowseMode("search")}
                   className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "search"
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground"
+                    : "text-muted-foreground hover:text-primary hover:underline"
                     }`}
                 >
                   Search

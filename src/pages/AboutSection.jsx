@@ -33,7 +33,7 @@ export const AboutSection = () => {
               <p>
                 These two things are non-negotiables in the righteous life. Interestingly enough, they can be (trivially) achieved regardless of social status, income level, or external successes. Many people prioritise other material gains in a way that overshadows this moral code, or do not prioritise this moral code.
               </p>
-              <p>The content above seeks to outline this Aristotelian quote:</p>
+              <p>The content above can be summed up by this Aristotelian quote:</p>
 
               {/* Quote box */}
               <div className="border-l-4 border-primary/70 pl-4 text-body">
