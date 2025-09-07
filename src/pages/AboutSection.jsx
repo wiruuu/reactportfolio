@@ -51,13 +51,13 @@ export const AboutSection = () => {
                 </sup>
               </p>
 
-              <p>Two years passed. I wrote a book on adelic <a href="https://www.wikiwand.com/en/articles/Class_field_theory" className="underline">class field theory</a> which somewhat diminished my love for pure maths.<sup id="fnref-1">
+              <p>Two years passed. I wrote a book on adelic <a href="https://www.wikiwand.com/en/articles/Class_field_theory" className="underline">class field theory</a> which somewhat diminished my love for pure maths as I was writing it.<sup id="fnref-1">
                   <a href="#fn-1" className="hover:underline text-body">
                     2
                   </a>
-                </sup> I proceeded to study economics at undergraduate level.</p>
+                </sup> Probably due to tedium or lack of motivation to continue afterwards. I proceeded to study economics at undergraduate level.</p>
 
-              <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. In recent years academic economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought. I agree that economics should not solely be modified algebra and calculus. </p>
+              <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. Undergraduate economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought. I agree that economics should not solely be modified algebra and calculus. </p>
 
               <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to tie political philosophy and climate policy, among other disciplines, in with economics. I am also a strong advocate of econometrics and quantitative economics as means of ensuring rigour.</p>
 
