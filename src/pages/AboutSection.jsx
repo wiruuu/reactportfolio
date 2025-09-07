@@ -15,11 +15,7 @@ export const AboutSection = () => {
 
         {/* Intro paragraph */}
         <p className="justify-center flex text-xl pb-8 text-body">
-          I'm a sophomore studying economics in London with quantitative
-          interests in econometrics and quant finance. I'm also an algo trader
-          and quant developer specialising in ML and statistical arbitrage who
-          likes building nice web apps. I write recreationally on a wide range
-          of topics and have written 2 maths textbooks.
+          I'm a sophomore studying economics in London with quantitative interests in econometrics and quant finance. I'm also an algo trader and quant developer specialising in ML and statistical arbitrage who likes building nice web apps. I write recreationally on a wide range of topics and have written 2 maths textbooks.
         </p>
 
         {/* Introduction */}
@@ -55,15 +51,19 @@ export const AboutSection = () => {
                 </sup>
               </p>
 
-              <p>Two years passed. I wrote a book on adelic <a href="https://www.wikiwand.com/en/articles/Class_field_theory" className="underline">class field theory</a> which somewhat diminished my love for pure maths. I proceeded to study economics at undergraduate level.</p>
+              <p>Two years passed. I wrote a book on adelic <a href="https://www.wikiwand.com/en/articles/Class_field_theory" className="underline">class field theory</a> which somewhat diminished my love for pure maths.<sup id="fnref-1">
+                  <a href="#fn-1" className="hover:underline text-body">
+                    2
+                  </a>
+                </sup> I proceeded to study economics at undergraduate level.</p>
 
               <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. In recent years academic economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought. I agree that economics should not solely be modified algebra and calculus. </p>
 
               <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to make political philosophy and climate policy tied in with economics. I am a strong advocate of econometrics and quanitative economics to bolster the positions held by these applications of economics.</p>
 
               <p>Some models are useful. In quantitative finance, Black-Scholes is never used as a pricing model in practice but is useful as a reference in comparing the price of options using an analytic formula with clear-cut assumptions and flaws.<sup id="fnref-1">
-                  <a href="#fn-2" className="hover:underline text-body">
-                    2
+                  <a href="#fn-3" className="hover:underline text-body">
+                    3
                   </a>
                 </sup> It is also useful for traders as they navigate these flaws and adjust their risk exposures accordingly. “Better” option pricing models are, by and large, propelled by Black-Scholes. A similar analogy can be made for economics models.</p>
 
@@ -102,6 +102,9 @@ export const AboutSection = () => {
                 It contains three panels of white placed side by side. Perhaps this piece of art serves as an inapt analogy as my analogy with art intended to expose the abstract complexities of maths. But this is nevertheless an intriguing piece of artwork to bring up when someone asks you "what is art?".
               </li>
               <li id="fn-2">
+                Note that I used the word <i>diminish</i> and not <i>eliminate</i>. I post some expository mathematical tidbits on this blog from time to time.
+              </li>
+              <li id="fn-3">
                 Traders usually use Black-Scholes as a "reference point" by first computing implied volatility and using that to guide them on how to quote on different strike prices. Thinking in implied volatility terms is, in most cases, better than thinking in option premium terms as the nature of options are inherently priced into Black-Scholes. Some of my blog posts discuss Black-Scholes in greater detail.
               </li>
             </ol>

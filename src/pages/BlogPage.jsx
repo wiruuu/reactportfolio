@@ -16,14 +16,14 @@ export const BlogPage = () => {
     return localStorage.getItem("viewMode") || "grid";
   });
 
-  // Posts per page toggle (default 6)
+  // Posts per page toggle
   const [postsPerPage, setPostsPerPage] = useState(() => {
     return parseInt(localStorage.getItem("postsPerPage") || "6", 10);
   });
 
   // Sort by date
   const [sortOrder, setSortOrder] = useState(() => {
-    return localStorage.getItem("sortOrder") || "newest"; // default newest
+    return localStorage.getItem("sortOrder") || "newest"; 
   });
 
   // Category filter

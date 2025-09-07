@@ -6,6 +6,8 @@ import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
+import remarkGfm from "remark-gfm";
+import { Fragment } from "react";
 
 export const BlogPostPage = () => {
   const { slug } = useParams();
@@ -45,7 +47,7 @@ export const BlogPostPage = () => {
               </div>
               <div className="flex items-center gap-2">
                 <WholeWord className="h-4 w-4" />
-                <span>{post.wordCount}</span>
+                <span>{post.wordCount} words</span>
               </div>
               <div className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full whitespace-nowrap">
                 {post.category}
@@ -65,16 +67,22 @@ export const BlogPostPage = () => {
         </div>
 
         {/* Content */}
-        <div className="prose prose-lg max-w-none">
-          <div className="text-8xl text-center mb-8">{post.image}</div>
+        {/* <div className="prose prose-lg max-w-none text-left">
           <ReactMarkdown
-            remarkPlugins={[remarkMath]}
+            remarkPlugins={[remarkMath, remarkGfm]}
+            rehypePlugins={[rehypeKatex]}
+          >
+            {post.content}
+          </ReactMarkdown>
+        </div> */}
+        <div className="prose prose-lg max-w-none text-left">
+          <ReactMarkdown
+            remarkPlugins={[remarkMath, remarkGfm]}
             rehypePlugins={[rehypeKatex]}
           >
             {post.content}
           </ReactMarkdown>
         </div>
-
       </div>
     </article>
   );

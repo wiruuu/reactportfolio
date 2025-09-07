@@ -4,6 +4,7 @@ import { content as blog3 } from '../content/20250812';
 import { content as blog4 } from '../content/20250815';
 import { content as blog5 } from '../content/20250830';
 import { content as blog6 } from '../content/20250901';
+import { Pi } from 'lucide-react';
 
 const getWordCount = (text) => {
   if (!text) return 0;
@@ -13,16 +14,17 @@ const getWordCount = (text) => {
     .split(/\s+/).length;
 };
 
+
 export const blogPosts = [
   {
     id: 1,
-    title: "Blog 1",
+    title: "An interesting product",
     excerpt: "1",
     content: blog1,
     date: "2025-07-31",
-    category: "Philosophy",
-    slug: "getting-started-with-react-hooks",
-    image: ""
+    category: "Mathematics",
+    slug: "2025-07-31",
+    image: Pi
   },
   {
     id: 2,

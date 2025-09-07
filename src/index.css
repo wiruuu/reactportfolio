@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
 
+
 html, body {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
@@ -9,6 +10,8 @@ html, body {
 body {
   overflow-x: hidden;
 }
+
+
 
 @theme {
   --color-border: hsl(var(--border));
@@ -73,9 +76,27 @@ body {
     transform: translateY(0);
   }
 }
+@layer components {
+  .prose h1 { @apply text-4xl font-bold mb-8; }
+  .prose h2 { @apply text-3xl font-bold mb-6; }
+  .prose h3 { @apply text-2xl font-semibold mb-4; }
+  .prose h4 { @apply text-xl font-semibold mb-2; }
+  .prose p { @apply mb-2; }
+}
 
 
 @layer base {
+    section, .card, .container {
+    position: relative;
+    z-index: 20;
+    background: inherit;
+  }
+    #root {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
   :root {
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
@@ -167,18 +188,5 @@ body {
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
-section, .card, .container {
-  position: relative;
-  z-index: 20;
-  background: inherit;
-}
 
 
-
-
-#root {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}

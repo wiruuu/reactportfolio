@@ -11,8 +11,12 @@ export const BlogList = ({ posts }) => {
           className="group flex items-center gap-4 p-4 border rounded-lg bg-card hover:shadow-md hover:border-primary/30 transition-all"
         >
           {/* Image/Icon */}
-          <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-2xl">
-            {post.image}
+          <div className="h-14 w-14 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg flex items-center justify-center">
+            {typeof post.image === "string" ? (
+              <div className="text-2xl">{post.image}</div>
+            ) : (
+              <post.image className="w-16 h-16 text-primary p-3" />
+            )}
           </div>
 
           {/* Content */}

@@ -11,8 +11,13 @@ export const BlogCard = ({ post }) => {
     >
       {/* Image/Icon */}
       <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-        <div className="text-6xl">{post.image}</div>
+        {typeof post.image === "string" ? (
+          <div className="text-6xl">{post.image}</div>
+        ) : (
+          <post.image className="w-16 h-16 text-primary" /> 
+        )}
       </div>
+
 
       {/* Content */}
       <div className="p-6">
