@@ -88,7 +88,7 @@ export const AboutSection = () => {
                 <li>I’ve seen 3 Laufey concerts #performativemale</li>
                 <li>I’ve chatted with <a href="https://www.wikiwand.com/en/articles/Terence_Tao" className="underline">Terence Tao</a></li>
               </ol>
-              <div className="w-2xl mx-auto font-semibold text-center text-foreground">
+              <div className="w-auto md:w-2xl lg:w-2xl mx-auto font-semibold text-center text-foreground justify-center items-center">
                 <img src="../projects/GBM.png" alt="Geometric Brownian Motion" className="pb-8"></img>
                 <p className="pb-2 text-xl">「性相近也，習相遠也。」</p>
                 <a href="https://chinese.bookmarks.tw/poetry/454" className="block mb-4 text-l hover:underline hover:text-primary"> 孔子 - 《論語 · 陽貨》</a>
