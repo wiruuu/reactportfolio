@@ -82,6 +82,9 @@ body {
   .prose h3 { @apply text-2xl font-semibold mb-4; }
   .prose h4 { @apply text-xl font-semibold mb-2; }
   .prose p { @apply mb-2; }
+  .prose a.block {
+    margin-bottom: 1rem; /* same as mb-4 */
+  }
 }
 
 
@@ -98,7 +101,7 @@ body {
     text-align: center;
   }
   :root {
-    --background: 210 40% 98%;
+    --background: 210 0% 100%;
     --foreground: 222 47% 11%;
     --body: 0 0% 50%;
     --card: 0 0% 100%;

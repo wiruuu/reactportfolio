@@ -44,7 +44,7 @@ export const AboutSection = () => {
 
               <p>Didactic lecture over. Now a bit about myself:</p>
               <p>
-                When I was around 15, I wanted to be a maths researcher. I loved reading up on pure mathematics, specialising in number theory and algebra. But then all that abstraction with homological algebra and automorphic forms and whatnot made me lose touch with the world. Although this was very fun, very day working with said maths felt like I was tinkering with an entangled system of cogs, strings, and screws in a contemporary art exhibit — while I did get the bigger picture, not everyone comes to truly appreciate abstract art even if they've worked with it for a while.<sup id="fnref-1">
+                When I was around 15, I wanted to be a maths researcher. I loved reading up on pure mathematics, specialising in number theory and algebra. But then all that abstraction with homological algebra and automorphic forms and whatnot made me lose touch with the world. Although this was very fun, every day working with said maths felt like I was tinkering with a convoluted system of cogs, strings, and screws in a contemporary art exhibit — while I did get the bigger picture, not everyone comes to truly appreciate abstract art even if they've worked with it for a while.<sup id="fnref-1">
                   <a href="#fn-1" className="hover:underline text-body">
                     1
                   </a>
@@ -59,7 +59,7 @@ export const AboutSection = () => {
 
               <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. In recent years academic economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought. I agree that economics should not solely be modified algebra and calculus. </p>
 
-              <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to make political philosophy and climate policy tied in with economics. I am a strong advocate of econometrics and quanitative economics to bolster the positions held by these applications of economics.</p>
+              <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to tie political philosophy and climate policy, among other disciplines, in with economics. I am also a strong advocate of econometrics and quantitative economics as means of ensuring rigour.</p>
 
               <p>Some models are useful. In quantitative finance, Black-Scholes is never used as a pricing model in practice but is useful as a reference in comparing the price of options using an analytic formula with clear-cut assumptions and flaws.<sup id="fnref-1">
                   <a href="#fn-3" className="hover:underline text-body">
@@ -83,11 +83,19 @@ export const AboutSection = () => {
 
               <p className="text-xl font-semibold text-left text-foreground"> Two truths and one lie</p>
 
-              <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
+              <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4 pb-8">
                 <li>I've travelled to Tunisia and met a lot of lovely people there</li>
                 <li>I’ve seen 3 Laufey concerts #performativemale</li>
                 <li>I’ve chatted with <a href="https://www.wikiwand.com/en/articles/Terence_Tao" className="underline">Terence Tao</a></li>
               </ol>
+              <div className="w-2xl mx-auto font-semibold text-center text-foreground">
+                <img src="../projects/GBM.png" alt="Geometric Brownian Motion" className="pb-8"></img>
+                <p className="pb-2 text-xl">「性相近也，習相遠也。」</p>
+                <a href="https://chinese.bookmarks.tw/poetry/454" className="block mb-4 text-l hover:underline hover:text-primary"> 孔子 - 《論語 · 陽貨》</a>
+                <p className="pb-2 text-xl">"Mankind is born alike. People diverge through their habits."</p>
+                <a href="https://lisiming.net/2013/06/confucius-analects-mens-nature-are-alike/" className=" text-l hover:underline hover:text-primary"> The Analects: Yang Huo</a>
+              </div>
+              
             </div>
           </div>
 
