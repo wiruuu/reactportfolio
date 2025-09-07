@@ -93,7 +93,7 @@ export const AboutSection = () => {
                 <p className="pb-2 text-xl">「性相近也，習相遠也。」</p>
                 <a href="https://chinese.bookmarks.tw/poetry/454" className="block mb-4 text-l hover:underline hover:text-primary"> 孔子 - 《論語 · 陽貨》</a>
                 <p className="pb-2 text-xl">"Mankind is born alike. People diverge through their habits."</p>
-                <a href="https://lisiming.net/2013/06/confucius-analects-mens-nature-are-alike/" className=" text-l hover:underline hover:text-primary"> The Analects: Yang Huo</a>
+                <a href="https://lisiming.net/2013/06/confucius-analects-mens-nature-are-alike/" className=" text-l hover:underline hover:text-primary"> Confucius - The Analects: Yang Huo</a>
               </div>
               
             </div>
