@@ -76,7 +76,7 @@ export const AboutSection = () => {
 
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
                 <li> It’s what I enjoy studying. It keeps me connected and aware with the world around me. It compels me to be largely abreast of global events and to know the reasons and rationales behind them. While abstract, it is often not abstract for abstraction’s sake. </li>
-                <li> Economics is a largely quantitative discipline. I personally know some economics majors working in large quant firms. By “large quant firms” I probably mean the one(s) you’re thinking of right now. They probably wouldn’t be very fond of how that question is worded.
+                <li> Economics is a largely quantitative discipline. Most quant firms do not have a rule barring economics majors. If I know my stuff, why shouldn't I join the fun?
                 </li>
               </ol>
               <p>When I’m not working or studying, I’m usually performing, producing, arranging, or composing music, watching a movie, or writing this blog. I also hike, climb, and swim, and do about a million random side quests.</p>
@@ -84,7 +84,7 @@ export const AboutSection = () => {
               <p className="text-xl font-semibold text-left text-foreground"> Two truths and one lie</p>
 
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
-                <li>I used to catch creeps on the internet as a kid</li>
+                <li>I've travelled to Tunisia and met a lot of lovely people there</li>
                 <li>I’ve seen 3 Laufey concerts #performativemale</li>
                 <li>I’ve chatted with <a href="https://www.wikiwand.com/en/articles/Terence_Tao" className="underline">Terence Tao</a></li>
               </ol>
