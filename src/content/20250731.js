@@ -38,7 +38,7 @@ $$
 
 where $\\zeta(s)$ is the Riemann zeta function. In particular note that the Laurent series for $\\zeta(s)$ is $\\zeta(s) = \\frac{1}{s-1}+\\gamma + O(s-1),$ where $\\gamma$ is the Euler-Mascheroni constant, and the Laurent series for $2^{1-s}$ is $1-(s-1)\\ln 2 + O((s-1)^2).$
 
-Therefore $\\eta'(1) = \\ln 2(\\gamma-\\frac{1}{2} \\ln 2)$, or 
+Therefore $\\eta'(1) = \\ln 2^{(\\gamma-\\frac{1}{2} \\ln 2)}$, or 
 $$
 P=2^{\\gamma - \\frac{1}{2} \\ln 2}.
 $$

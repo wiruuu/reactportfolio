@@ -77,11 +77,11 @@ body {
   }
 }
 @layer components {
-  .prose h1 { @apply text-4xl font-bold mb-8; }
-  .prose h2 { @apply text-3xl font-bold mb-6; }
-  .prose h3 { @apply text-2xl font-semibold mb-4; }
-  .prose h4 { @apply text-xl font-semibold mb-2; }
-  .prose p { @apply mb-2; }
+  .prose h1 { @apply text-4xl font-bold mb-10; }
+  .prose h2 { @apply text-3xl font-bold mb-8; }
+  .prose h3 { @apply text-2xl font-semibold mb-6; }
+  .prose h4 { @apply text-xl font-semibold mb-4; }
+  .prose p { @apply mb-4; }
   .prose a.block {
     margin-bottom: 1rem; /* same as mb-4 */
     white-space: nowrap;

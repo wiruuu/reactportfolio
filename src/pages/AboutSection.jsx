@@ -17,7 +17,7 @@ export const AboutSection = () => {
 
         {/* Intro paragraph */}
         <p className="justify-center flex text-xl pb-8 text-body">
-          I'm a sophomore studying economics in London with quantitative interests in econometrics and quant finance. I'm also an algo trader and quant developer specialising in ML and statistical arbitrage who likes building nice web apps. I write recreationally on a wide range of topics and have written 2 maths textbooks.
+          I'm an undergraduate sophomore studying economics in London with quantitative interests in econometrics and quant finance. I'm also an algo trader and quant developer specialising in ML and statistical arbitrage who likes building nice web apps. I write recreationally on many topics and have written 2 maths textbooks.
         </p>
 
         {/* Introduction */}
@@ -26,7 +26,7 @@ export const AboutSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 pb-10 text-body">
             <div className="text-left space-y-3">
               <p>
-                I have two goals in life. The first is to do things for good. The second is to service my local community.
+                I have two goals in life. The first is to act with virtue and excellence. The second is to service my local community.
               </p>
               <p>
                 These two things are non-negotiables in the righteous life. Interestingly enough, they can be (trivially) achieved regardless of social status, income level, or external successes. Many people prioritise other material gains in a way that overshadows this moral code, or do not prioritise this moral code.
@@ -61,7 +61,7 @@ export const AboutSection = () => {
 
               <p> I proceeded to study economics at undergraduate level.</p>
 
-              <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. Undergraduate economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought.  </p>
+              <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. Undergraduate economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought. This is not an economics-specific diagnosis nor do I believe an effective antidote will be available very soon. </p>
 
               <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to tie political philosophy and climate policy, among other disciplines, in with economics. I agree that economics should not solely comprise of exercises in algebra and calculus with no regard for the limitations and assumptions of the models discussed. However, I am a strong advocate of econometrics and quantitative economics as means of ensuring rigour.</p>
 
@@ -141,8 +141,6 @@ export const AboutSection = () => {
           </div>
         </div>
         <div className="container mx-auto max-w-5xl">
-
-        
       </div>
       </div>
     </section>
