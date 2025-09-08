@@ -32,7 +32,7 @@ export const BlogCard = ({ post }) => {
         </h2>
 
         {/* Excerpt */}
-        <p className="text-muted-foreground mb-4 line-clamp-3">
+        <p className="text-muted-foreground mb-4 line-clamp-3 text-sm">
           {post.excerpt}
         </p>
 
@@ -52,7 +52,7 @@ export const BlogCard = ({ post }) => {
         </div>
 
         {/* Read More Indicator */}
-        <div className="w-full py-2 px-4 rounded-lg flex items-center justify-center gap-2 font-medium text-card bg-primary">
+        <div className="w-full py-2 px-4 rounded-lg flex items-center justify-center gap-2 font-medium text-card bg-primary hover:underline">
           Read More
           <ArrowRight className="h-4 w-4" />
         </div>

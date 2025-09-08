@@ -84,6 +84,8 @@ body {
   .prose p { @apply mb-2; }
   .prose a.block {
     margin-bottom: 1rem; /* same as mb-4 */
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 

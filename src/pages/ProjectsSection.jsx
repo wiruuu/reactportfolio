@@ -7,8 +7,8 @@ const books = [
     description: "Linear algebra, multivariable calculus, constrained optimisation, difference and differential equations for economists",
     image: "/projects/amet.png",
     tags: ["Mathematical economics"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://drive.google.com/drive/folders/1qqOE1Re6u2VhVkZisQbBp9xekysrOHtd?usp=drive_link",
+    githubUrl: "https://github.com/wiruuu/AMET",
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const books = [
       "Number, cyclotomic, and local fields, class number formula, adeles, group cohomology, local and global class field theory",
     image: "/projects/tcft.png",
     tags: ["Number theory"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://drive.google.com/drive/folders/1AeZ4M8jLgLybF7K71HtABtnF6AecjDeS?usp=sharing",
+    githubUrl: "https://github.com/wiruuu/TCFT",
   },
 ];
 

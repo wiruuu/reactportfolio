@@ -1,4 +1,6 @@
 import { Briefcase, Code, User } from "lucide-react";
+import { BlockMath, InlineMath } from "react-katex"
+import "katex/dist/katex.min.css";
 
 export const AboutSection = () => {
   return (
@@ -51,15 +53,17 @@ export const AboutSection = () => {
                 </sup>
               </p>
 
-              <p>Two years passed. I wrote a book on adelic <a href="https://www.wikiwand.com/en/articles/Class_field_theory" className="underline">class field theory</a> which somewhat diminished my love for pure maths as I was writing it.<sup id="fnref-1">
+              <p>Two years passed. I wrote a <a href="https://drive.google.com/file/d/1mpnwIl-NnpAkyUE9c2ygCtVuKJVgZsJg/view?usp=drive_link" className="underline"> book </a> on adelic <a href="https://www.wikiwand.com/en/articles/Class_field_theory" className="underline">class field theory</a> which somewhat diminished my love for pure maths as I was writing it.<sup id="fnref-1">
                   <a href="#fn-1" className="hover:underline text-body">
                     2
                   </a>
-                </sup> Probably due to tedium or lack of motivation to continue afterwards. I proceeded to study economics at undergraduate level.</p>
+                </sup> Probably due to tedium or lack of motivation to continue afterwards.</p>
 
-              <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. Undergraduate economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought. I agree that economics should not solely be modified algebra and calculus. </p>
+              <p> I proceeded to study economics at undergraduate level.</p>
 
-              <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to tie political philosophy and climate policy, among other disciplines, in with economics. I am also a strong advocate of econometrics and quantitative economics as means of ensuring rigour.</p>
+              <p>Why economics? Firstly we must understand the reasons for why people would be averse towards economics degrees at large. Undergraduate economics has been largely adherent to neoclassical economics and rational economic behaviour. In intermediate micro and macro courses students are given problem sets of a purely mathematical nature by which students use mechanical tools to work through a series of mental gymnastics. Most curriculums do not teach about ecological crises, geopolitics and colonialism, nor teach how to rid these rigid pedagogies and develop independent modes of thought.  </p>
+
+              <p>Economics, when correctly taught, is grounded in solving problems and challenging the status quo. I try to tie political philosophy and climate policy, among other disciplines, in with economics. I agree that economics should not solely comprise of exercises in algebra and calculus with no regard for the limitations and assumptions of the models discussed. However, I am a strong advocate of econometrics and quantitative economics as means of ensuring rigour.</p>
 
               <p>Some models are useful. In quantitative finance, Black-Scholes is never used as a pricing model in practice but is useful as a reference in comparing the price of options using an analytic formula with clear-cut assumptions and flaws.<sup id="fnref-1">
                   <a href="#fn-3" className="hover:underline text-body">
@@ -91,9 +95,24 @@ export const AboutSection = () => {
               <div className="w-auto md:w-2xl lg:w-2xl mx-auto font-semibold text-center text-foreground justify-center items-center">
                 <img src="../projects/GBM.png" alt="Geometric Brownian Motion" className="pb-8"></img>
                 <p className="pb-2 text-xl">「性相近也，習相遠也。」</p>
-                <a href="https://chinese.bookmarks.tw/poetry/454" className="block mb-4 text-l hover:underline hover:text-primary"> 孔子 - 《論語 · 陽貨》</a>
+                <div className="block mb-4">
+                  <a href="https://chinese.bookmarks.tw/poetry/454" className="text-l hover:underline hover:text-primary"> 孔子 - 《論語 · 陽貨》</a>
+                <sup id="fnref-1">
+                  <a href="#fn-4" className="hover:underline">
+                    4
+                  </a>
+                </sup>
+                </div>
+                
                 <p className="pb-2 text-xl">"Mankind is born alike. People diverge through their habits."</p>
-                <a href="https://lisiming.net/2013/06/confucius-analects-mens-nature-are-alike/" className=" text-l hover:underline hover:text-primary"> Confucius - The Analects: Yang Huo</a>
+                <div className="block mb-4">
+                <a href="https://lisiming.net/2013/06/confucius-analects-mens-nature-are-alike/" className="text-l hover:underline hover:text-primary"> Confucius - The Analects: Yang Huo</a>
+                <sup id="fnref-1">
+                  <a href="#fn-4" className="hover:underline">
+                    4
+                  </a>
+                </sup>
+                </div>
               </div>
               
             </div>
@@ -115,9 +134,16 @@ export const AboutSection = () => {
               <li id="fn-3">
                 Traders usually use Black-Scholes as a "reference point" by first computing implied volatility and using that to guide them on how to quote on different strike prices. Thinking in implied volatility terms is, in most cases, better than thinking in option premium terms as the nature of options are inherently priced into Black-Scholes. Some of my blog posts discuss Black-Scholes in greater detail.
               </li>
+              <li id="fn-4">
+                The development of human nature is not a stochastic process. However I do that human inclinations have somewhat of a Markov property as is characteristic of GBM (and increments are not independent like regular Brownian motion): that <InlineMath math="P(X_{n+1}=x_{n+1} \mid X_1=x_1, \dots, X_n=x_n) = P(X_{n+1}=x_{n+1} \mid X_n=x_n)" />. In layman's terms, this means that the future state of a stochastic processes depends solely on the current state and not the states that precede it. I used the word <i>somewhat</i> as I do believe that when human behaviour and decisions are concerned, <InlineMath math="X_{n+1}"/> should be somewhat dependent on <InlineMath math="X_1, \dots, X_{n-1}"/>. I used this analogy to explain how drastically people can change.
+              </li>
             </ol>
           </div>
         </div>
+        <div className="container mx-auto max-w-5xl">
+
+        
+      </div>
       </div>
     </section>
   );
