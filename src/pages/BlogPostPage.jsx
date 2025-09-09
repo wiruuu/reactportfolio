@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import "katex/dist/katex.min.css";
 import remarkGfm from "remark-gfm";
 import { Fragment } from "react";
@@ -78,7 +79,7 @@ export const BlogPostPage = () => {
         <div className="prose prose-lg max-w-none text-left">
           <ReactMarkdown
             remarkPlugins={[remarkMath, remarkGfm]}
-            rehypePlugins={[rehypeKatex]}
+            rehypePlugins={[rehypeKatex, rehypeRaw]}
           >
             {post.content}
           </ReactMarkdown>

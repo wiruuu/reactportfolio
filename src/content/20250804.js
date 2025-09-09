@@ -1,13 +1,13 @@
 export const content = `
-Before I begin, I would like to preface by claiming that this is not a complete encapsulation of the upshots and objections pertaining to moral emotivism. These are just some of my thoughts on the matter.
+Before I begin, I would like to preface by claiming that this is not a complete encapsulation of the upshots and objections pertaining to moral non-cognitivsm and emotivism, nor do I make clear-cut verdicts on the types of cognitivism and non-cognitivism. These are just some of my thoughts on the matter.
 
 ### Introduction
 
 The non-cognitivist standpoint regarding moral principles is one that claims that moral statements are not truth-apt (meaning we can assign truthfulness or falsity to moral statements), and thus statements about right and wrong are inherently meaningless. This is because moral statements are not analytic, meaning that they are not true by definition or are axiomatically true, or are substantiated by empirical verification. In contrast, cognitivists believe that moral statements are truth-apt, meaning that statements with moral predicates have the same effect of expressing belief as statements with descriptive predicates.
 
-Emotivism is a variety of non-cognitivism. Not only are moral statements not truth-apt, but they function primarily to express emotions. If I say "theft is wrong", I am simply voicing my emotional disapproval for theft as someone who says "theft is right" voices their emotional approval for it. The statement itself cannot demonstrate that theft is wrong. **Ethical statements do not outline truths, but are expressions of emotion.**
+Emotivism is a variety of non-cognitivism. Not only are moral statements not truth-apt, but they function primarily to express emotions. If I say "theft is wrong", I am simply voicing my emotional disapproval for theft as someone who says "theft is right" voices their emotional approval for it. The statement itself cannot demonstrate that theft is wrong. **Ethical statements do not outline truths, but are expressions of emotion.** 
 
-Furthermore, I believe that most moral terms have the dual objective of endowing itself with its descriptive predicate and achieving the emotivist objective. For example, the statement "he is ruthless" predicates itself with the definition of being ruthless. In fact, I can't think of a counterexample where a moral predicate does not intrinsically contain a descriptive predicate.
+Furthermore, I believe that most moral terms have the dual objective of endowing itself with its descriptive predicate and achieving the emotivist objective. For example, the statement "he is ruthless" predicates itself with the definition of being ruthless. In fact, I can't think of a counterexample where a moral predicate does not intrinsically contain a descriptive predicate. The emotivist predicate outlines an assumption containing a basket of moral values - some being non-negotiables and some being arguable, which are then used to conclude the moral statement. When I say "theft is wrong", I am in other words claiming that the purview of core moral judgments or universal values that I uphold lead, by a priori means, to this conclusion. 
 
 Before we continue, let's distinguish between types of statements. Consider these three statements.
 
@@ -23,7 +23,7 @@ Non-cognitivists believe that only the first two statements are truth-apt, while
 
 ### Cognitivsm and non-naturalism
 
-Before we defend the emotivist argument I'd like to spend some time exploring some  defences and upshots of a cognitivst standpoint. More specifically, I would like to explore the cognitivist non-naturalist standpoint, which claims that moral statements are truth-apt statements, and are descriptive and meaningful. However, these descriptions are distinct from natural properties and cannot be reduced to any natural properties. The former is the cognitivist standpoint, while the latter is the non-naturalist standpoint. Here I first discuss non-naturalism before cognitivism.
+Before we defend the emotivist argument I'd like to spend some time exploring some  defences and upshots of the cognitivst standpoint. More specifically, I would like to explore the cognitivist non-naturalist standpoint, which claims that moral statements are truth-apt statements, and are descriptive and meaningful. However, these descriptions are distinct from natural properties and cannot be reduced to any natural properties. The former is the cognitivist standpoint, while the latter is the non-naturalist standpoint. Here I first discuss non-naturalism before cognitivism.
 
 Let's first consider the following line of reasoning (a modus tollens). Here, properties like being pleasurable or being happy are natural properties, while properties like being good or being right are moral properties.  
 
@@ -51,9 +51,46 @@ There is much discourse on this topic specifically revolving around the "paradox
 
 There are some issues with these objections which I will briefly go through. Although the open-question argument seems to be a question-begging argument, the begged questions are not conceptually open "to competent users of moral terms". For a competent analyst, the question "is pleasure good" is evidently more open than the question "is NaCl table salt?" A common way of laying out this argument is by appealing to the fact that opponents of non-naturalism can see that some questions are conceptually open; thus non-naturalism is not a direct consequence of the argument's premise. However this is a much weaker version of the original open-question argument.
 
+In fact one can see that most of the counterarguments to these objections, after a dialectical process, can be resolved by suggesting this weaker version of the open-question argument. This, commonly known as the *argument to the best explanation*, claims that the best explanation for the premise that identity questions seem open to competent analysts of moral terms is that they are open. This is perhaps not a superlatively satisfying conclusion but seems tenable once we consider the motivational internalist premise - that there is a conceptual connection between moral judgments and motivations to act (typically fuelled by some desire fulfilled by said act). If we accept the internalist theory of motivation, then we accept that moral propositions and motivations to act are not analytically equivalent. Thus it is unclear whether natural properties fuel our motivations to act. This Humean tenet is also, I hold, a tenable non-cognitivist strategy.
+
 One counter-argument that naturalists use is that although Moore's questions may seem open, moral properties may be equivalent to naturalistic properties in a non-tautological sense through empirical discovery. But the world is often not black-and-white, and even though we cannot conclude that two terms P and Q may not be distinct, we cannot immediately conclude that they are equivalent in meaning. 
 
-Here I try to outline how the open-question argument can be used to substantiate the non-cognitivist standpoint. It is not too convoluted of an argument. A chief upshot of the open-question argument is that there is a semantic nonfactualism about moral judgments that leave moral equivalences open. In fact, Moore's identity questions cannot be viewed as closed even to competent speakers as the questions are not equivalent (or not prima facie equivalent). Therefore, the moral expressions used in these questions, or the notion of equivalence itself when used in this context, 
+Here I try to outline how the open-question argument can be used to substantiate the non-cognitivist standpoint. It is not too convoluted of an argument. A chief upshot of the open-question argument is that there is a semantic nonfactualism about moral judgments that leave moral equivalences open. 
+
+In fact, Moore's identity questions cannot be viewed as closed even to competent speakers as the questions are not equivalent (or not prima facie equivalent). Therefore, the moral expressions used in these questions, or the notion of equivalence itself when used in this context, do not predicate any property, and are equivalent in function to descriptive statements. The conclusion is that moral statements have a normative element that is distinct from descriptive statements.
+
+Lastly, one can also appeal for non-cognitivsm by appealing to what we call *Hume's Law*. Also known as the is-ought problem, it is the premise that one cannot directly use a priori means to derive a prescriptive statement from a descriptive statement without introducing additional moral premises. Thus, non-moral descriptive statements cannot produce a moral conclusion. Non-cognitivists use this by claiming that moral judgments express the proposal of some function; descriptive statements do not possess this quality. Descriptive statements must ipso facto have some implicit imperatival component in order to entail the moral conclusion. 
+
+There are many varieties of non-cognitivism. The prescriptivist viewpoint claims that moral judgments are commands; a statement like "stealing is wrong" is equivalent to "do not steal". Since moral judgments are imperatives, there can be no such thing as moral error. The quasi-realist school of thought emphasises why we are entitled to act as if moral judgments are truth-apt when they are not truth-apt. Personally I think that quasi-realism does not attack the problem of truth-aptness but rather act as a motivational theory for how we project our attitudes and values onto the world as if they were real properties; under the pretense that ethical statements are not truth-apt our projections are effectuated in a way that makes them truth-apt. My disapproval of the quasi-realist perspective largely follows the Frege-Geach problem, which is also used as a counterargument to emotivism.
+
+Emotivism is perhaps not the most tenable variant of non-cognitivism, but certainly opens itself up to much discourse.
+
+### Emotivism
+
+A. J. Ayer, in his *The Emotive Theory of Ethics*, uses this following example to elucidate the emotivist theory. If I said "Stealing money is wrong", the upshots of my utterance is equivalent to saying "Stealing money!!!" with the exclamation marks suggesting immense disapproval. Value judgments like "stealing money is bad" do not truly exist independently of our emotions.
+
+Ayer's argument roughly proceeds as follows. The first few steps proceeds similarly to the non-cognitivist argument, but implements what Ayer would call the *verification principle*.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 1) He first assumes the verification principle as a baseline criteria for determining whether a statement can be factually meaningful. Ayer claims that a synthetic proposition is truth-apt only if it is empirically verifiable, meaning that there exist observations that we can employ to deduce said propositions as true or false.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 2) Ethical propositions cannot be reduced to statements of empirical fact. We cannot reduce ethical terms to a pure utilitarian analysis because some actions that are generally approved of can be viewed as immoral. 
+
+Similarly, we cannot use Bentham's utilitarian calculus to maximise happiness and minimise pain as it is sometimes wrong to perform the action that elicits the greatest happiness. In fact - such a proposition may not be utilitarian in nature: see the distinction between direct and indirect utilitarianism. Therefore, it isn't self-contradictory to say that some pleasant things are not good; thus it cannot be said that the sentence "x is good" is equivalent to "x is pleasant".
+
+&nbsp;&nbsp;&nbsp;&nbsp; 3) Ethical statements are synthetic, not analytic. Therefore, as they are not tautological truths, ethical statements are not meaningful and are not truth-apt. 
+
+These three steps entail the non-cognitivist conclusion. But why emotivism? Ayer writes that one cannot test the validity of ethical concepts as they are "pseudo-concepts"; only moral sentiments, and nothing true/false, is said here. 
+
+Consider the statement "you stole money!": this is merely an expression of moral disapproval that, to the prescriptivists, doubles as a command not to steal (vis-a-vis the statement "stealing money is wrong"). So, ethical statements not only express feelings but also arouse them. Any statement of the type "you should X" tacitly contains a command to perform X. Thus, the upshots of the emotivist perspective are twofold - the first upshot pertains to the feelings that they generally intend to elicit; the second pertains to the responses that they provoke. 
+
+### Discussing the Emotivist perspective
+
+A common-sensical way to deconstruct the emotivist argument is to first determine whether the verification principle is tenable, for the entire argument is constructed upon said principle. 
+
+The *Sanxingdui （三星堆）*, an archaeological site excavated in the 1980s onwards (the most recent significant discovery was in 2021)
+
+
+
 
 
 `

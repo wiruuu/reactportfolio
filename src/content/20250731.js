@@ -42,4 +42,7 @@ Therefore $\\eta'(1) = \\ln 2^{(\\gamma-\\frac{1}{2} \\ln 2)}$, or
 $$
 P=2^{\\gamma - \\frac{1}{2} \\ln 2}.
 $$
-`;
+`
+
+
+
