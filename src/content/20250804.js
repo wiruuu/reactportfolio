@@ -87,7 +87,7 @@ Consider the statement "you stole money!": this is merely an expression of moral
 
 A common-sensical way to deconstruct the emotivist argument is to first determine whether the verification principle is tenable, for the entire argument is constructed upon said principle. 
 
-The *Sanxingdui （三星堆）*, an archaeological site excavated in the 1980s onwards (the most recent significant discovery was in 2021)
+The *Sanxingdui （三星堆）*, a Chinese archaeological site excavated from the 1980s onwards (the most recent significant discovery was in 2021), contained artefacts dated from circa. 1700 to 1150 B.C. If someone who procured knowledge about the Sanxingdui through historical texts before the excavations were to make statements about it, Ayer's theory would deem those statements meaningness as said statements could not be empirically verified. However, 
 
 
 
