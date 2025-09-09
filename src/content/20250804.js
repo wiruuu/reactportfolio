@@ -11,11 +11,18 @@ Furthermore, I believe that most moral terms have the dual objective of endowing
 
 Before we continue, let's distinguish between types of statements. Consider these three statements.
 
-  &nbsp;&nbsp;&nbsp;&nbsp; A) Thieves are people who steal.
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
 
-  &nbsp;&nbsp;&nbsp;&nbsp; B) You are a thief.
+  A) Thieves are people who steal. 
 
-  &nbsp;&nbsp;&nbsp;&nbsp; C) You acted immorally by virtue of you being a thief.
+  B) You are a thief.
+
+  C) You acted immorally by virtue of you being a thief.  
+</div>
+</div>
+
+  
 
 A) is an analytic statement, meaning that it is declarative and is true by definition. B) is a synthetic statement, meaning that it is a truth-apt statement as its truthfulness is dependent on the state of the world and is not intrinsically defined. These assertions can be confirmed or refuted by empirical observations. C) is a moral-judgment statement, meaning that C) is synonymous with the statement "Boo to theft!"
 
@@ -23,19 +30,20 @@ Non-cognitivists believe that only the first two statements are truth-apt, while
 
 ### Cognitivsm and non-naturalism
 
-Before we defend the emotivist argument I'd like to spend some time exploring some  defences and upshots of the cognitivst standpoint. More specifically, I would like to explore the cognitivist non-naturalist standpoint, which claims that moral statements are truth-apt statements, and are descriptive and meaningful. However, these descriptions are distinct from natural properties and cannot be reduced to any natural properties. The former is the cognitivist standpoint, while the latter is the non-naturalist standpoint. Here I first discuss non-naturalism before cognitivism.
+Before we defend the emotivist argument and subsequently dismantle it, I'd like to spend some time exploring some  defences and upshots of the cognitivst standpoint. More specifically, I would like to explore the cognitivist non-naturalist standpoint, which claims that moral statements are truth-apt statements, and are descriptive and meaningful. However, these descriptions are distinct from natural properties and cannot be reduced to any natural properties. The former is the cognitivist standpoint, while the latter is the non-naturalist standpoint. Here I first discuss non-naturalism before cognitivism.
 
 Let's first consider the following line of reasoning (a modus tollens). Here, properties like being pleasurable or being happy are natural properties, while properties like being good or being right are moral properties.  
 
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
 
+  P1: By definition, $x$ being good is equivalent to $x$ being pleasant. Therefore, the question "is pleasure good?" is equal to the tautological statement "is pleasure pleasure?". In the same vein, the question "is pleasure good" is a closed question.
 
-  &nbsp;&nbsp;&nbsp;&nbsp; P1: By definition, $x$ being good is equivalent to $x$ being pleasant. Therefore, the question "is pleasure good?" is equal to the tautological statement "is pleasure pleasure?". In the same vein, the question "is pleasure good" is a closed question.
+  P2: The question "is pleasure good?" or the statement "pleasure is good" is something substantive and not meaningless; it is debatable.
 
-  &nbsp;&nbsp;&nbsp;&nbsp; P2: The question "is pleasure good?" or the statement "pleasure is good" is something substantive and not meaningless; it is debatable.
-
-  &nbsp;&nbsp;&nbsp;&nbsp; C: There is no analytic link between $x$ being good and $x$ being pleasant. Once it is estsablished that $x$ is pleasant, the question of whether $x$ is good is an open question.
-
-
+  C: There is no analytic link between $x$ being good and $x$ being pleasant. Once it is estsablished that $x$ is pleasant, the question of whether $x$ is good is an open question.
+</div>
+</div>
 
 By this chain of reasoning, the claim that $x$ is good is inherently a meaningless claim. Any connection between a natural property and a moral property leads to a tautology. 
 
@@ -79,16 +87,54 @@ Similarly, we cannot use Bentham's utilitarian calculus to maximise happiness an
 
 &nbsp;&nbsp;&nbsp;&nbsp; 3) Ethical statements are synthetic, not analytic. Therefore, as they are not tautological truths, ethical statements are not meaningful and are not truth-apt. 
 
-These three steps entail the non-cognitivist conclusion. But why emotivism? Ayer writes that one cannot test the validity of ethical concepts as they are "pseudo-concepts"; only moral sentiments, and nothing true/false, is said here. 
+These three steps entail the non-cognitivist conclusion. But why emotivism? 
 
-Consider the statement "you stole money!": this is merely an expression of moral disapproval that, to the prescriptivists, doubles as a command not to steal (vis-a-vis the statement "stealing money is wrong"). So, ethical statements not only express feelings but also arouse them. Any statement of the type "you should X" tacitly contains a command to perform X. Thus, the upshots of the emotivist perspective are twofold - the first upshot pertains to the feelings that they generally intend to elicit; the second pertains to the responses that they provoke. 
+Ayer writes that one cannot test the validity of ethical concepts as they are "pseudo-concepts"; only moral sentiments, and nothing true/false, is said here. Consider the statement "you stole money!": this is merely an expression of moral disapproval that, to the prescriptivists, doubles as a command not to steal (vis-a-vis the statement "stealing money is wrong"). 
+
+This leads to the argument for emotivism:
+
+4) By expressing the moral sentiment, one merely expresses one's individual attitudes, or one's approval towards a certain matter. Note the difference between an assertion of disapproval and an expression of one. Assertions like "Stealing money is wrong" and expressions like "I disapprove of stealing money" are non-equivalent: the former, a non-propositional statement, merely expresses disapproval.
+
+Ethical statements not only express feelings but also arouse them. Any statement of the type "you should X" tacitly contains a command to perform X. Thus, the upshots of the emotivist perspective are twofold - the first upshot pertains to the feelings that they generally intend to elicit; the second pertains to the responses that they provoke. 
 
 ### Discussing the Emotivist perspective
 
-A common-sensical way to deconstruct the emotivist argument is to first determine whether the verification principle is tenable, for the entire argument is constructed upon said principle. 
+A common-sensical way to object to the emotivist argument is to first determine whether the verification principle is tenable, for the entire argument is constructed upon said principle. Before deconstructing the verification principle, it is notable that the conclusion of emotivism from non-cognitivism is not a non-negotiable one.
 
-The *Sanxingdui （三星堆）*, a Chinese archaeological site excavated from the 1980s onwards (the most recent significant discovery was in 2021), contained artefacts dated from circa. 1700 to 1150 B.C. If someone who procured knowledge about the Sanxingdui through historical texts before the excavations were to make statements about it, Ayer's theory would deem those statements meaningness as said statements could not be empirically verified. However, 
+The most eminent objection is the identification of non-cognitivism with "boo-hurrahism". When I make a moral claim like "theft is wrong", I merely make a claim that I believe, under the purview of moral judgments that I hold, to represent my perception of the state of the world. Who says that I am booing an action?
 
+### Variants of the verification principle
+
+The *Sanxingdui （三星堆）*, a Chinese archaeological site excavated from the 1980s onwards (the most recent significant discovery was in 2021), contained artefacts dated from circa. 1700 to 1150 B.C. If someone who procured knowledge about the Sanxingdui through historical texts before the excavations were to make statements about it, Ayer's theory would deem those statements meaningness as said statements could not be empirically verified. 
+
+One counterargument is to claim *weak verification*, where a statement is meaningful if there is some conceivable empirical observation that substantiates the statement albeit not being conclusively verified by a posteriori means. Here, we take a statement $S$ to be conclusively verifiable if there exists a set of statements that produce $S$. 
+
+Let's first outline the problems with strong verification. Any universal, sweeping quantification of the form "all X satisfies property P" cannot be established with true certainty by any finite set of observations. Similarly, conclusively falsifiable statements of the form "there exists an X with property P" cannot be established by a finite set of observations as these statements are merely a negation of the former. 
+
+These are synthetic statements that seem truth-apt but not empirically verifiable - e.g. "there was a man living in the ancient civilisation that gave rise to the Sanxingdui archaeological site who died on Jan 1st, 1400 B.C.".
+
+The most damning example of this objection is that the verification principle is a self-defeating argument. The statement is synthetic but claims that "all truth-apt synthetic propositions are empirically verifiable", suggesting that it is a universal quantification and cannot be established by any finite set of empirical observations. So is the verification principle not truth-apt?
+
+### Cultural relativism vs emotivism
+
+I would like to conclude by noting some oft-conflated similarities between cultural relativism<sup id="fnref-1"><a href="#fn-4" className="hover:underline">1</a></sup> and emotivism. At first glance, both perspectives do agree that a moral statement like "theft is wrong" has no definitive answer; the cultural relativist may belief that theft is wrong in some scenarios, and not wrong in others. 
+
+The difference is that if we restrict ourselves to certain societal scenarios or purviews, cultural relativists do tend to believe in a form of objective moral truth albeit said moral truth not being absolute qua moral realists. The statement "theft is wrong" holds true only within the boundaries of certain cultural settings (but not in others). While cultural relativists stand by the non-absolute nature of this moral judgment, it is an attempted description of a relativistic truth. Emotivists, evidently, do not believe this.
+
+
+
+
+<div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full mt-8"></div>
+
+
+
+<div className="text-sm  mt-6 text-left">
+            <h4 className="font-medium">Footnotes</h4>
+            <ol className="list-decimal list-inside space-y-2 mt-2">
+              <li id="fn-4">Cultural relativism is the principle that moral judgments should be evaluated on the basis of one's own cultural beliefs rather than judged on the basis of other cultures, or a "universal set of beliefs".  </li>
+            </ol>
+          </div>
+        </div>
 
 
 
