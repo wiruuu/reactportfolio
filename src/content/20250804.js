@@ -1,5 +1,7 @@
 export const content = `
-Before I begin, I would like to preface by claiming that this is not a complete encapsulation of the upshots and objections pertaining to moral non-cognitivsm and emotivism, nor do I make clear-cut verdicts on the types of cognitivism and non-cognitivism. These are just some of my thoughts on the matter.
+Before I begin, I would like to preface by claiming that this is not a complete encapsulation of the upshots and objections pertaining to moral non-cognitivsm and emotivism, nor do I make clear-cut verdicts or develop positions on whether the variants of cognitivism and non-cognitivism are tenable. These are just some of my thoughts on the matter.
+
+The emotivist perspective discussed here is Ayer's, not Stevenson's, emotivism.
 
 ### Introduction
 
@@ -77,15 +79,28 @@ Emotivism is perhaps not the most tenable variant of non-cognitivism, but certai
 
 A. J. Ayer, in his *The Emotive Theory of Ethics*, uses this following example to elucidate the emotivist theory. If I said "Stealing money is wrong", the upshots of my utterance is equivalent to saying "Stealing money!!!" with the exclamation marks suggesting immense disapproval. Value judgments like "stealing money is bad" do not truly exist independently of our emotions.
 
-Ayer's argument roughly proceeds as follows. The first few steps proceeds similarly to the non-cognitivist argument, but implements what Ayer would call the *verification principle*.
+Ayer's argument roughly proceeds as follows. We first proceed similarly to the non-cognitivist argument, implementing what Ayer would call the *verification principle*.
 
-&nbsp;&nbsp;&nbsp;&nbsp; 1) He first assumes the verification principle as a baseline criteria for determining whether a statement can be factually meaningful. Ayer claims that a synthetic proposition is truth-apt only if it is empirically verifiable, meaning that there exist observations that we can employ to deduce said propositions as true or false.
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
 
-&nbsp;&nbsp;&nbsp;&nbsp; 2) Ethical propositions cannot be reduced to statements of empirical fact. We cannot reduce ethical terms to a pure utilitarian analysis because some actions that are generally approved of can be viewed as immoral. 
+  1: He first assumes the verification principle as a baseline criteria for determining whether a statement can be factually meaningful. Ayer claims that a synthetic proposition is truth-apt only if it is empirically verifiable, meaning that there exist observations that we can employ to deduce said propositions as true or false.
 
-Similarly, we cannot use Bentham's utilitarian calculus to maximise happiness and minimise pain as it is sometimes wrong to perform the action that elicits the greatest happiness. In fact - such a proposition may not be utilitarian in nature: see the distinction between direct and indirect utilitarianism. Therefore, it isn't self-contradictory to say that some pleasant things are not good; thus it cannot be said that the sentence "x is good" is equivalent to "x is pleasant".
+  2: Ethical propositions cannot be reduced to statements of empirical fact. We cannot reduce ethical terms to a pure utilitarian analysis because some actions that are generally approved of can be viewed as immoral. 
+</div>
+</div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; 3) Ethical statements are synthetic, not analytic. Therefore, as they are not tautological truths, ethical statements are not meaningful and are not truth-apt. 
+
+
+Similarly, we cannot use Bentham's utilitarian calculus to maximise happiness and minimise pain as it is sometimes wrong to perform the action that elicits the greatest happiness. Yet such a proposition may not be utilitarian in nature: see the distinction between direct and indirect utilitarianism. Therefore, it isn't self-contradictory to say that some pleasant things are not good; thus it cannot be said that the sentence "x is good" is equivalent to "x is pleasant".
+
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
+
+  3: Ethical statements are synthetic, not analytic. Therefore, as they are not tautological truths, ethical statements are not meaningful and are not truth-apt. 
+</div>
+</div>
+
 
 These three steps entail the non-cognitivist conclusion. But why emotivism? 
 
@@ -93,7 +108,12 @@ Ayer writes that one cannot test the validity of ethical concepts as they are "p
 
 This leads to the argument for emotivism:
 
-4) By expressing the moral sentiment, one merely expresses one's individual attitudes, or one's approval towards a certain matter. Note the difference between an assertion of disapproval and an expression of one. Assertions like "Stealing money is wrong" and expressions like "I disapprove of stealing money" are non-equivalent: the former, a non-propositional statement, merely expresses disapproval.
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
+
+  4: By expressing the moral sentiment, one merely expresses one's individual attitudes, or one's approval towards a certain matter. Note the difference between an assertion of disapproval and an expression of one. Assertions like "Stealing money is wrong" and expressions like "I disapprove of stealing money" are non-equivalent: the former, a non-propositional statement, merely expresses disapproval.
+</div>
+</div>
 
 Ethical statements not only express feelings but also arouse them. Any statement of the type "you should X" tacitly contains a command to perform X. Thus, the upshots of the emotivist perspective are twofold - the first upshot pertains to the feelings that they generally intend to elicit; the second pertains to the responses that they provoke. 
 
@@ -101,7 +121,11 @@ Ethical statements not only express feelings but also arouse them. Any statement
 
 A common-sensical way to object to the emotivist argument is to first determine whether the verification principle is tenable, for the entire argument is constructed upon said principle. Before deconstructing the verification principle, it is notable that the conclusion of emotivism from non-cognitivism is not a non-negotiable one.
 
-The most eminent objection is the identification of non-cognitivism with "boo-hurrahism". When I make a moral claim like "theft is wrong", I merely make a claim that I believe, under the purview of moral judgments that I hold, to represent my perception of the state of the world. Who says that I am booing an action?
+The most eminent objection is the identification of non-cognitivism with "boo-hurrahism". When I make a moral claim like "theft is wrong", I merely make a claim that I believe, under the purview of moral judgments that I hold, to represent my perception of the state of the world. Who says that I am booing an action? The link is not immediate. In our phenomenology of thought, we know that moral claims hold a belief about the world, and not just a mere expression. Why is my lived experience being dismissed?
+
+Additionally, our moral utterances need not hold a bearing towards our emotions. For example, a poor thief, or person who is inclined to thieve, may claim that it is (A) immoral to steal yet (B) harbour a desire to steal. There is a difference between having a feeling to steal (a proposition about lived experience) and holding a moral belief (a proposition about society). An immediate objection would be that (A) represents a positive statement, or a hurrah; (B) represents a boo. Thus, statements such as "I disapprove of this, but it's right (at least for me)" is not a contradiction per se, bu the product of conflicting moral judgments.
+
+This reduction of multi-faceted statements about our emotions to simple, primitive statements holds valid when there is no dialectical process that produce this litany of boo's and hurrah's. If we accept the emotivist claim, are we saying that all processes of moral dialectic are reducable to a series of statements of approval and disapproval? If we do, we immediately claim that factual statements are emotive in disguise even when they concern formal, factual disagreements. How do you explain the rationale behind people who change their mind about moral judgments through moral reason? 
 
 ### Variants of the verification principle
 
@@ -109,24 +133,50 @@ The *Sanxingdui （三星堆）*, a Chinese archaeological site excavated from t
 
 One counterargument is to claim *weak verification*, where a statement is meaningful if there is some conceivable empirical observation that substantiates the statement albeit not being conclusively verified by a posteriori means. Here, we take a statement $S$ to be conclusively verifiable if there exists a set of statements that produce $S$. 
 
-Let's first outline the problems with strong verification. Any universal, sweeping quantification of the form "all X satisfies property P" cannot be established with true certainty by any finite set of observations. Similarly, conclusively falsifiable statements of the form "there exists an X with property P" cannot be established by a finite set of observations as these statements are merely a negation of the former. 
+Ayer makes a clear distinction. He states that:
+
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
+
+A proposition is viable in the strong sense if, and only if, its truth could be conclusively established, but is viable in the weak sense if it is possible for experience to render it probable.
+</div>
+</div>
+
+Let's first outline the problems with strong verification. Any universal, sweeping quantification of the form "all $X$ satisfies property $P$" cannot be established with true certainty by any finite set of observations. Similarly, conclusively falsifiable statements of the form "there exists an $X$ with property $P$" cannot be established by a finite set of observations as these statements are merely a negation of the former. 
 
 These are synthetic statements that seem truth-apt but not empirically verifiable - e.g. "there was a man living in the ancient civilisation that gave rise to the Sanxingdui archaeological site who died on Jan 1st, 1400 B.C.".
 
-The most damning example of this objection is that the verification principle is a self-defeating argument. The statement is synthetic but claims that "all truth-apt synthetic propositions are empirically verifiable", suggesting that it is a universal quantification and cannot be established by any finite set of empirical observations. So is the verification principle not truth-apt?
+The most damning example of this objection is that the verification principle is a self-defeating argument. The statement is synthetic but claims that "all truth-apt synthetic propositions are empirically verifiable", suggesting that it is a universal quantification and cannot be established by any finite set of empirical observations. So is the verification principle not meaningful and not truth-apt?
 
-### Cultural relativism vs emotivism
+Ayer tries to circumvent these problems is to consider the weak verification principle. This creates more problems. Here, metaphysical claims are devoid of meaning under this principle, but scientific or empirically verifiable claims are meaningful. Religious statements are meaningless under the principle.
 
-I would like to conclude by noting some oft-conflated similarities between cultural relativism<sup id="fnref-1"><a href="#fn-4" className="hover:underline">1</a></sup> and emotivism. At first glance, both perspectives do agree that a moral statement like "theft is wrong" has no definitive answer; the cultural relativist may belief that theft is wrong in some scenarios, and not wrong in others. 
+Many meaningful statements in the human sciences involve statements that are not empirically verifiable. In contrast, many meaningless statements could be shown to be meaningful by being linked to a verifiable observation. Any meaningless statement $s$ could be linked to a verifiable observation and thus gain meaning. To illustrate this, consider three empirically and unrelated observable statements $p, q, r$, which do not entail any of the statements, and a meaningless statement $s$. Consider the statement 
+
+$$
+\\begin{aligned}
+  \\mathbf{S}: (\\neg p \\land q) \\vee (r \\land \\neg s),
+\\end{aligned}
+$$
+
+which is a directly verifiable sentence. Note that $p$ is empirically verifiable. When applied in conjunction with $\\mathbf{S}$, it is clear that $r$ holds as $r \\land \\neg s$ holds. 
+
+Suppose first that $q$ is not entailed by $\\mathbf{S}$. We know that $q$ is entailed by the conjunction of $s$ and $\\mathbf{S}$ since $s$ disallows $r \\land \\neg s$. Since $\\mathbf{S}$ is directly verifiable, $s$ is said to be *indirectly verifiable.*
+
+Suppose now that $q$ is entailed by $\\mathbf{S}$. Then, it must be entailed by $r \\land \\neg s$. If $r \\land \\neg s$ entails $q$, then the conjunction of $r$ with $\\neg s$ entails $q$. But $r$ does not entail itself; thus $\\neg s$ and $s$ must be indirectly verifiable. Thus we have injected meaning, through this contrivance, to a meaningless statement.
+
+### Cultural relativism vs emotivism; accepting emotivism's flaws
+
+I would like to conclude by doing two things. First, I'll note some oft-conflated similarities between cultural relativism<sup id="fnref-1"><a href="#fn-4" className="hover:underline">1</a></sup> and emotivism. I'll also shed some light on accepting Ayer's emotivism albeit its flaws.
+
+At first glance, both perspectives do agree that a moral statement like "theft is wrong" has no definitive answer; the cultural relativist may belief that theft is wrong in some scenarios, and not wrong in others. 
 
 The difference is that if we restrict ourselves to certain societal scenarios or purviews, cultural relativists do tend to believe in a form of objective moral truth albeit said moral truth not being absolute qua moral realists. The statement "theft is wrong" holds true only within the boundaries of certain cultural settings (but not in others). While cultural relativists stand by the non-absolute nature of this moral judgment, it is an attempted description of a relativistic truth. Emotivists, evidently, do not believe this.
 
+I view the logical framework behind emotivism as a psychological portrayal of how we make moral judgments - a motivational theory. A change in someone's moral beliefs has a bearing on their motivations not attainable with descriptive beliefs. Emotions have a motivational force independent of conscious thought or pre-existing beliefs. I won't go too much into this, but this parallels the Humean perspective that emotions have a motivating force that controls the strength and direction existing desires, consequentially acting as a force in guiding behaviour.
 
-
+Ayer's deductive process which leads to emotivism is laden with error. His strong and weak verification principles arrive at a means to define *meaning* in order to claim that certain categories of propositions are meaningless, but fall short when trying to make sense of the vagueness of metaphysical concepts. Ayer's emotivism can be best taken as a Humean motivational theory.
 
 <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full mt-8"></div>
-
-
 
 <div className="text-sm  mt-6 text-left">
             <h4 className="font-medium">Footnotes</h4>
