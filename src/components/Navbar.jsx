@@ -49,11 +49,11 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
 
     const myConfetti = confetti.create(myCanvas, { resize: true, useWorker: true });
 
-    myConfetti({ particleCount: 150, spread: 70, origin: { y: 0.9 } });
+    myConfetti({ particleCount: 150, spread: 70, startVelocity: 60, origin: { y: 0.9 } });
 
     setTimeout(() => {
-      myConfetti({ particleCount: 80, angle: 60, spread: 55, origin: { x: 0, y:0.9 } });
-      myConfetti({ particleCount: 80, angle: 120, spread: 55, origin: { x: 1, y:0.9 } });
+      myConfetti({ particleCount: 80, angle: 60, spread: 55, startVelocity: 60, origin: { x: 0, y:0.9 } });
+      myConfetti({ particleCount: 80, angle: 120, spread: 55, startVelocity: 60, origin: { x: 1, y:0.9 } });
     }, 250);
 
     setTimeout(() => {
