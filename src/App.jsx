@@ -29,10 +29,9 @@ function App() {
     <div className="min-h-screen flex flex-col ">
       <Toaster /> 
       <BrowserRouter>
-      {/* Stars behind everything */}
       <StarBackground enabled={starsEnabled} />
 
-      {/* Navbar with toggle */}
+
       <Navbar starsEnabled={starsEnabled} setStarsEnabled={setStarsEnabled} />
         <main className="flex-1">
           <Routes>

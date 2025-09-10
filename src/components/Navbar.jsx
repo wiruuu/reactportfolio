@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { Menu, X, Star } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Star, PartyPopper } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
+import confetti from "canvas-confetti";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -20,7 +21,6 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
 
-    // detect dark mode
     const observer = new MutationObserver(() => {
       setIsDark(document.documentElement.classList.contains("dark"));
     });
@@ -30,22 +30,36 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     });
     setIsDark(document.documentElement.classList.contains("dark"));
 
-    // load saved star state
-    const savedStars = localStorage.getItem("starsEnabled");
-    if (savedStars !== null) {
-      setStarsEnabled(savedStars === "true");
-    }
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       observer.disconnect();
     };
-  }, [setStarsEnabled]);
+  }, []);
 
-  // persist star toggle
-  useEffect(() => {
-    localStorage.setItem("starsEnabled", starsEnabled);
-  }, [starsEnabled]);
+  const launchConfetti = () => {
+    const myCanvas = document.createElement("canvas");
+    myCanvas.style.position = "fixed";
+    myCanvas.style.top = "0";
+    myCanvas.style.left = "0";
+    myCanvas.style.width = "100%";
+    myCanvas.style.height = "100%";
+    myCanvas.style.pointerEvents = "none";
+    myCanvas.style.zIndex = "9999";
+    document.body.appendChild(myCanvas);
+
+    const myConfetti = confetti.create(myCanvas, { resize: true, useWorker: true });
+
+    myConfetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+
+    setTimeout(() => {
+      myConfetti({ particleCount: 80, angle: 60, spread: 55, origin: { x: 0 } });
+      myConfetti({ particleCount: 80, angle: 120, spread: 55, origin: { x: 1 } });
+    }, 250);
+
+    setTimeout(() => {
+      document.body.removeChild(myCanvas);
+    }, 3000);
+  };
 
   return (
     <nav
@@ -55,17 +69,19 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
       )}
     >
       <div className="container flex items-center justify-between">
-        {/* logo */}
+        {/* Logo */}
         <a className="text-xl font-bold text-primary flex items-center gap-2" href="/">
           <span className="relative z-10">
             <span className="text-glow text-foreground">wiru</span>
           </span>
           <div className="flex items-center justify-center px-2 py-0.5 rounded-lg bg-foreground border border-background/20">
-            <span className="text-glow text-background text-lg font-bold relative top-[1px]">writes</span>
+            <span className="text-glow text-background text-lg font-bold relative top-[1px]">
+              writes
+            </span>
           </div>
-        </a>  
+        </a>
 
-        {/* desktop nav */}
+        {/* Desktop nav */}
         <div className="hidden md:flex w-full justify-between items-center">
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             {navItems.map((item) => (
@@ -78,39 +94,69 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
               </a>
             ))}
           </div>
-
           <div className="ml-auto flex items-center gap-4">
-            {/* star toggle only in dark mode */}
             {isDark && (
               <button
                 onClick={() => setStarsEnabled((prev) => !prev)}
                 className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
               >
-                {starsEnabled ? "Hide" : "Show"}
-                <Star className="h-4 w-4" />
+                {starsEnabled ? "Hide" : "Show"} <Star className="h-4 w-4" />
               </button>
             )}
+            <button
+              onClick={launchConfetti}
+              className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
+            >
+              <PartyPopper className="h-5 w-5" />
+            </button>
             <ThemeToggle />
           </div>
         </div>
 
-        {/* mobile menu */}
-        <div className="flex md:hidden items-center gap-3">
+        {/* Mobile nav controls (right aligned) */}
+        <div className="flex md:hidden items-center gap-3 ml-auto">
           {isDark && (
             <button
               onClick={() => setStarsEnabled((prev) => !prev)}
-              className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
+              className="px-2 py-1 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
             >
-              {starsEnabled ? "Hide" : "Show"}
-              <Star className="h-4 w-4" />
+              {starsEnabled ? "Hide" : "Show"} <Star className="h-4 w-4" />
             </button>
           )}
+          <button
+            onClick={launchConfetti}
+            className="p-2 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"
+          >
+            <PartyPopper className="h-5 w-5" />
+          </button>
+          <ThemeToggle />
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="p-2 text-foreground z-50"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+      </div>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={cn(
+          "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-end justify-start p-8 transition-all duration-300 md:hidden",
+          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+      >
+        <div className="flex flex-col space-y-8 text-xl items-end">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.name}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
