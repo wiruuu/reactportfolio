@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, WholeWord } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, WholeWord, Scroll } from "lucide-react";
 import { blogPosts } from "../data/blogPosts";
 import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import "katex/dist/katex.min.css";
 import remarkGfm from "remark-gfm";
 import { Fragment } from "react";
+import { ScrollTop } from "../components/ScrollTop";
 
 export const BlogPostPage = () => {
   const { slug } = useParams();
@@ -32,7 +33,7 @@ export const BlogPostPage = () => {
   }
 
   return (
-    <article className="py-20 px-4 bg-background min-h-screen">
+    <article className="pt-20 pb-10 px-4 min-h-screen">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -64,7 +65,6 @@ export const BlogPostPage = () => {
               </Link>
             </div>
           </div>
-
         </div>
 
         {/* Content */}
@@ -85,6 +85,7 @@ export const BlogPostPage = () => {
           </ReactMarkdown>
         </div>
       </div>
+      <ScrollTop />
     </article>
   );
 };

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from "@/components/ui/toaster";
 import { Navbar } from "@/components/Navbar";
+import { useState, useEffect } from 'react';
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/pages/HeroSection";
@@ -14,13 +15,25 @@ import { Labubu } from './components/Labubu';
 import { StarBackground } from './components/StarBackground';
 
 
+
 function App() {
+  const [starsEnabled, setStarsEnabled] = useState(() => {
+    const saved = localStorage.getItem("starsEnabled");
+    return saved === null ? true : saved === "true";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("starsEnabled", starsEnabled);
+  }, [starsEnabled]);
   return (
     <div className="min-h-screen flex flex-col ">
       <Toaster /> 
-      <Navbar />
-      <StarBackground />
       <BrowserRouter>
+      {/* Stars behind everything */}
+      <StarBackground enabled={starsEnabled} />
+
+      {/* Navbar with toggle */}
+      <Navbar starsEnabled={starsEnabled} setStarsEnabled={setStarsEnabled} />
         <main className="flex-1">
           <Routes>
             <Route index element={<HeroSection />} />

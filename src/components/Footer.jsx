@@ -7,13 +7,6 @@ export const Footer = () => {
         <p className="text-sm text-muted-foreground text-center sm:text-left">
           &copy; {new Date().getFullYear()} Ethan Choi. All rights reserved + all opinions are my own. Website made using React + Vite.
         </p>
-
-        <a 
-          href="" 
-          className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors flex-shrink-0"
-        >
-          <ArrowUp size={20} />
-        </a>
       </div>
     </footer>
   )
