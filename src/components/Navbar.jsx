@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Star, PartyPopper } from "lucide-react";
+import { Menu, X, Star, PartyPopper, Check } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 import confetti from "canvas-confetti";
@@ -52,8 +52,8 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     myConfetti({ particleCount: 150, spread: 70, startVelocity: 60, origin: { y: 0.9 } });
 
     setTimeout(() => {
-      myConfetti({ particleCount: 80, angle: 60, spread: 55, startVelocity: 60, origin: { x: 0, y:0.9 } });
-      myConfetti({ particleCount: 80, angle: 120, spread: 55, startVelocity: 60, origin: { x: 1, y:0.9 } });
+      myConfetti({ particleCount: 80, angle: 60, spread: 55, startVelocity: 60, origin: { x: 0, y: 0.9 } });
+      myConfetti({ particleCount: 80, angle: 120, spread: 55, startVelocity: 60, origin: { x: 1, y: 0.9 } });
     }, 250);
 
     setTimeout(() => {
@@ -65,12 +65,12 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled && !isMenuOpen ? "py-3 bg-background/80" : "py-5"
+        isScrolled && !isMenuOpen ? "bg-background/80" : "py-2 bg-background/80"
       )}
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a className="text-xl font-bold text-primary flex items-center gap-2" href="/">
+        <a className="text-xl font-bold text-primary flex items-center gap-2 py-3" href="/">
           <span className="relative z-10">
             <span className="text-glow text-foreground">wiru</span>
           </span>
@@ -82,7 +82,7 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex w-full justify-between items-center">
+        <div className="hidden md:flex w-full justify-between items-center bg-background/80">
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             {navItems.map((item) => (
               <a
@@ -98,9 +98,9 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
             {isDark && (
               <button
                 onClick={() => setStarsEnabled((prev) => !prev)}
-                className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
+                className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
               >
-                {starsEnabled ? "Hide" : "Show"} <Star className="h-4 w-4" />
+                {starsEnabled ? <X /> : <Check />} <Star className="h-4 w-4" />
               </button>
             )}
             <button
@@ -114,51 +114,56 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
         </div>
 
         {/* Mobile nav controls (right aligned) */}
-        <div className="flex md:hidden items-center gap-3 ml-auto">
+        {/* Navbar Right Controls */}
+        <div className="ml-auto flex items-center gap-4 relative md:hidden">
+          {/* Mobile toggle button (aligned right) */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 rounded-md text-foreground hover:text-primary"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Full-width dropdown */}
+          <div
+  className={cn(
+    "fixed top-[64px] left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
+    isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+  )}
+>
+  {navItems.map((item) => (
+    <a
+      key={item.name}
+      href={item.href}
+      className="text-body hover:text-primary transition-colors duration-300"
+      onClick={() => setIsMenuOpen(false)}
+    >
+      {item.name}
+    </a>
+  ))}
+</div>
+
+
+          {/* Other buttons (right side, always visible) */}
           {isDark && (
             <button
               onClick={() => setStarsEnabled((prev) => !prev)}
-              className="px-2 py-1 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
+              className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
             >
-              {starsEnabled ? "Hide" : "Show"} <Star className="h-4 w-4" />
+              {starsEnabled ? <X /> : <Check />} <Star className="h-4 w-4" />
             </button>
           )}
           <button
             onClick={launchConfetti}
-            className="p-2 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"
+            className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
           >
             <PartyPopper className="h-5 w-5" />
           </button>
           <ThemeToggle />
-          <button
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="p-2 text-foreground z-50"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
+
       </div>
 
-      {/* Mobile menu overlay */}
-      <div
-        className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-end justify-start p-8 transition-all duration-300 md:hidden",
-          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        )}
-      >
-        <div className="flex flex-col space-y-8 text-xl items-end">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-      </div>
     </nav>
   );
 };

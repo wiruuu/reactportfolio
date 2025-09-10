@@ -5,7 +5,7 @@ const books = [
     id: 1,
     title: "A Mathematical Economist's Toolkit",
     description: "Linear algebra, multivariable calculus, constrained optimisation, difference and differential equations for economists",
-    image: "/projects/amet.png",
+    image: "/projects/amet2.png",
     tags: ["Mathematical economics"],
     demoUrl: "https://drive.google.com/drive/folders/1qqOE1Re6u2VhVkZisQbBp9xekysrOHtd?usp=drive_link",
     githubUrl: "https://github.com/wiruuu/AMET",
