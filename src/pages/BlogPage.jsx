@@ -96,7 +96,7 @@ export const BlogPage = () => {
           </h1>
         </div>
         <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
-
+        <p className="text-center my-6 text-body">Click <a href="/whyiwrite" className="underline hover:text-primary">here</a> to know why I write and what I write about.</p>
         {/* Search */}
         {browseMode === "search" ? (
           <div className="flex flex-col md:flex-row justify-center items-center mb-6 gap-4 w-full">

@@ -11,6 +11,7 @@ import { AboutSection } from "@/pages/AboutSection";
 import { BlogPage } from "@/pages/BlogPage";
 import { BlogPostPage } from "@/pages/BlogPostPage";
 import { NotFound } from "@/pages/NotFound";
+import { WhyIWrite } from "@/pages/WhyIWrite";
 import { Labubu } from './components/Labubu';
 import { StarBackground } from './components/StarBackground';
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/whyiwrite" element={<WhyIWrite />} />
           </Routes>
         </main>
       </BrowserRouter>

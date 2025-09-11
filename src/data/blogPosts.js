@@ -2,11 +2,13 @@ import { content as blog1 } from '../content/20250731';
 import { content as blog2 } from '../content/20250804';
 import { content as blog3 } from '../content/20250812';
 import { content as blog4 } from '../content/20250815';
-import { content as blog5 } from '../content/20250830';
-import { content as blog6 } from '../content/20250901';
-import { content as blog7 } from '../content/20250905';
-import { content as blog8 } from '../content/20250911';
-import { Flower2, Pi, Gem, Infinity, Leaf} from 'lucide-react';
+import { content as blog5 } from '../content/20250825';
+import { content as blog6 } from '../content/20250830';
+import { content as blog7 } from '../content/20250901';
+import { content as blog8 } from '../content/20250905';
+import { content as blog9 } from '../content/20250911';
+import { content as blog10 } from '../content/20250913';
+import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield} from 'lucide-react';
 import { ThumbsUp } from 'lucide-react';
 import { ArrowLeftRight } from 'lucide-react';
 
@@ -62,44 +64,76 @@ export const blogPosts = [
   },
   {
     id: 5,
+    title: "A contemporary glance at incentive pay",
+    excerpt: "Piece rates in the modern labour market",
+    content: blog5,
+    date: "2025-08-25",
+    category: "Economics",
+    slug: "incentive-pay",
+    image: SquareActivity
+  },
+  {
+    id: 6,
     title: "Pricing exotic options (1)",
     excerpt: "From vanilla to exotic",
-    content: blog5,
+    content: blog6,
     date: "2025-08-30",
     category: "Quantitative finance",
     slug: "exotic-options-1",
     image: Flower2
   },
+  
   {
-    id: 6,
+    id: 7,
     title: "Infinite sums involving hyperbolic functions",
     excerpt: "Special functions arise again",
-    content: blog6,
+    content: blog7,
     date: "2025-09-01",
     category: "Mathematics",
     slug: "infinite-sum-hyperbolic",
     image: Infinity
   },
   {
-    id: 7,
+    id: 8,
     title: "Musings on the state of nature",
     excerpt: "A historical glance at hypothetical primitive society",
-    content: blog7,
+    content: blog8,
     date: "2025-09-05",
     category: "Philosophy",
     slug: "musings-state-of-nature",
     image: Leaf
   },
   {
-    id: 8,
-    title: "Celebrating death and moral collapse",
-    excerpt: "Is it acceptable to celerbrate a person's death?",
-    content: blog8,
+    id: 9,
+    title: "Celebrating death, and moral collapse",
+    excerpt: "Is it acceptable to celebrate a person's death?",
+    content: blog9,
     date: "2025-09-11",
     category: "Philosophy",
     slug: "celebrating-death",
-    image: Leaf
+    image: Skull
   },
+  {
+    id: 10,
+    title: "Soup kitchens and student initiative",
+    excerpt: "Why are high schoolers doing so much?",
+    content: blog10,
+    date: "2025-09-12",
+    category: "Pedagogy",
+    slug: "student-initiative",
+    image: BookOpen
+  },
+  {
+    id: 11,
+    title: "Infinite resignation and infinite sacrifice",
+    excerpt: "Regarding Kierkegaard's Fear and Trembling",
+    content: blog11,
+    date: "2025-09-16",
+    category: "Pedagogy",
+    slug: "infinite-resignation",
+    image: Shield
+  },
+  
 ].map((post) => {
   const wordCount = getWordCount(post.content);
   return {
