@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 py-8 md:py-12 "
+      className="relative min-h-screen flex items-center justify-center px-4 py-8 md:py-12"
     >
       <div className="container max-w-2xl mx-auto relative z-10">
         <Star className="absolute -top-10 -left-0 w-10 h-10 text-primary/50 fill-primary/20 animate-pulse z-10 rotate-40" />

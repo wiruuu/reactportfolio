@@ -4,7 +4,9 @@ import { content as blog3 } from '../content/20250812';
 import { content as blog4 } from '../content/20250815';
 import { content as blog5 } from '../content/20250830';
 import { content as blog6 } from '../content/20250901';
-import { Pi } from 'lucide-react';
+import { content as blog7 } from '../content/20250905';
+import { content as blog8 } from '../content/20250911';
+import { Flower2, Pi, Gem, Infinity, Leaf} from 'lucide-react';
 import { ThumbsUp } from 'lucide-react';
 import { ArrowLeftRight } from 'lucide-react';
 
@@ -41,43 +43,63 @@ export const blogPosts = [
   {
     id: 3,
     title: "Kishore Mahbubani and political contrarianism",
-    excerpt: "What is Singapore up to?",
+    excerpt: "American primacy and the new world order",
     content: blog3,
     date: "2025-08-12",
     category: "Politics",
     slug: "kishore-mahbubani",
     image: ArrowLeftRight
   },
-  // {
-  //   id: 4,
-  //   title: "Blog 4",
-  //   excerpt: "4",
-  //   content: blog4,
-  //   date: "2025-08-15",
-  //   category: "Quantitative Finance",
-  //   slug: "building-scalable-apis-nodejs",
-  //   image: "🚀"
-  // },
-  // {
-  //   id: 5,
-  //   title: "Blog5",
-  //   excerpt: "5",
-  //   content: blog5,
-  //   date: "2025-08-30",
-  //   category: "Algo Trading",
-  //   slug: "introduction-machine-learning",
-  //   image: "🤖"
-  // },
-  // {
-  //   id: 6,
-  //   title: "Blog6",
-  //   excerpt: "6",
-  //   content: blog6,
-  //   date: "2025-09-01",
-  //   category: "Machine Learning",
-  //   slug: "web-performance-optimization",
-  //   image: "⚡"
-  // }
+  {
+    id: 4,
+    title: "Arguments against same-sex marriage",
+    excerpt: "How sound are they?",
+    content: blog4,
+    date: "2025-08-15",
+    category: "Politics",
+    slug: "arguments-same-sex-marriage",
+    image: Gem
+  },
+  {
+    id: 5,
+    title: "Pricing exotic options (1)",
+    excerpt: "From vanilla to exotic",
+    content: blog5,
+    date: "2025-08-30",
+    category: "Quantitative finance",
+    slug: "exotic-options-1",
+    image: Flower2
+  },
+  {
+    id: 6,
+    title: "Infinite sums involving hyperbolic functions",
+    excerpt: "Special functions arise again",
+    content: blog6,
+    date: "2025-09-01",
+    category: "Mathematics",
+    slug: "infinite-sum-hyperbolic",
+    image: Infinity
+  },
+  {
+    id: 7,
+    title: "Musings on the state of nature",
+    excerpt: "A historical glance at hypothetical primitive society",
+    content: blog7,
+    date: "2025-09-05",
+    category: "Philosophy",
+    slug: "musings-state-of-nature",
+    image: Leaf
+  },
+  {
+    id: 8,
+    title: "Celebrating death and moral collapse",
+    excerpt: "Is it acceptable to celerbrate a person's death?",
+    content: blog8,
+    date: "2025-09-11",
+    category: "Philosophy",
+    slug: "celebrating-death",
+    image: Leaf
+  },
 ].map((post) => {
   const wordCount = getWordCount(post.content);
   return {

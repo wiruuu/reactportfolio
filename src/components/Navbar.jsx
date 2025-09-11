@@ -65,12 +65,12 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled && !isMenuOpen ? "bg-background/80" : "py-2 bg-background/80"
+        isScrolled && !isMenuOpen ? "bg-background" : "py-1 bg-background"
       )}
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a className="text-xl font-bold text-primary flex items-center gap-2 py-3" href="/">
+        <a className="text-xl font-bold text-primary flex items-center gap-2 pt-6 pb-3" href="/">
           <span className="relative z-10">
             <span className="text-glow text-foreground">wiru</span>
           </span>
@@ -126,22 +126,22 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
 
           {/* Full-width dropdown */}
           <div
-  className={cn(
-    "fixed top-[64px] left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
-    isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
-  )}
->
-  {navItems.map((item) => (
-    <a
-      key={item.name}
-      href={item.href}
-      className="text-body hover:text-primary transition-colors duration-300"
-      onClick={() => setIsMenuOpen(false)}
-    >
-      {item.name}
-    </a>
-  ))}
-</div>
+            className={cn(
+              "fixed top-[64px] left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
+              isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+            )}
+          >
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-body hover:text-primary transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
 
 
           {/* Other buttons (right side, always visible) */}

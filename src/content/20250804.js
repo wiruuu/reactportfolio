@@ -9,7 +9,7 @@ The non-cognitivist standpoint regarding moral principles is one that claims tha
 
 Emotivism is a variety of non-cognitivism. Not only are moral statements not truth-apt, but they function primarily to express emotions. If I say "theft is wrong", I am simply voicing my emotional disapproval for theft as someone who says "theft is right" voices their emotional approval for it. The statement itself cannot demonstrate that theft is wrong. **Ethical statements do not outline truths, but are expressions of emotion.** 
 
-Furthermore, I believe that most moral terms have the dual objective of endowing itself with its descriptive predicate and achieving the emotivist objective. For example, the statement "he is ruthless" predicates itself with the definition of being ruthless. In fact, I can't think of a counterexample where a moral predicate does not intrinsically contain a descriptive predicate. The emotivist predicate outlines an assumption containing a basket of moral values - some being non-negotiables and some being arguable, which are then used to conclude the moral statement. When I say "theft is wrong", I am in other words claiming that the purview of core moral judgments or universal values that I uphold lead, by a priori means, to this conclusion. 
+Furthermore, I believe that if we accept the emotivist argument, we must also accept that most moral terms have the dual objective of endowing itself with its descriptive predicate and achieving the emotivist objective. For example, the statement "he is ruthless" predicates itself with the definition of being ruthless. In fact, I can't think of a counterexample where under emotivism, a moral predicate does not intrinsically contain a descriptive predicate. The emotivist predicate outlines an assumption containing a basket of moral values - some being non-negotiables and some being arguable, which are then used to conclude the moral statement. When I say "theft is wrong", I am in other words claiming that the purview of core moral judgments or universal values that I uphold lead, by a priori means, to this conclusion. <sup id="fnref-1"><a href="#fn-1" className="hover:underline">1</a></sup>
 
 Before we continue, let's distinguish between types of statements. Consider these three statements.
 
@@ -24,7 +24,7 @@ Before we continue, let's distinguish between types of statements. Consider thes
 </div>
 </div>
 
-  
+These three statements are distinct in nature. <sup id="fnref-1"><a href="#fn-1" className="hover:underline">2</a></sup>
 
 A) is an analytic statement, meaning that it is declarative and is true by definition. B) is a synthetic statement, meaning that it is a truth-apt statement as its truthfulness is dependent on the state of the world and is not intrinsically defined. These assertions can be confirmed or refuted by empirical observations. C) is a moral-judgment statement, meaning that C) is synonymous with the statement "Boo to theft!"
 
@@ -34,7 +34,7 @@ Non-cognitivists believe that only the first two statements are truth-apt, while
 
 Before we defend the emotivist argument and subsequently dismantle it, I'd like to spend some time exploring some  defences and upshots of the cognitivst standpoint. More specifically, I would like to explore the cognitivist non-naturalist standpoint, which claims that moral statements are truth-apt statements, and are descriptive and meaningful. However, these descriptions are distinct from natural properties and cannot be reduced to any natural properties. The former is the cognitivist standpoint, while the latter is the non-naturalist standpoint. Here I first discuss non-naturalism before cognitivism.
 
-Let's first consider the following line of reasoning (a modus tollens). Here, properties like being pleasurable or being happy are natural properties, while properties like being good or being right are moral properties.  
+Let's first consider the following line of reasoning (a modus tollens) <sup id="fnref-2"><a href="#fn-2" className="hover:underline">2</a></sup>. Here, properties like being pleasurable or being happy are natural properties, while properties like being good or being right are moral properties.  
 
 <div className="border-l-4 border-primary/70 pl-4">
 <div className="text-md">
@@ -71,7 +71,7 @@ In fact, Moore's identity questions cannot be viewed as closed even to competent
 
 Lastly, one can also appeal for non-cognitivsm by appealing to what we call *Hume's Law*. Also known as the is-ought problem, it is the premise that one cannot directly use a priori means to derive a prescriptive statement from a descriptive statement without introducing additional moral premises. Thus, non-moral descriptive statements cannot produce a moral conclusion. Non-cognitivists use this by claiming that moral judgments express the proposal of some function; descriptive statements do not possess this quality. Descriptive statements must ipso facto have some implicit imperatival component in order to entail the moral conclusion. 
 
-There are many varieties of non-cognitivism. The prescriptivist viewpoint claims that moral judgments are commands; a statement like "stealing is wrong" is equivalent to "do not steal". Since moral judgments are imperatives, there can be no such thing as moral error. The quasi-realist school of thought emphasises why we are entitled to act as if moral judgments are truth-apt when they are not truth-apt. Personally I think that quasi-realism does not attack the problem of truth-aptness but rather act as a motivational theory for how we project our attitudes and values onto the world as if they were real properties; under the pretense that ethical statements are not truth-apt our projections are effectuated in a way that makes them truth-apt. My disapproval of the quasi-realist perspective largely follows the Frege-Geach problem, which is also used as a counterargument to emotivism.
+There are many varieties of non-cognitivism. The prescriptivist viewpoint claims that moral judgments are commands; a statement like "stealing is wrong" is equivalent to "do not steal". Since moral judgments are imperatives, there can be no such thing as moral error. The quasi-realist school of thought emphasises why we are entitled to act as if moral judgments are truth-apt when they are not truth-apt. Personally I think that quasi-realism does not attack the problem of truth-aptness but rather act as a motivational theory for how we project our attitudes and values onto the world as if they were real properties; under the pretense that ethical statements are not truth-apt our projections are effectuated in a way that makes them truth-apt. My disapproval of the quasi-realist perspective largely follows the Frege-Geach problem <sup id="fnref-3"><a href="#fn-3" className="hover:underline">3</a></sup>, which is also used as a counterargument to emotivism.
 
 Emotivism is perhaps not the most tenable variant of non-cognitivism, but certainly opens itself up to much discourse.
 
@@ -125,7 +125,7 @@ The most eminent objection is the identification of non-cognitivism with "boo-hu
 
 Additionally, our moral utterances need not hold a bearing towards our emotions. For example, a poor thief, or person who is inclined to thieve, may claim that it is (A) immoral to steal yet (B) harbour a desire to steal. There is a difference between having a feeling to steal (a proposition about lived experience) and holding a moral belief (a proposition about society). An immediate objection would be that (A) represents a positive statement, or a hurrah; (B) represents a boo. Thus, statements such as "I disapprove of this, but it's right (at least for me)" is not a contradiction per se, bu the product of conflicting moral judgments.
 
-This reduction of multi-faceted statements about our emotions to simple, primitive statements holds valid when there is no dialectical process that produce this litany of boo's and hurrah's. If we accept the emotivist claim, are we saying that all processes of moral dialectic are reducable to a series of statements of approval and disapproval? If we do, we immediately claim that factual statements are emotive in disguise even when they concern formal, factual disagreements. How do you explain the rationale behind people who change their mind about moral judgments through moral reason? 
+This reduction of multi-faceted statements about our emotions to simple, primitive statements holds valid when there is no dialectical process that produce this litany of boo's and hurrah's. If we accept the emotivist claim, are we saying that all processes of moral dialectic or discourse are reducable to a series of statements of approval and disapproval? <sup id="fnref-3"><a href="#fn-3" className="hover:underline">3</a></sup> If we do, we immediately claim that factual statements are emotive in disguise even when they concern formal, factual disagreements. How do you explain the rationale behind people who change their mind about moral judgments through moral reason? 
 
 ### Variants of the verification principle
 
@@ -166,7 +166,7 @@ Suppose now that $q$ is entailed by $\\mathbf{S}$. Then, it must be entailed by 
 
 ### Cultural relativism vs emotivism; accepting emotivism's flaws
 
-I would like to conclude by doing two things. First, I'll note some oft-conflated similarities between cultural relativism<sup id="fnref-1"><a href="#fn-4" className="hover:underline">1</a></sup> and emotivism. I'll also shed some light on accepting Ayer's emotivism albeit its flaws.
+I would like to conclude by doing two things. First, I'll note some oft-conflated similarities between cultural relativism<sup id="fnref-3"><a href="#fn-3" className="hover:underline">3</a></sup> and emotivism. I'll also shed some light on accepting Ayer's emotivism albeit its flaws.
 
 At first glance, both perspectives do agree that a moral statement like "theft is wrong" has no definitive answer; the cultural relativist may belief that theft is wrong in some scenarios, and not wrong in others. 
 
@@ -174,14 +174,19 @@ The difference is that if we restrict ourselves to certain societal scenarios or
 
 I view the logical framework behind emotivism as a psychological portrayal of how we make moral judgments - a motivational theory. A change in someone's moral beliefs has a bearing on their motivations not attainable with descriptive beliefs. Emotions have a motivational force independent of conscious thought or pre-existing beliefs. I won't go too much into this, but this parallels the Humean perspective that emotions have a motivating force that controls the strength and direction existing desires, consequentially acting as a force in guiding behaviour.
 
-Ayer's deductive process which leads to emotivism is laden with error. His strong and weak verification principles arrive at a means to define *meaning* in order to claim that certain categories of propositions are meaningless, but fall short when trying to make sense of the vagueness of metaphysical concepts. Ayer's emotivism can be best taken as a Humean motivational theory.
+Ayer's deductive process which leads to emotivism is laden with error. His strong and weak verification principles arrive at a means to define *meaning* in order to claim that certain categories of propositions are meaningless, but fall short when trying to make sense of the vagueness of metaphysical concepts. Ayer's emotivism must not be directly taken as a Humean motivational theory, but rather an explanation of how moral judgments are related to one's motivation to act. 
 
 <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full mt-8"></div>
 
 <div className="text-sm  mt-6 text-left">
             <h4 className="font-medium">Footnotes</h4>
             <ol className="list-decimal list-inside space-y-2 mt-2">
-              <li id="fn-4">Cultural relativism is the principle that moral judgments should be evaluated on the basis of one's own cultural beliefs rather than judged on the basis of other cultures, or a "universal set of beliefs".  </li>
+              <li id="fn-1">It is important to distinguish between what I, given my personal purview of morals, believe is true, and the belief that there are universal values knowable through reason. The distinction is between what one personally holds to be a priori and thus justify me in thinking that a moral statement is true, and an objective moral epistemiology where moral principles are self-evident. Kant's derivation, for example, of the Categorical Imperative</li>
+              <li id="fn-1">Interestingly enough, some schools of thought do not hold this. Moral realists believe that moral truths are synthetic and are substantive, a priori truths. They believe that moral truths are a description of the world while containing facts about reality: statements of the form "X is Y" are synthetic statements as X, through rational deduction or empirical observation, objectively possesses Y. In fact, moral naturalists could hold that moral truths are analytic. They externally define, or fix, moral qualities like "goodness" to some definition; thus, statements pertaining to what "goodness" refers to are by definition analytic. For example, under the scope of analytic hedonism, goodness is equivalent to the seeking of pleasure. The statement "pleasure is good" needs no a posteriori justification, and is thus analytic. </li>
+              <li id="fn-3">The premise of the Frege-Geach problem is  </li>
+              <li id="fn-3">A modus tollens is an deductive argument of the form "P implies Q and not Q implies not P".  </li>
+              <li id="fn-3">The Frege-Geach problem arises again.   </li>
+              <li id="fn-2">Cultural relativism is the principle that moral judgments should be evaluated on the basis of one's own cultural beliefs rather than judged on the basis of other cultures, or a "universal set of beliefs".  </li>
             </ol>
           </div>
         </div>

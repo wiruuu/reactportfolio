@@ -10,6 +10,7 @@ import "katex/dist/katex.min.css";
 import remarkGfm from "remark-gfm";
 import { Fragment } from "react";
 import { ScrollTop } from "../components/ScrollTop";
+import "katex/dist/katex.min.css";
 
 export const BlogPostPage = () => {
   const { slug } = useParams();
