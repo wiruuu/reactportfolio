@@ -8,6 +8,7 @@ import { content as blog7 } from '../content/20250901';
 import { content as blog8 } from '../content/20250905';
 import { content as blog9 } from '../content/20250911';
 import { content as blog10 } from '../content/20250913';
+import { content as blog11 } from '../content/20250916';
 import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield} from 'lucide-react';
 import { ThumbsUp } from 'lucide-react';
 import { ArrowLeftRight } from 'lucide-react';

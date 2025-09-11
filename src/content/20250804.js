@@ -1,5 +1,13 @@
 export const content = `
-Before I begin, I would like to preface by claiming that this is not a complete encapsulation of the upshots and objections pertaining to moral non-cognitivsm and emotivism, nor do I make clear-cut verdicts or develop positions on whether the variants of cognitivism and non-cognitivism are tenable. These are just some of my thoughts on the matter.
+Before I begin, I would like to preface by claiming that this is not a complete encapsulation of the upshots and objections pertaining to moral non-cognitivsm and emotivism, nor do I explore in great depth the upshots of the aforementioned. These are just some of my thoughts on the matter.
+
+<div className="border-l-4 border-primary/70 pl-4">
+<div className="text-md">
+
+  In this text, I devise some tenable arguments for non-cognitivism by objecting to Moorean non-naturalist cognitivism. While a rejection of Moorean cognitivism does not immediately shun other forms of cognitivism, I develop counterarguments that directly shed light on the non-cognitivst position. Under the umbrella of non-cognitivism, I show that the contemporarily unpopular emotivism has intrinsic flaws in its justification, while exploring how emotivism can be appreciated notwithstanding its flaws.
+</div>
+</div>
+
 
 The emotivist perspective discussed here is Ayer's, not Stevenson's, emotivism.
 
