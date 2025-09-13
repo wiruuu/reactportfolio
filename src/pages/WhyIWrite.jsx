@@ -47,7 +47,7 @@ export const WhyIWrite = () => {
           <h3 className="text-2xl font-semibold mb-6 mt-6 text-foreground">What do I write about?</h3>
 
           <p>The contents of this page seem to imply that I have a predilection for philosophy. This couldn't be further from the truth. My academic concentration is economics. My vocation is finance. However I do love the human sciences, and try to write on a large range of topics. My range is (roughly) covered by the tags which you can classify my blog posts by.</p>
-          <p>I tend to write about topics I am unfamiliar with and by such may make inaccuracies or incorrect judgments. Regardless I am by no means an experienced or adept academic writer. Nonetheless I try to write with truth and conviction. Please send all queries to my email, viewable on my <a href="/contacts" className="underline hover:text-primary">contacts</a> page. </p>
+          <p>I tend to write about topics I am unfamiliar with and by such may make inaccuracies or incorrect judgments. Regardless I am by no means an experienced or adept academic writer. Nonetheless I try to write with truth and conviction. Please send all queries to my email, viewable on my <a href="/contact" className="underline hover:text-primary">contact</a> page. </p>
 
         </div>
         <a href="/blog" className="inline-flex items-center justify-center p-3 rounded-full font-medium bg-primary text-primary-foreground transition-transform duration-300 transform hover:scale-110 active:scale-95; mb-6"> <ArrowLeft />

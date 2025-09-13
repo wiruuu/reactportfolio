@@ -71,6 +71,10 @@ export const AboutSection = () => {
                   </a>
                 </sup> It is also useful for traders as they navigate these flaws and adjust their risk exposures accordingly. “Better” option pricing models are, by and large, propelled by Black-Scholes. A similar analogy can be made for economics models.</p>
 
+              <h3 className="text-xl font-semibold text-left text-foreground">What is "wiru"?</h3>
+
+              <p> It's an online alias that I use for several online purposes.</p>
+
               <p className="text-xl font-semibold text-left text-foreground">Two questions I receive a lot:</p>
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">
                 <li>“Why do you study economics if you’re more proficient in mathematics?”</li>
@@ -121,9 +125,9 @@ export const AboutSection = () => {
           <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
 
           {/* Footnotes */}
-          <div className="text-sm text-body mt-6 text-left">
-            <h4 className="font-medium">Footnotes</h4>
-            <ol className="list-decimal list-inside space-y-2 mt-2">
+          <h4 className="text-md font-semibold text-foreground text-left">Footnotes</h4>
+          <div className="text-sm text-body text-left">
+            <ol className="list-decimal list-inside space-y-2">
               <li id="fn-1">
                 An interesting piece of abstract art is Robert Ryman's <a href="https://www.centrepompidou.fr/en/ressources/oeuvre/yJJQZOL" className="underline hover:text-primary"><i>Untitled Triptych</i></a>, housed in the Centre Pompidou in Paris. 
                 It contains three panels of white placed side by side. Perhaps this piece of art serves as an inapt analogy as my analogy with art intended to expose the abstract complexities of maths. But this is nevertheless an intriguing piece of artwork to bring up when someone asks you "what is art?".
@@ -132,10 +136,10 @@ export const AboutSection = () => {
                 Note that I used the word <i>diminish</i> and not <i>eliminate</i>. I post some expository mathematical tidbits on this blog from time to time.
               </li>
               <li id="fn-3">
-                Traders usually use Black-Scholes as a "reference point" by first computing implied volatility and using that to guide them on how to quote on different strike prices. Thinking in implied volatility terms is, in most cases, better than thinking in option premium terms as the nature of options are inherently priced into Black-Scholes. Some of my blog posts discuss Black-Scholes in greater detail.
+                Traders usually use Black-Scholes as a "reference point" by first computing implied volatility and using that to guide them on how to quote on different strike prices. Thinking in implied volatility terms is, in most cases, better than thinking in option premium terms as the nature of options is inherently priced into Black-Scholes. Some of my blog posts discuss Black-Scholes in greater detail.
               </li>
               <li id="fn-4">
-                The development of human nature is not a stochastic process. However I do that human inclinations have somewhat of a Markov property as is characteristic of GBM (and increments are not independent like regular Brownian motion): that <InlineMath math="P(X_{n+1}=x_{n+1} \mid X_1=x_1, \dots, X_n=x_n) = P(X_{n+1}=x_{n+1} \mid X_n=x_n)" />. In layman's terms, this means that the future state of a stochastic processes depends solely on the current state and not the states that precede it. I used the word <i>somewhat</i> as I do believe that when human behaviour and decisions are concerned, <InlineMath math="X_{n+1}"/> should be somewhat dependent on <InlineMath math="X_1, \dots, X_{n-1}"/>. I used this analogy to explain how drastically people can change.
+                The development of human nature is not a stochastic process. However I do that human inclinations have somewhat of a Markov property as is characteristic of GBM (and increments are not independent like regular Brownian motion): that <InlineMath math="P(X_{n+1}=x_{n+1} \mid X_1=x_1, \dots, X_n=x_n) = P(X_{n+1}=x_{n+1} \mid X_n=x_n)" />. This means that the future state of a stochastic process depends solely on the current state and not the states that precede it, or that your future inclinations are solely conditional on your present inclinations. I used the word <i>somewhat</i> as I do believe that when human behaviour and decisions are concerned, <InlineMath math="X_{n+1}"/> should be somewhat dependent on <InlineMath math="X_1, \dots, X_{n-1}"/> with more dependence being given to the more recent <InlineMath math="X_i"/>'s. I used this analogy to explain how drastically people can change.
               </li>
             </ol>
           </div>

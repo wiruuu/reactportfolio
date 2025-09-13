@@ -86,7 +86,7 @@ export const blogPosts = [
   
   {
     id: 7,
-    title: "Infinite sums involving hyperbolic functions",
+    title: "Infinite sums involving hyperbolic functions (1)",
     excerpt: "Special functions arise again",
     content: blog7,
     date: "2025-09-01",
