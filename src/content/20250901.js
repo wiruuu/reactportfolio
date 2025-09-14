@@ -104,7 +104,7 @@ $K$ and $K'$ come from definitions of the complete elliptic integral of the firs
 It is known that $$\\vartheta_3(q) = \\sqrt{\\frac{2K(k)}{\\pi}}.$$ We obtain the nice value $k=\\frac{1}{\\sqrt{2}}$ when $q=e^{-\\pi}$. Note it remains for us to evaluate $K(\\frac{1}{\\sqrt{2}})$, which is a famous value of $K(x)$. Nonetheless, substituting $t=\\sin^2 \\theta$ yields 
 
 $$
-K\\left(\\frac{1}{\\sqrt{2}}\\right) = \\frac{1}{2} \\int_0^1 t^{-1/2}(1-t)^{-1/2}(1-t/2)^{-1/2}\\ dt
+K\\left(\\frac{1}{\\sqrt{2}}\\right) = \\frac{1}{2} \\int_0^1 t^{-1/2}(1-t)^{-1/2}(1-t/2)^{-1/2}\\ dt,
 $$ 
 
 which is equivalent to the hypergeometric function 
@@ -115,13 +115,13 @@ $$
 We can reduce this to a Beta integral and represent this hypergeometric function as $\\frac{\\Gamma(\\frac{1}{4})^2}{2\\pi^{3/2}}$; thus 
 
 $$
-K\\left(\\frac{1}{\\sqrt{2}}\\right) = \\frac{\\Gamma(\\frac{1}{4})^2}{4\\sqrt{\\pi}}
+K\\left(\\frac{1}{\\sqrt{2}}\\right) = \\frac{\\Gamma(\\frac{1}{4})^2}{4\\sqrt{\\pi}}.
 $$
 
 Substituting back into $\\vartheta_3(e^{-\\pi}) = \\sqrt{\\frac{2K(\\frac{1}{\\sqrt{2}})}{\\pi}}$ and using the Gamma function's reflection identity $$\\Gamma(z)\\Gamma(1-z) = \\pi \\csc(\\pi z)$$ yields 
 
 $$
-\\vartheta_3(e^{-\\pi}) = \\frac{\\pi^{1/4}}{\\Gamma(\\frac{3}{4})}
+\\vartheta_3(e^{-\\pi}) = \\frac{\\pi^{1/4}}{\\Gamma(\\frac{3}{4})}.
 $$
 
 Finally, employing $S=\\frac{\\vartheta_3(x)^2-1}{2}$ gives us 
@@ -130,5 +130,22 @@ $$
 S=\\sum\\limits_{i=1}^\\infty\\frac{1}{\\cosh(\\pi n)} = \\frac{1}{2} \\left( \\frac{\\sqrt{\\pi}}{\\Gamma^2(\\frac{3}{4})} -1\\right).
 $$
 
-
 `
+
+// Pi and the AGM
+
+// https://math.stackexchange.com/questions/4192954/closed-form-of-sum-n-1-infty-frac1-sinh-n-pi-in-terms-of-gamma-a?noredirect=1&lq=1
+
+// https://mathoverflow.net/questions/232260/evaluating-an-infinite-sum-related-to-sinh
+
+// https://math.stackexchange.com/questions/2290683/sums-of-the-form-s-k-sum-n-geq-1-frac1-sinh2kn-pi-and-the-residue?noredirect=1&lq=1
+
+// https://math.stackexchange.com/questions/4623620/prove-a-relation-between-theta-functions-and-their-derivatives-to-prove-sum-n?noredirect=1&lq=1
+
+// https://math.stackexchange.com/questions/346713/using-residues-to-evaluate-a-sum-involving-the-square-of-textcsch
+
+// https://math.stackexchange.com/questions/4808868/show-that-sum-n-1-infty-frac1n-cdot-sinhn-pi2-frac23-sum?noredirect=1&lq=1
+
+// https://math.stackexchange.com/questions/907480/sum-the-series-sum-n-1-infty-coth-n-pi-x-x2-cothn-pi-x-n
+
+// https://math.stackexchange.com/questions/4623620/prove-a-relation-between-theta-functions-and-their-derivatives-to-prove-sum-n?noredirect=1&lq=1
