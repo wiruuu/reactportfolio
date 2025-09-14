@@ -67,16 +67,7 @@ export const BlogPostPage = () => {
             </div>
           </div>
         </div>
-
-        {/* Content */}
-        {/* <div className="prose prose-lg max-w-none text-left">
-          <ReactMarkdown
-            remarkPlugins={[remarkMath, remarkGfm]}
-            rehypePlugins={[rehypeKatex]}
-          >
-            {post.content}
-          </ReactMarkdown>
-        </div> */}
+        
         <div className="prose prose-lg max-w-none text-left">
           <ReactMarkdown
             remarkPlugins={[remarkMath, remarkGfm]}

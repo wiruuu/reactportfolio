@@ -20,18 +20,23 @@ export const BlogList = ({ posts }) => {
           </div>
 
           {/* Content */}
-          <div className="flex-1 min-w-0">
-            {/* Top row: responsive layout */}
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 gap-1">
-              {/* Category + Title */}
-              <div className="flex items-center gap-2">
-                <span className="inline-block px-2 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                  {post.category}
-                </span>
-                <h3 className="text-lg font-semibold text-foreground line-clamp-1 group-hover:text-primary transition-colors m-0">
-                  {post.title}
-                </h3>
-              </div>
+         <div className="flex-1 min-w-0">
+  {/* Top row: responsive layout */}
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 gap-1 text-left">
+    {/* Category + Title */}
+    <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2 min-w-0">
+<span className="inline-block w-fit px-2 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded-full">
+  {post.category}
+</span>
+
+
+      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors m-0 break-words">
+        {post.title}
+      </h3>
+    </div>
+
+
+
 
               {/* Date + Read time */}
               <div className="flex items-center gap-4 text-xs text-muted-foreground flex-shrink-0">

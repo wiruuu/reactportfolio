@@ -3,8 +3,8 @@ import { BlogCard } from "../components/Blog/BlogCard";
 import { BlogSearch } from "../components/Blog/BlogSearch";
 import { BlogPagination } from "../components/Blog/BlogPagination";
 import { blogPosts } from "../data/blogPosts";
-import { HeartCrack, Grid, List } from "lucide-react";
-import { useNavigate } from 'react-router-dom';
+import { HeartCrack, Grid, List, Tag, Search, Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { BlogList } from "../components/Blog/BlogList";
 
 export const BlogPage = () => {
@@ -16,36 +16,44 @@ export const BlogPage = () => {
     return localStorage.getItem("viewMode") || "grid";
   });
 
-  // Posts per page toggle
   const [postsPerPage, setPostsPerPage] = useState(() => {
     return parseInt(localStorage.getItem("postsPerPage") || "6", 10);
   });
 
-  // Sort by date
   const [sortOrder, setSortOrder] = useState(() => {
-    return localStorage.getItem("sortOrder") || "newest"; 
+    return localStorage.getItem("sortOrder") || "newest";
   });
 
-  // Category filter
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const [showAllMonths, setShowAllMonths] = useState(false);
+
+  const months = [
+    { value: "2025-09", label: "Sep 2025" },
+    { value: "2025-08", label: "Aug 2025" },
+    { value: "2025-07", label: "July 2025" },
+  ];
+
   const [categoryFilter, setCategoryFilter] = useState("");
   const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
-
   const [showAllCategories, setShowAllCategories] = useState(false);
 
-  // Apply filtering + sorting
   const filteredPosts = useMemo(() => {
-    let posts = blogPosts.filter(post => {
-      const matchesSearch =
-        post.title.toLowerCase().includes(searchTerm.toLowerCase());
+    let posts = blogPosts.filter((post) => {
+      const matchesSearch = post.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
 
       const matchesCategory = categoryFilter
         ? post.category === categoryFilter
         : true;
 
-      return matchesSearch && matchesCategory;
+      const matchesMonth = selectedMonth
+        ? post.date.startsWith(selectedMonth) // assumes YYYY-MM-DD
+        : true;
+
+      return matchesSearch && matchesCategory && matchesMonth;
     });
 
-    // Sort newest/oldest
     posts.sort((a, b) => {
       if (sortOrder === "newest") {
         return new Date(b.date) - new Date(a.date);
@@ -55,20 +63,17 @@ export const BlogPage = () => {
     });
 
     return posts;
-  }, [searchTerm, categoryFilter, sortOrder]);
+  }, [searchTerm, categoryFilter, selectedMonth, sortOrder]);
 
-  // Pagination
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
-  // Reset page when filters change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, postsPerPage, categoryFilter, sortOrder]);
+  }, [searchTerm, postsPerPage, categoryFilter, selectedMonth, sortOrder]);
 
-  // Save preferences to localStorage
   useEffect(() => {
     localStorage.setItem("viewMode", viewMode);
   }, [viewMode]);
@@ -96,37 +101,48 @@ export const BlogPage = () => {
           </h1>
         </div>
         <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full"></div>
-        <p className="text-center my-6 text-body">Click <a href="/whyiwrite" className="underline hover:text-primary">here</a> to know why I write and what I write about.</p>
-        {/* Search */}
+        <p className="text-center my-6 text-body">
+          Click{" "}
+          <a href="/whyiwrite" className="underline hover:text-primary">
+            here
+          </a>{" "}
+          to know why I write and what I write about.
+        </p>
+
+        {/* Search / Tags / Month */}
         {browseMode === "search" ? (
           <div className="flex flex-col md:flex-row justify-center items-center mb-6 gap-4 w-full">
             <BlogSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           </div>
-        ) : (
+        ) : browseMode === "tags" ? (
           <div className="flex flex-col items-center gap-3 mb-6">
             <div className="flex flex-wrap gap-2 justify-center">
               <button
                 onClick={() => setCategoryFilter("")}
-                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${categoryFilter === ""
+                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
+                  categoryFilter === ""
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                  }`}
+                }`}
               >
                 All
               </button>
 
-              {(showAllCategories ? categories : categories.slice(0, 4)).map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setCategoryFilter(cat)}
-                  className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${categoryFilter === cat
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+              {(showAllCategories ? categories : categories.slice(0, 4)).map(
+                (cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setCategoryFilter(cat)}
+                    className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
+                      categoryFilter === cat
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
                     }`}
-                >
-                  {cat}
-                </button>
-              ))}
+                  >
+                    {cat}
+                  </button>
+                )
+              )}
             </div>
 
             {categories.length > 4 && (
@@ -135,6 +151,44 @@ export const BlogPage = () => {
                 className="text-sm text-body hover:underline hover:text-primary hover:bg-primary/10 border-2 border-primary/10 rounded-full px-3 py-1"
               >
                 {showAllCategories ? "Show less" : "Show more"}
+              </button>
+            )}
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-3 mb-6">
+            <div className="flex flex-wrap gap-2 justify-center">
+              <button
+                onClick={() => setSelectedMonth("")}
+                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
+                  selectedMonth === ""
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                }`}
+              >
+                All
+              </button>
+
+              {(showAllMonths ? months : months.slice(0, 4)).map((m) => (
+                <button
+                  key={m.value}
+                  onClick={() => setSelectedMonth(m.value)}
+                  className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
+                    selectedMonth === m.value
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                  }`}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
+
+            {months.length > 4 && (
+              <button
+                onClick={() => setShowAllMonths(!showAllMonths)}
+                className="text-sm text-body hover:underline hover:text-primary hover:bg-primary/10 border-2 border-primary/10 rounded-full px-3 py-1"
+              >
+                {showAllMonths ? "Show less" : "Show more"}
               </button>
             )}
           </div>
@@ -148,13 +202,21 @@ export const BlogPage = () => {
                 <div className="flex bg-muted rounded-md p-1">
                   <button
                     onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded-md cursor-pointer ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
+                    className={`p-2 rounded-md cursor-pointer ${
+                      viewMode === "grid"
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:underline hover:text-primary"
+                    }`}
                   >
                     <Grid size={18} />
                   </button>
                   <button
                     onClick={() => setViewMode("list")}
-                    className={`p-2 rounded-md cursor-pointer ${viewMode === "list" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
+                    className={`p-2 rounded-md cursor-pointer ${
+                      viewMode === "list"
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:underline hover:text-primary"
+                    }`}
                   >
                     <List size={18} />
                   </button>
@@ -168,7 +230,11 @@ export const BlogPage = () => {
                     <button
                       key={n}
                       onClick={() => setPostsPerPage(n)}
-                      className={`px-3 py-2 rounded-md cursor-pointer ${postsPerPage === n ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
+                      className={`px-3 py-2 rounded-md cursor-pointer ${
+                        postsPerPage === n
+                          ? "bg-primary text-primary-foreground"
+                          : "text-muted-foreground hover:underline hover:text-primary"
+                      }`}
                     >
                       {n}
                     </button>
@@ -178,56 +244,87 @@ export const BlogPage = () => {
             </div>
           </div>
 
-          {/* Sort */}
+          {/* Sort + Browse Mode */}
           <div className="flex items-center gap-2">
             <div className="flex bg-muted rounded-md p-1 ">
               <button
                 onClick={() => setSortOrder("newest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "newest" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
+                className={`px-3 py-2 rounded-md cursor-pointer ${
+                  sortOrder === "newest"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:underline hover:text-primary"
+                }`}
               >
-                Newest
+                New
               </button>
               <button
                 onClick={() => setSortOrder("oldest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "oldest" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:underline hover:text-primary"}`}
+                className={`px-3 py-2 rounded-md cursor-pointer ${
+                  sortOrder === "oldest"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:underline hover:text-primary"
+                }`}
               >
-                Oldest
+                Old
               </button>
             </div>
-            {/* Search/Browse Toggle */}
-            
+
+            {/* Search / Tags / Month toggle */}
             <div className="flex justify-center gap-2 items-center">
               <div className="flex bg-muted rounded-md p-1">
                 <button
-                  onClick={() => setBrowseMode("tags")}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "tags"
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-primary hover:underline"
-                    }`}
+                  onClick={() => {
+                    setBrowseMode("tags");
+                    setSearchTerm("");
+                    setSelectedMonth("");
+                  }}
+                  className={`px-3 py-2 rounded-md cursor-pointer ${
+                    browseMode === "tags"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-primary hover:underline"
+                  }`}
                 >
-                  Tags
+                  <Tag />
                 </button>
                 <button
-                  onClick={() => setBrowseMode("search")}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "search"
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-primary hover:underline"
-                    }`}
+                  onClick={() => {
+                    setBrowseMode("search");
+                    setCategoryFilter("");
+                    setSelectedMonth("");
+                  }}
+                  className={`px-3 py-2 rounded-md cursor-pointer ${
+                    browseMode === "search"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-primary hover:underline"
+                  }`}
                 >
-                  Search
+                  <Search />
+                </button>
+                <button
+                  onClick={() => {
+                    setBrowseMode("month");
+                    setSearchTerm("");
+                    setCategoryFilter("");
+                  }}
+                  className={`px-3 py-2 rounded-md cursor-pointer ${
+                    browseMode === "month"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-primary hover:underline"
+                  }`}
+                >
+                  <Calendar />
                 </button>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Search results */}
         <div className="text-center mb-8">
-          {(searchTerm) && (
+          {searchTerm && (
             <p className="text-muted-foreground">
-              {filteredPosts.length} article{filteredPosts.length !== 1 ? "s" : ""} found
-              {searchTerm && ` for "${searchTerm}"`}
+              {filteredPosts.length} article
+              {filteredPosts.length !== 1 ? "s" : ""} found for "{searchTerm}"
             </p>
           )}
         </div>
@@ -243,7 +340,6 @@ export const BlogPage = () => {
           <BlogList posts={currentPosts} onPostClick={handlePostClick} />
         )}
 
-        {/* Empty */}
         {filteredPosts.length === 0 && (
           <div className="text-center py-16">
             <div className="mb-5 flex justify-center">
@@ -253,7 +349,7 @@ export const BlogPage = () => {
               No articles found
             </h3>
             <p className="text-muted-foreground">
-              We couldn't find what you were looking for.
+              :(
             </p>
           </div>
         )}

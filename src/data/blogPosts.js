@@ -130,7 +130,7 @@ export const blogPosts = [
     excerpt: "Regarding Kierkegaard's Fear and Trembling",
     content: blog11,
     date: "2025-09-16",
-    category: "Pedagogy",
+    category: "Philosophy",
     slug: "infinite-resignation",
     image: Shield
   },
