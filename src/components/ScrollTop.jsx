@@ -11,7 +11,7 @@ export const ScrollTop = () => {
       const docHeight = document.documentElement.scrollHeight;
       const distanceFromBottom = docHeight - (scrolled + viewportHeight);
 
-      setIsFixed(scrolled > 100 && distanceFromBottom > 100);
+      setIsFixed(scrolled > 100 && distanceFromBottom > 200);
     };
 
     window.addEventListener("scroll", handleScroll);

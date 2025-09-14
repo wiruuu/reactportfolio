@@ -7,7 +7,7 @@ Consider the following (abriged) scenario:
 <div className="border-l-4 border-primary/70 pl-4">
 <div className="text-md">
 
-  I want my daughter to study \*insert reputable subject\* at an \*insert reputable university in the US\*, but she doesn't have any published research papers or internships or work shadowing yet. She is only 13 yet she is behind compared to her classmates. Parents with kids her age are sending their kids to summer programmes and teenagers her age have published research papers and are doing competitions! How do I develop a roadmap for the next 5-6 years to secure my kid's chance at \*insert reputable university\*?
+  I want my daughter to study \*insert reputable subject\* at \*insert reputable university in the US\*, but she doesn't have any published research papers or internships or work shadowing yet. She is only 13 yet she is behind compared to her classmates. Parents with kids her age are sending their kids to summer programmes and teenagers her age have published research papers and are doing competitions! How do I develop a roadmap for the next 5-6 years to secure my kid's chance at \*insert reputable university\*?
 </div>
 </div>
 
