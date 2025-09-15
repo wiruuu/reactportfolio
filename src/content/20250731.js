@@ -1,48 +1,10 @@
 export const content = `
-### Premise
+### Introduction
 
-I came across this interesting infinite product on _Threads_ which illustrates the indispensable mathematical skill of having good intuition.
-
-The infinite product in question is 
-
-$$
-  \\begin{aligned}
-      P&=\\prod\\limits_{n=1}^\\infty \\frac{(2n)^{1/2n}}{(2n+1)^{1/(2n+1)}}. \\\\
-  \\end{aligned}
-$$
-
-### Solution
-
-The first few steps are routine. First we take the natural log of $P$.
-
-$$
-\\begin{aligned}
-     \\ln P &= \\sum\\limits_{n=1}^\\infty \\left(\\frac{\\ln (2n)}{2n}-\\frac{\\ln(2n+1)}{2n+1} \\right)
-    \\\\ &= \\frac{\\ln 2}{2}-\\frac{\\ln 3}{3}+\\frac{\\ln 4}{4}-\\frac{\\ln 5}{5}+\\dots \\\\
-    &= \\sum\\limits_{n=2}^\\infty (-1)^n \\ \\frac{\\ln n}{n}
-\\end{aligned}
-$$
+In 399 BC, Socrates was charged with *asebeia*, or irreverence, against the Panthenon of Athens, instead bringing strange divinities of his own, and for bringing moral corruption to the Athenian youth. Socrates was accused of corrupting the youth by instructing them to despise established laws by appealing to the folly of the ballot box, or in other words, for teaching the youth to question authority. The main line of argument was that to question and subsequently embarrass people of power would allow the populace to lose respect for their elders and those in power, hence corrupting them.
 
 
-Now we invoke something rather unobvious. The Dirichlet eta function, defined as $$\\eta(s) = \\sum\\limits_{n=1}^\\infty \\frac{(-1)^{n-1}}{n^s},$$ has derivative $$\\eta'(s) = -\\sum\\limits_{n=1}^\\infty \\frac{(-1)^{n-1} \\ln n}{n^s}.$$ 
 
-Here we have that 
-$$
-\\ln P =\\eta'(1).
-$$
+It is often challenging to defend a politically contrarian viewpoint. The reasons for this are several:
 
-Observe that we have 
-$$
-\\eta'(s) = 2^{1-s} \\log 2\\zeta(s)+(1-2^{1-s})\\zeta'(s),
-$$
-
-where $\\zeta(s)$ is the Riemann zeta function. In particular note that the Laurent series for $\\zeta(s)$ is $\\zeta(s) = \\frac{1}{s-1}+\\gamma + O(s-1),$ where $\\gamma$ is the Euler-Mascheroni constant, and the Laurent series for $2^{1-s}$ is $1-(s-1)\\ln 2 + O((s-1)^2).$
-
-Therefore $\\eta'(1) = \\ln 2^{(\\gamma-\\frac{1}{2} \\ln 2)}$, or 
-$$
-P=2^{\\gamma - \\frac{1}{2} \\ln 2}.
-$$
 `
-
-
-

@@ -1,1 +1,3 @@
-export const content = "lmao skibidi"
+export const content = `
+
+`
