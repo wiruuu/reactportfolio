@@ -46,8 +46,12 @@ export const BlogPage = () => {
   const [browseMode, setBrowseMode] = useState("month");
 
   const [viewMode, setViewMode] = useState(() => {
-    return localStorage.getItem("viewMode") || "grid";
+    return (
+      localStorage.getItem("viewMode") ||
+      (window.innerWidth < 768 ? "list" : "grid") // md breakpoint
+    );
   });
+
 
   const [postsPerPage, setPostsPerPage] = useState(() => {
     return parseInt(localStorage.getItem("postsPerPage") || "6", 10);
@@ -64,6 +68,7 @@ export const BlogPage = () => {
     { value: "2025-09", label: "Sep 2025" },
     { value: "2025-08", label: "Aug 2025" },
     { value: "2025-07", label: "July 2025" },
+    { value: "2025-06", label: "June 2025" },
   ];
 
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -152,11 +157,10 @@ export const BlogPage = () => {
             <div className="flex flex-wrap gap-2 justify-center">
               <button
                 onClick={() => setCategoryFilter("")}
-                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
-                  categoryFilter === ""
+                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${categoryFilter === ""
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                }`}
+                  }`}
               >
                 All
               </button>
@@ -166,11 +170,10 @@ export const BlogPage = () => {
                   <button
                     key={cat}
                     onClick={() => setCategoryFilter(cat)}
-                    className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
-                      categoryFilter === cat
+                    className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${categoryFilter === cat
                         ? "bg-primary text-primary-foreground"
                         : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                    }`}
+                      }`}
                   >
                     {cat}
                   </button>
@@ -192,11 +195,10 @@ export const BlogPage = () => {
             <div className="flex flex-wrap gap-2 justify-center">
               <button
                 onClick={() => setSelectedMonth("")}
-                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
-                  selectedMonth === ""
+                className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${selectedMonth === ""
                     ? "bg-primary text-primary-foreground"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                }`}
+                  }`}
               >
                 All
               </button>
@@ -205,11 +207,10 @@ export const BlogPage = () => {
                 <button
                   key={m.value}
                   onClick={() => setSelectedMonth(m.value)}
-                  className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${
-                    selectedMonth === m.value
+                  className={`px-3 py-1 rounded-full font-medium transition-colors border border-2 border-primary/30 ${selectedMonth === m.value
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                  }`}
+                    }`}
                 >
                   {m.label}
                 </button>
@@ -235,21 +236,19 @@ export const BlogPage = () => {
                 <div className="flex bg-muted rounded-md p-1">
                   <button
                     onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded-md cursor-pointer ${
-                      viewMode === "grid"
+                    className={`p-2 rounded-md cursor-pointer ${viewMode === "grid"
                         ? "bg-primary text-primary-foreground"
                         : "text-muted-foreground hover:underline hover:text-primary"
-                    }`}
+                      }`}
                   >
                     <Grid size={18} />
                   </button>
                   <button
                     onClick={() => setViewMode("list")}
-                    className={`p-2 rounded-md cursor-pointer ${
-                      viewMode === "list"
+                    className={`p-2 rounded-md cursor-pointer ${viewMode === "list"
                         ? "bg-primary text-primary-foreground"
                         : "text-muted-foreground hover:underline hover:text-primary"
-                    }`}
+                      }`}
                   >
                     <List size={18} />
                   </button>
@@ -263,11 +262,10 @@ export const BlogPage = () => {
                     <button
                       key={n}
                       onClick={() => setPostsPerPage(n)}
-                      className={`px-3 py-2 rounded-md cursor-pointer ${
-                        postsPerPage === n
+                      className={`px-3 py-2 rounded-md cursor-pointer ${postsPerPage === n
                           ? "bg-primary text-primary-foreground"
                           : "text-muted-foreground hover:underline hover:text-primary"
-                      }`}
+                        }`}
                     >
                       {n}
                     </button>
@@ -282,21 +280,19 @@ export const BlogPage = () => {
             <div className="flex bg-muted rounded-md p-1 ">
               <button
                 onClick={() => setSortOrder("newest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${
-                  sortOrder === "newest"
+                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "newest"
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:underline hover:text-primary"
-                }`}
+                  }`}
               >
                 New
               </button>
               <button
                 onClick={() => setSortOrder("oldest")}
-                className={`px-3 py-2 rounded-md cursor-pointer ${
-                  sortOrder === "oldest"
+                className={`px-3 py-2 rounded-md cursor-pointer ${sortOrder === "oldest"
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:underline hover:text-primary"
-                }`}
+                  }`}
               >
                 Old
               </button>
@@ -311,11 +307,10 @@ export const BlogPage = () => {
                     setSearchTerm("");
                     setCategoryFilter("");
                   }}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${
-                    browseMode === "month"
+                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "month"
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-primary hover:underline"
-                  }`}
+                    }`}
                 >
                   <Calendar />
                 </button>
@@ -325,11 +320,10 @@ export const BlogPage = () => {
                     setSearchTerm("");
                     setSelectedMonth("");
                   }}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${
-                    browseMode === "tags"
+                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "tags"
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-primary hover:underline"
-                  }`}
+                    }`}
                 >
                   <Tag />
                 </button>
@@ -339,11 +333,10 @@ export const BlogPage = () => {
                     setCategoryFilter("");
                     setSelectedMonth("");
                   }}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${
-                    browseMode === "search"
+                  className={`px-3 py-2 rounded-md cursor-pointer ${browseMode === "search"
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-primary hover:underline"
-                  }`}
+                    }`}
                 >
                   <Search />
                 </button>

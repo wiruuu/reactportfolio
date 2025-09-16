@@ -40,7 +40,7 @@ export const blogPosts = [
     title: "On emotivism and truth-aptness",
     excerpt: "Thoughts on ethical emotivism",
     content: blog2,
-    date: "2025-08-04",
+    date: "2025-7-15",
     category: "Philosophy",
     slug: "on-emotivism",
     image: ThumbsUp
@@ -50,7 +50,7 @@ export const blogPosts = [
     title: "Kishore Mahbubani and political contrarianism",
     excerpt: "American primacy and the new world order",
     content: blog3,
-    date: "2025-08-12",
+    date: "2025-07-31",
     category: "Politics",
     slug: "kishore-mahbubani",
     image: ArrowLeftRight
