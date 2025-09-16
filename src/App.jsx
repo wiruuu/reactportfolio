@@ -14,13 +14,13 @@ import { NotFound } from "@/pages/NotFound";
 import { WhyIWrite } from "@/pages/WhyIWrite";
 import { Labubu } from './components/Labubu';
 import { StarBackground } from './components/StarBackground';
-
+import { ScrollManager } from "./components/ScrollManager";
 
 
 function App() {
   const [starsEnabled, setStarsEnabled] = useState(() => {
     const saved = localStorage.getItem("starsEnabled");
-    return saved === null ? true : saved === "true";
+    return saved === null ? true : saved === "false";
   });
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
       <StarBackground enabled={starsEnabled} />
 
-
+      <ScrollManager />
       <Navbar starsEnabled={starsEnabled} setStarsEnabled={setStarsEnabled} />
         <main className="flex-1">
           <Routes>

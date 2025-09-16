@@ -13,6 +13,21 @@ body {
 
 
 
+.katex-display {
+  white-space: normal !important;     /* allow wrapping */
+  text-align: left !important;        /* align to left edge instead of center */
+}
+
+.katex-display > .katex {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important; /* break anywhere if needed */
+  word-break: break-word !important;
+}
+
+
+
+
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -115,7 +130,7 @@ body {
   }
 
   .dark {
-    --background: 222 47% 4%;
+    --background: 222 47% 8%;
     --foreground: 213 31% 91%;
     --body: 0 0% 70%;
     --card: 222 47% 8%;

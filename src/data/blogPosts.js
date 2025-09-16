@@ -11,7 +11,7 @@ import { content as blog10 } from '../content/20250913';
 import { content as blog11 } from '../content/20250916';
 import { content as blog12 } from '../content/20250924';
 import { content as blog13 } from '../content/20251006';
-import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield} from 'lucide-react';
+import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield, Sword, TrendingUp} from 'lucide-react';
 import { ThumbsUp } from 'lucide-react';
 import { ArrowLeftRight } from 'lucide-react';
 
@@ -129,7 +129,7 @@ export const blogPosts = [
   {
     id: 11,
     title: "Infinite resignation and infinite sacrifice",
-    excerpt: "A contemporary glance at Kierkegaard's Fear and Trembling",
+    excerpt: "Underexplored viewpoints within Kierkegaard's Fear and Trembling",
     content: blog11,
     date: "2025-09-16",
     category: "Philosophy",
@@ -144,7 +144,7 @@ export const blogPosts = [
     date: "2025-09-24",
     category: "Economics",
     slug: "structural-transformation",
-    image: Shield
+    image: TrendingUp
   },
   {
     id: 13,
@@ -154,7 +154,7 @@ export const blogPosts = [
     date: "2025-10-06",
     category: "Literature",
     slug: "medea",
-    image: Shield
+    image: Sword
   },
   
 ].map((post) => {

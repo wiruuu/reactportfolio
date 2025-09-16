@@ -39,7 +39,7 @@ export const ContactSection = () => {
                 <h4 className="font-medium text-foreground mb-1">Email</h4>
                 <a
                   href="mailto:ethanchoi422@gmail.com"
-                  className="text-muted-foreground hover:text-blue-600 transition-colors truncate text-body"
+                  className="text-muted-foreground hover:text-primary transition-colors truncate text-body hover:underline"
                 >
                   ethanchoi422@gmail.com
                 </a>
@@ -49,15 +49,15 @@ export const ContactSection = () => {
             {/* Phone */}
             <div className="flex group py-4 px-6 border border-primary/50 items-start bg-card rounded-lg overflow-hidden shadow-xs card-hover shadow-xs shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/20 block">
               <div className="p-3 mr-5 rounded-full border border-primary/50 bg-background hover:bg-primary/10 flex-shrink-0">
-                <Phone className="h-6 w-6 text-primary " />
+                <Phone className="h-6 w-6 text-primary" />
               </div>
               <div className="flex flex-col flex-1 min-w-0 text-left">
                 <h4 className="font-medium text-foreground mb-1">Phone</h4>
                 <a
-                  href="tel:+447444292973"
-                  className="text-muted-foreground hover:text-blue-600 transition-colors text-body"
+                  href=""
+                  className="text-muted-foreground transition-colors text-body"
                 >
-                  +44 7444292973
+                  Email me to find out
                 </a>
               </div>
             </div>

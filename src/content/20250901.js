@@ -58,21 +58,21 @@ $$
 A proof usually involves the unique factorisation of $\\mathbb{Z}[i]$. However I did come across a variant of this brute force proof online which I found elegant. Substitute $x$ for $x^2$ and replace $a$ with $-a^2x$. Thus we obtain, multiplying by $a$, 
 $$
 \\begin{aligned}
-& \\ \\ \\ \\ (a - a^{-1}) \\prod_{n \\geq 1} (1 - a^{2}x^{n})(1 - a^{-2}x^{n})(1 - x^{n}) \\  \\ \\ \\ (1) \\\\ &= \\sum_{-\\infty}^{\\infty} (-1)^n a^{2n+1} x^{(n^{2}+n)/2} \\\\
+& \\ \\ \\ \\ (a - a^{-1}) \\prod_{n \\geq 1} (1 - a^{2}x^{n})(1 - a^{-2}x^{n})(1 - x^{n}) \\  \\ \\ \\ (1) \\\\ &= \\sum_{n \\in \\mathbb{Z}} (-1)^n a^{2n+1} x^{(n^{2}+n)/2} \\\\
 \\end{aligned}
 $$
 This is a telescoping sum that can be represented as 
 $$
 \\begin{aligned}
-&\\ \\ \\ \\ \\sum_{-\\infty}^{\\infty} a^{4n+1} x^{2n^{2}+n} - \\sum_{-\\infty}^{\\infty} a^{4n-1} x^{2n^{2}-n} \\\\
-&= a \\prod_{n \\geq 1} (1 + a^{4}x^{4n-1})(1 + a^{-4}x^{4n-3})(1 - x^{4n})- a^{-1} \\prod_{n \\geq 1} (1 + a^{4}x^{4n-3})(1 + a^{-4}x^{4n-1})(1 - x^{4n}). \\ \\ \\ \\ (2)
+&\\ \\ \\ \\ \\sum_{n \\in \\mathbb{Z}} a^{4n+1} x^{2n^{2}+n} - \\sum_{n \\in \\mathbb{Z}} a^{4n-1} x^{2n^{2}-n} \\\\
+&= a \\prod_{n \\geq 1} (1 + a^{4}x^{4n-1})(1 + a^{-4}x^{4n-3})(1 - x^{4n})\\\\ &- a^{-1} \\prod_{n \\geq 1} (1 + a^{4}x^{4n-3})(1 + a^{-4}x^{4n-1})(1 - x^{4n}). \\ \\ \\ \\ (2)
 \\end{aligned}
 $$
 
 Taking $\\frac{\\partial}{\\partial a}$ on $(1)$ and $(2)$, we get 
 $$
-\\begin{aligned} \\prod\\limits_{n\\geq 1}(1-x^n)^3 &= \\prod\\limits_{n\\geq 1} (1+x^{4n-3})(1+x^{4n-1})(1-x^{4n}) \\cdot \\left(1 - 4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1+x^{4n-3}}-\\frac{x^{4n-1}}{1+x^{4n-1}} \\right) \\right)\\\\
-&= \\prod\\limits_{n\\geq 1} (1+x^n)^2(1-x^n) \\cdot \\left(1 - 4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1+x^{4n-3}}-\\frac{x^{4n-1}}{1+x^{4n-1}} \\right) \\right).
+\\begin{aligned} \\prod\\limits_{n\\geq 1}(1-x^n)^3 &= \\prod\\limits_{n\\geq 1} (1+x^{4n-3})(1+x^{4n-1})(1-x^{4n})\\\\ &\\cdot \\left(1 - 4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1+x^{4n-3}}-\\frac{x^{4n-1}}{1+x^{4n-1}} \\right) \\right)\\\\
+&= \\prod\\limits_{n\\geq 1} (1+x^n)^2(1-x^n)\\\\ &\\cdot \\left(1 - 4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1+x^{4n-3}}-\\frac{x^{4n-1}}{1+x^{4n-1}} \\right) \\right).
 \\end{aligned}
 $$
 
@@ -91,7 +91,7 @@ $$
 \\begin{aligned}
 	\\vartheta_3^2(x) &= \\left(\\sum\\limits_{n=-\\infty}^\\infty x^{n^2} \\right)^2 \\\\
 	&= 1+4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1-x^{4n-3}}-\\frac{x^{4n-1}}{1-x^{4n-1}} \\right) \\\\
-	&= 1+4\\left(\\frac{x}{1-x}-\\frac{x^3}{1-x^3}+\\frac{x^5}{1-x^5}-\\frac{x^7}{1-x^7}+\\dots \\right).
+	&= 1+4\\left(\\frac{x}{1-x}-\\frac{x^3}{1-x^3}+\\frac{x^5}{1-x^5}+\\dots \\right).
 \\end{aligned}
 $$
 

@@ -4,13 +4,46 @@ import { BlogSearch } from "../components/Blog/BlogSearch";
 import { BlogPagination } from "../components/Blog/BlogPagination";
 import { blogPosts } from "../data/blogPosts";
 import { HeartCrack, Grid, List, Tag, Search, Calendar } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { BlogList } from "../components/Blog/BlogList";
 
+export function useScrollRestoration() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    const storageKey = `scroll-position:${location.pathname}`;
+
+    // ✅ Restore on mount
+    const storedY = sessionStorage.getItem(storageKey);
+    if (storedY !== null) {
+      window.scrollTo(0, parseInt(storedY, 10));
+    }
+
+    // ✅ Save continuously while scrolling
+    const saveScroll = () => {
+      sessionStorage.setItem(storageKey, window.scrollY.toString());
+    };
+    window.addEventListener("scroll", saveScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", saveScroll);
+      saveScroll(); // save one last time
+    };
+  }, [location.pathname]);
+}
+
+
 export const BlogPage = () => {
+  useScrollRestoration();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [browseMode, setBrowseMode] = useState("tags");
+  const [browseMode, setBrowseMode] = useState("month");
 
   const [viewMode, setViewMode] = useState(() => {
     return localStorage.getItem("viewMode") || "grid";
@@ -274,6 +307,20 @@ export const BlogPage = () => {
               <div className="flex bg-muted rounded-md p-1">
                 <button
                   onClick={() => {
+                    setBrowseMode("month");
+                    setSearchTerm("");
+                    setCategoryFilter("");
+                  }}
+                  className={`px-3 py-2 rounded-md cursor-pointer ${
+                    browseMode === "month"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-primary hover:underline"
+                  }`}
+                >
+                  <Calendar />
+                </button>
+                <button
+                  onClick={() => {
                     setBrowseMode("tags");
                     setSearchTerm("");
                     setSelectedMonth("");
@@ -299,20 +346,6 @@ export const BlogPage = () => {
                   }`}
                 >
                   <Search />
-                </button>
-                <button
-                  onClick={() => {
-                    setBrowseMode("month");
-                    setSearchTerm("");
-                    setCategoryFilter("");
-                  }}
-                  className={`px-3 py-2 rounded-md cursor-pointer ${
-                    browseMode === "month"
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-primary hover:underline"
-                  }`}
-                >
-                  <Calendar />
                 </button>
               </div>
             </div>
