@@ -17,19 +17,16 @@ export function useScrollRestoration() {
 
     const storageKey = `scroll-position:${location.pathname}`;
 
-    // ✅ Restore on mount
     const storedY = sessionStorage.getItem(storageKey);
     if (storedY !== null) {
       window.scrollTo(0, parseInt(storedY, 10));
     }
 
-    // ✅ Save continuously while scrolling
     const saveScroll = () => {
       sessionStorage.setItem(storageKey, window.scrollY.toString());
     };
     window.addEventListener("scroll", saveScroll);
 
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", saveScroll);
       saveScroll(); // save one last time

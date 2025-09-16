@@ -4,7 +4,7 @@ import { content as blog3 } from '../content/20250731';
 import { content as blog4 } from '../content/20250815';
 import { content as blog5 } from '../content/20250825';
 import { content as blog6 } from '../content/20250830';
-import { content as blog7 } from '../content/20250901';
+import { content as blog7 } from '../content/20250525';
 import { content as blog8 } from '../content/20250905';
 import { content as blog9 } from '../content/20250911';
 import { content as blog10 } from '../content/20250913';
@@ -40,7 +40,7 @@ export const blogPosts = [
     title: "On emotivism and truth-aptness",
     excerpt: "Thoughts on ethical emotivism",
     content: blog2,
-    date: "2025-7-15",
+    date: "2025-07-15",
     category: "Philosophy",
     slug: "on-emotivism",
     image: ThumbsUp
@@ -91,7 +91,7 @@ export const blogPosts = [
     title: "Infinite sums involving hyperbolic functions (1)",
     excerpt: "Special functions arise again",
     content: blog7,
-    date: "2025-09-01",
+    date: "2025-05-25",
     category: "Mathematics",
     slug: "infinite-sum-hyperbolic",
     image: Infinity
