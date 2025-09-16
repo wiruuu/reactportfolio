@@ -28,7 +28,7 @@ export const ScrollTop = () => {
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`inline-flex items-center gap-2 p-3 rounded-full bg-primary text-primary-foreground font-medium border border-body hover:bg-primary/90 transition-all duration-300`}
+        className={`inline-flex items-center gap-2 p-3 rounded-full bg-primary text-primary-foreground font-medium border border-body hover:bg-primary/90 transition-all duration-300 hover:cursor-pointer`}
         style={
           isFixed
             ? { position: "fixed", bottom: "24px", right: "24px" }

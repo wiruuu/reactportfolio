@@ -24,10 +24,6 @@ body {
   word-break: break-word !important;
 }
 
-
-
-
-
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));

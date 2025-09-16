@@ -13,7 +13,7 @@ Consider the following (abridged) scenario:
 
 The typical answer is to develop a niche in a field where your demographic is not oversaturated in, and endeavour to explore something creative, special, awe-inspiring, and produce something that produces unique impact, whether it be a piece of comparative intersectional marginalised cross-cultural meta-linguistic research, or a soup kitchen. Or they must endeavour to compete in olympiads, produce or directly facilitate a startup, join a feeder programme, and to package and position oneself within that niche. 
 
-Why these name-brand universities? Easy question. Graduates of these universities go on to lead productive lives with high-paying jobs. Many then make this fallacious argument: if one thrives in a high-pressure university with sky-high expectations, why shouldn't I expect them to thrive in the workplace? 
+Why these name-brand universities? Easy question. Graduates of these universities often go on to lead productive lives with high-paying jobs. Many then make this fallacious argument: if one thrives in a high-pressure university with sky-high expectations, why shouldn't I expect them to thrive in the workplace? 
 
 A lot to unpack. In comparison, John F. Kennedy's Harvard application ends with "Then too, I would like to go to the same college as my father. To be a "Harvard man" is an enviable distinction, and one that I sincerely hope I shall attain".
 

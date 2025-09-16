@@ -98,8 +98,8 @@ export const blogPosts = [
   },
   {
     id: 8,
-    title: "Musings on the state of nature",
-    excerpt: "A historical glance at hypothetical primitive society",
+    title: "Mozi (墨子) and the state of nature",
+    excerpt: "What do Chinese philosophers think of the state of nature?",
     content: blog8,
     date: "2025-09-05",
     category: "Philosophy",

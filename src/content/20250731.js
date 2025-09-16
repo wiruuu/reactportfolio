@@ -35,6 +35,7 @@ I will focus on three of his arguments:
 <ol className="list-decimal list-inside space-y-2 mt-2">
   <li>The United States is losing ground to China not because China's bellicosity towards the US, but rather because of internal failure and strategic incoherence. It is for this reason that there has been much stagnation in economic development in the US.</li>
   <li>With the rise of the "Rest", the world is now returning to a global balance of power. Therefore, Asia's pre-eminence is not a matter of "if", but rather a matter of "when".</li>
+  <li>Global institutions such as the UN Security Council must be better reformed to better represent the rapid changes in power over the past 3 decades.</li>
 </ol>
 
 `
