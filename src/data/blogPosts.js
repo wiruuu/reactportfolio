@@ -128,12 +128,12 @@ export const blogPosts = [
   },
   {
     id: 11,
-    title: "Infinite resignation and infinite sacrifice",
-    excerpt: "Underexplored viewpoints within Kierkegaard's Fear and Trembling",
+    title: "I fear as if I have never feared before",
+    excerpt: "Vices of youthfulness",
     content: blog11,
     date: "2025-09-16",
-    category: "Philosophy",
-    slug: "infinite-resignation",
+    category: "Essays",
+    slug: "great-fear",
     image: Shield
   },
   {

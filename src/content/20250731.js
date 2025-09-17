@@ -26,9 +26,9 @@ Many ad hominem arguments are used against contrarians rather than legitimate ar
 
 ### On Mahbubani
 
-Geopolitics is a cruel, emotionally charged endeavour. This is not new. It is motivated by viciousness and is accentuated by personal politics. 
+Geopolitics is a cruel, emotionally charged endeavour. This is not new. It is motivated by viciousness and is accentuated by personal politics. Kishore Mahbubani knows this and stands his ground in spite of this. This, I hold, is a mark of great bravery. 
 
-Kishore Mahbubani knows this. Bit of background - at time of writing, he is the Dean of the LKY School of Public Policy in Singapore, and he has served as President of the UN Security Council from 2001-2002. He has written and spoken on many contemporary issues in Asia, including discourse regarding the role of Hong Kong as holding a competitive edge as it is differentiated from mainland China. Yet the most prominent and extensive of his discourses lie in its defense of Asian values, the ideological decline of the West, and the eminent divide between what he denotes the West and the Rest. 
+Bit of background - at time of writing, he is the Dean of the LKY School of Public Policy in Singapore, and he has served as President of the UN Security Council from 2001-2002. He has written and spoken on many contemporary issues in Asia, including discourse regarding the role of Hong Kong as holding a competitive edge as it is differentiated from mainland China. Yet the most prominent and extensive of his discourses lie in its defense of Asian values, the ideological decline of the West, and the eminent divide between what he denotes the West and the Rest. 
 
 I will focus on three of his arguments:
 
@@ -37,5 +37,11 @@ I will focus on three of his arguments:
   <li>With the rise of the "Rest", the world is now returning to a global balance of power. Therefore, Asia's pre-eminence is not a matter of "if", but rather a matter of "when".</li>
   <li>Global institutions such as the UN Security Council must be better reformed to better represent the rapid changes in power over the past 3 decades.</li>
 </ol>
+
+### United States losing ground to China
+
+### Economic success in Asia and future developments
+
+### Reform vis-a-vis global governance
 
 `
