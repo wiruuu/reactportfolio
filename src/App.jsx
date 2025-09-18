@@ -20,9 +20,8 @@ import { ScrollManager } from "./components/ScrollManager";
 function App() {
   const [starsEnabled, setStarsEnabled] = useState(() => {
     const saved = localStorage.getItem("starsEnabled");
-    return saved === null ? true : saved === "true"; // ✅ correctly parse string
+    return saved === null ? false : saved === "false"; // ✅ correctly parse string
   });
-
 
   useEffect(() => {
     localStorage.setItem("starsEnabled", starsEnabled);
