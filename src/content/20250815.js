@@ -24,7 +24,9 @@ This argument is simple to treat. First, one would have to argue what "special r
 
 In many widely defended political positions there are individuals who declare their political standpoint as being supreme and right, and thus should be given disproportionate resources to facilitate this. The burden of proof is on the opposition to show that this "loud minority" of activists is any different from the loud minorities of any other political position, and to demonstrate why we should not apply this argument with other political positions with loud and unreasonable minorities. A probable solution is for nations to apply restrictions on the extent and nature of LGBTQ+ rights advocacy for extreme cases, or for major advocacy groups to clearly state the expectations and provisions vis-a-vis LGBTQ+ rights that they aim to fight for.
 
-Another argument under this vein is that societies should encourage what is best for children, which is a mother and a father who are the parents of that child, raising that child in a stable, married relationship.
+Another argument under this vein is that societies should encourage what is best for children, which is a mother and a father who are the parents of that child, raising that child in a stable, married relationship. Though it is not hard to counterargue that the quality of parent-child relationships, parental competence and security, and the family's economic position are greater indicators of well-being.
+
+Yet we have this very easily defensible counterargument: 
 
 <p className="text-xl font-medium"> Gay marriage, as as a part of the LGBTQ+ agenda's indoctrination, leads to an ideology of sexual deviance and impropriety, as well as diminish the expectations of parental commitment.</p>
 
@@ -66,7 +68,7 @@ A similar argument goes like this: "Marriage is, tautologically, the union of on
 
 <p className="text-xl font-medium">Procreation is essential for survival and is an objective of marriage. Gay couples cannot procreate as a couple, so gay couples should not be allowed to marry.</p>
 
-<p className="text-xl font-medium">Children have a biological yearning for their fathers / mothers.</p>
+<p className="text-xl font-medium">Children have a biological yearning for their fathers / mothers. Gay couples cannot provide for children what heterosexual couples do. For example, little girls without</p>
 
 <p className="text-xl font-medium">Marriages thrive when spouses take on roles faithful to their gender.</p>
 

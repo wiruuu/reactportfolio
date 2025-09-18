@@ -20,20 +20,21 @@ import { ScrollManager } from "./components/ScrollManager";
 function App() {
   const [starsEnabled, setStarsEnabled] = useState(() => {
     const saved = localStorage.getItem("starsEnabled");
-    return saved === null ? true : saved === "false";
+    return saved === null ? true : saved === "true"; // ✅ correctly parse string
   });
+
 
   useEffect(() => {
     localStorage.setItem("starsEnabled", starsEnabled);
   }, [starsEnabled]);
   return (
     <div className="min-h-screen flex flex-col ">
-      <Toaster /> 
+      <Toaster />
       <BrowserRouter>
-      <StarBackground enabled={starsEnabled} />
+        {starsEnabled && <StarBackground />}
 
-      <ScrollManager />
-      <Navbar starsEnabled={starsEnabled} setStarsEnabled={setStarsEnabled} />
+        <ScrollManager />
+        <Navbar starsEnabled={starsEnabled} setStarsEnabled={setStarsEnabled} />
         <main className="flex-1">
           <Routes>
             <Route index element={<HeroSection />} />

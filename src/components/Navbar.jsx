@@ -99,14 +99,13 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
             ))}
           </div>
           <div className="ml-auto flex items-center gap-4">
-            {isDark && (
-              <button
-                onClick={() => setStarsEnabled((prev) => !prev)}
-                className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
-              >
-                {starsEnabled ? <X /> : <Check />} <Star className="h-4 w-4" />
-              </button>
-            )}
+            <button
+  onClick={() => setStarsEnabled((prev) => !prev)}
+  className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
+>
+  {starsEnabled ? <X /> : <Check />} <Star className="h-4 w-4" />
+</button>
+
             <button
               onClick={launchConfetti}
               className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"

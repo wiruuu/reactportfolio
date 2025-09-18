@@ -2,7 +2,8 @@
 @import "katex/dist/katex.min.css";
 
 
-html, body {
+html,
+body {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -14,15 +15,22 @@ body {
 
 
 .katex-display {
-  white-space: normal !important;     /* allow wrapping */
-  text-align: left !important;        /* align to left edge instead of center */
+  white-space: normal !important;
+  /* allow wrapping */
+  text-align: left !important;
+  /* align to left edge instead of center */
 }
 
-.katex-display > .katex {
+.katex-display>.katex {
   white-space: normal !important;
-  overflow-wrap: anywhere !important; /* break anywhere if needed */
+  overflow-wrap: anywhere !important;
+  /* break anywhere if needed */
   word-break: break-word !important;
 }
+
+
+
+
 
 @theme {
   --color-border: hsl(var(--border));
@@ -45,36 +53,50 @@ body {
   --animate-meteor: meteor 5s linear infinite;
 
   @keyframes float {
+
     0%,
     100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
   }
+
   @keyframes pulse-subtle {
+
     0%,
     100% {
       opacity: 1;
     }
+
     50% {
       opacity: 0.8;
     }
   }
+
   @keyframes meteor {
     0% {
-      transform: rotate(215deg) translateX(0);
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      transform: rotate(215deg) translateX(-500px);
+      transform: translate(0, 0);
       opacity: 0;
     }
+
+    10% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-800px, 800px);
+      /* generic diagonal */
+      opacity: 0;
+    }
+
+
+
+
   }
+
 }
 
 @keyframes fadeIn {
@@ -82,19 +104,37 @@ body {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @layer components {
-  .prose h1 { @apply text-4xl font-bold mb-10 mt-6; }
-  .prose h2 { @apply text-3xl font-bold mb-8 mt-8; }
-  .prose h3 { @apply text-2xl font-semibold mb-6 mt-6; }
-  .prose h4 { @apply text-xl font-semibold mb-4 mt-4; }
-  .prose p { @apply mb-4; }
+  .prose h1 {
+    @apply text-4xl font-bold mb-10 mt-6;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-bold mb-8 mt-8;
+  }
+
+  .prose h3 {
+    @apply text-2xl font-semibold mb-6 mt-6;
+  }
+
+  .prose h4 {
+    @apply text-xl font-semibold mb-4 mt-4;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
   .prose a.block {
-    margin-bottom: 1rem; /* same as mb-4 */
+    margin-bottom: 1rem;
+    /* same as mb-4 */
     white-space: nowrap;
     overflow: hidden;
   }
@@ -102,17 +142,22 @@ body {
 
 
 @layer base {
-    section, .card, .container {
+
+  section,
+  .card,
+  .container {
     position: relative;
     z-index: 20;
     background: inherit;
   }
-    #root {
+
+  #root {
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
     text-align: center;
   }
+
   :root {
     --background: 210 0% 100%;
     --foreground: 222 47% 11%;
@@ -155,19 +200,23 @@ body {
   margin-inline: auto;
   padding-inline: 2rem;
 
-  @media (width >= 640px) {
+  @media (width >=640px) {
     max-width: 640px;
   }
-  @media (width >= 768px) {
+
+  @media (width >=768px) {
     max-width: 768px;
   }
-  @media (width >= 1024px) {
+
+  @media (width >=1024px) {
     max-width: 1024px;
   }
-  @media (width >= 1280px) {
+
+  @media (width >=1280px) {
     max-width: 1280px;
   }
-  @media (width >= 1400px) {
+
+  @media (width >=1400px) {
     max-width: 1400px;
   }
 }
@@ -189,11 +238,7 @@ body {
 }
 
 @utility cosmic-button {
-  @apply inline-flex items-center justify-center 
-         px-6 py-2 rounded-full font-medium
-         bg-primary text-primary-foreground 
-         transition-transform duration-300 transform
-         hover:scale-110 active:scale-95;
+  @apply inline-flex items-center justify-center px-6 py-2 rounded-full font-medium bg-primary text-primary-foreground transition-transform duration-300 transform hover:scale-110 active:scale-95;
 }
 
 
@@ -203,9 +248,10 @@ body {
 }
 
 @utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  @apply absolute rounded-full;
+  /* horizontal streak inside the element */
+  background: linear-gradient(90deg, white 0%, rgba(255,255,255,0) 100%);
+  box-shadow: 0 0 15px 6px rgba(255,255,255,0.4);
 }
-
 
 
