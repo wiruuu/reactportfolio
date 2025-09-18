@@ -68,9 +68,12 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
         isScrolled && !isMenuOpen ? "bg-background" : "py-1 bg-background"
       )}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between pt-3">
         {/* Logo */}
-        <a className="text-xl font-bold text-primary flex items-center gap-2 pt-6 pb-3" href="/">
+        <a
+          className="text-xl font-bold text-primary flex items-center gap-2"
+          href="/"
+        >
           <span className="relative z-10">
             <span className="text-glow text-foreground">wiru</span>
           </span>
@@ -80,6 +83,7 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
             </span>
           </div>
         </a>
+
 
         {/* Desktop nav */}
         <div className="hidden md:flex w-full justify-between items-center bg-background/80">
