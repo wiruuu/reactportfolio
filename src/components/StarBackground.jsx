@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
-  
+
   useEffect(() => {
     generateStars();
     spawnMeteor();
@@ -11,7 +11,7 @@ export const StarBackground = () => {
     const handleResize = () => generateStars();
     window.addEventListener("resize", handleResize);
 
-    const interval = setInterval(spawnMeteor, 2000);
+    const interval = setInterval(spawnMeteor, 2000); 
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -49,6 +49,7 @@ export const StarBackground = () => {
       dx,
       dy,
       angleDeg,
+      isRed: Math.random() < 1 / 6.7, 
     };
 
     setMeteors((prev) => [...prev, meteor]);
@@ -91,6 +92,17 @@ export const StarBackground = () => {
           styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
         } catch (e) {}
 
+        const baseColor = meteor.isRed ? "rgba(255,80,80,1)" : "white";
+        const trailColor = meteor.isRed
+          ? "rgba(255,80,80,0)"
+          : "rgba(255,255,255,0)";
+        const glowColor = meteor.isRed
+          ? "rgba(255,80,80,0.6)"
+          : "rgba(255,255,255,0.6)";
+        const blurColor = meteor.isRed
+          ? "rgba(255,80,80,0.3)"
+          : "rgba(255,255,255,0.3)";
+
         return (
           <div
             key={meteor.id}
@@ -101,11 +113,15 @@ export const StarBackground = () => {
               top: `${meteor.y}%`,
               width: `${meteor.size * 50}px`,
               height: `${meteor.size * 2}px`,
-              background: "linear-gradient(90deg, white, rgba(255,255,255,0))",
-              borderRadius: "9999px",
-              boxShadow: "0 0 15px 6px rgba(255,255,255,0.4)",
               animation: `${animName} ${meteor.animationDuration}s linear forwards`,
               transformOrigin: "left center",
+              transform: `rotate(${meteor.angleDeg}deg)`,
+              background: `linear-gradient(90deg, ${baseColor}, ${trailColor})`,
+              borderRadius: "9999px",
+              boxShadow: `
+                0 0 6px 2px ${glowColor}, 
+                -10px 0 15px ${blurColor}
+              `,
             }}
           />
         );
