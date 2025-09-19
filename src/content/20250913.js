@@ -65,7 +65,9 @@ How do we differentiate between students who are genuinely passionate in engagin
 
 What is success? Success in school is not success in life. There is plenty of room for comparison in one's formative years, and even beyond one's formative years. Students take no hesitation in flocking to internship applications as early as their freshman year of college. Rich Handler, CEO of middle-market investment bank Jefferies, once advised that it is never too early to start networking for one's career, and that high-school students could do so too. 
 
-While this is important, we should simultaneously be building a system that instills virtuous moral values in a student's most formative and impressionable years instead of building a system that encourages dismantling it. We have trained high-performing students on a feedback loop involving extrinsic reward, where if students don't succeed by someone arbitrary, poor-defined metric at any point in their formative years, they are a failure. Happiness is solely conditional on success and failure. 
+While this is important, we should simultaneously be building a system that instills virtuous moral values in a student's most formative and impressionable years instead of building a system that encourages dismantling it. We are factilitating the trend of training high-performing students on a feedback loop involving extrinsic reward, where if students don't succeed by someone arbitrary, poor-defined metric at any point in their formative years, they are a failure. Happiness is solely conditional on success and failure. 
+
+<a href="https://www.wikiwand.com/en/articles/MediSafe_controversy"> It's high time we put a stop to this toxic trend. </a>
 
 We teach our students Rudyard Kipling's poetry. We should also take a leaf out of Rudyard Kipling's poetry and teach students that:
 
