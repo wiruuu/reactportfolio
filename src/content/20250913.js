@@ -36,6 +36,7 @@ The worst thing about incessant achievement is that there is no margin for error
 Most Ivy League schools have been served negligence lawsuits for students who have committed suicide; a study has shown that <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9331452/" className="underline hover:text-primary">around half</a> of all undergraduate students are suffering from moderate to severe depression. This percentage is higher for prestigious universities. It wouldn't be unwise to suggest the causative relationship between this statistic and the precipitous, error-free path high-performing students are trained to adhere to.
 
 <div className="border-l-4 border-primary/70 pl-4">
+
 I am not arguing that there should be clear-cut, explicit ways of delineating what students should or should not aim to achieve. I am a strong advocate for exploring one's pursuits creatively, and do believe that students should adhere to extracurricular pursuits that don't solely derive its value from its instrumental utility. I also agree that many students who attend top schools do not invest time in their interests solely for objective, or instrumental value. Here I argue that most students intend to pursue their goals without confinement to metrics or arbitrarily defined bars. It is through rumours or commonly agreed-upon facts regarding the admissions system that these restrictions arise among applicants. It is through intense competition that the normatively multi-faceted rules of the game now appear streamlined and less multi-faceted. 
 </div>
 
