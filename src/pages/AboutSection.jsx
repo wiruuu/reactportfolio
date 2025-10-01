@@ -73,7 +73,7 @@ export const AboutSection = () => {
 
               <h3 className="text-xl font-semibold text-left text-foreground">What is "wiru"?</h3>
 
-              <p> It's an online alias that I use for several online purposes.</p>
+              <p> It's an online alias.</p>
 
               <p className="text-xl font-semibold text-left text-foreground">Two questions I receive a lot:</p>
               <ol className="list-decimal list-outside space-x-4 marker:pr-8 space-y-2 pl-4">

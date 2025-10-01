@@ -74,6 +74,7 @@ export const BlogPage = () => {
     { value: "2025-08", label: "Aug 2025" },
     { value: "2025-07", label: "July 2025" },
     { value: "2025-06", label: "June 2025" },
+    { value: "2025-05", label: "May 2025" },
   ];
   const categories = Array.from(new Set(blogPosts.map((p) => p.category)));
 

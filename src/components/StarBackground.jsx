@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     generateStars();
@@ -11,10 +12,17 @@ export const StarBackground = () => {
     const handleResize = () => generateStars();
     window.addEventListener("resize", handleResize);
 
-    const interval = setInterval(spawnMeteor, 2000); 
+    const interval = setInterval(spawnMeteor, 2000);
+
+    // detect dark mode
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    setIsDark(mediaQuery.matches);
+    const handleChange = (e) => setIsDark(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      mediaQuery.removeEventListener("change", handleChange);
       clearInterval(interval);
     };
   }, []);
@@ -49,7 +57,7 @@ export const StarBackground = () => {
       dx,
       dy,
       angleDeg,
-      isRed: Math.random() < 1 / 6.7, 
+      isRed: isDark && Math.random() < 1 / 6.7, // only red in dark mode
     };
 
     setMeteors((prev) => [...prev, meteor]);

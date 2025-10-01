@@ -9,43 +9,19 @@ import rehypeRaw from "rehype-raw";
 import "katex/dist/katex.min.css";
 import remarkGfm from "remark-gfm";
 import { ScrollTop } from "../components/ScrollTop";
-import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
-const root = getComputedStyle(document.documentElement);
-const primary = root.getPropertyValue("--primary").trim();
-const foreground = root.getPropertyValue("--foreground").trim();
-
-ChartJS.register(ArcElement, Tooltip);
 
 export const BlogPostPage = () => {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
 
   const [progress, setProgress] = useState(0);
-  const [visible, setVisible] = useState(false);
-  const [colors, setColors] = useState({ primary: "", foreground: "" });
 
   useEffect(() => {
-    const root = getComputedStyle(document.documentElement);
-    setColors({
-      primary: `hsl(${root.getPropertyValue("--primary").trim()})`,
-      foreground: `hsl(${root.getPropertyValue("--foreground").trim()})`,
-    });
-  }, []); // run once on mount
-
-  useEffect(() => {
-    let hideTimeout;
-
     const handleScroll = () => {
-      setVisible(true); // show once user scrolls
-      clearTimeout(hideTimeout);
-      hideTimeout = setTimeout(() => setVisible(false), 3000);
-
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight;
       const winHeight = window.innerHeight;
 
-      // subtract footer height if present
       const footerHeight =
         document.querySelector("footer")?.offsetHeight || 200;
 
@@ -55,13 +31,8 @@ export const BlogPostPage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(hideTimeout);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   if (!post) {
     return (
@@ -78,6 +49,14 @@ export const BlogPostPage = () => {
 
   return (
     <article className="pt-20 pb-10 px-4 min-h-screen relative">
+      <div className="fixed top-0 left-0 w-screen h-1 bg-muted z-50 translate-y-16">
+        <div
+          className="h-1 bg-primary transition-all duration-150"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+
+
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -118,31 +97,6 @@ export const BlogPostPage = () => {
           >
             {post.content}
           </ReactMarkdown>
-        </div>
-      </div>
-
-      {/* Scroll progress pie chart */}
-      <div
-        className={`invisible lg:visible fixed bottom-6 left-6 w-10 h-10 z-50 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"
-          }`}
-      >
-        <Doughnut
-          data={{
-            datasets: [
-              {
-                data: [progress, 100 - progress],
-                backgroundColor: [colors.primary, colors.foreground],
-                borderWidth: 0,
-              },
-            ],
-          }}
-          options={{
-            cutout: "80%",
-            plugins: { tooltip: { enabled: false }, legend: { display: false } },
-          }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center text-[0.65rem] font-semibold text-foreground">
-          {Math.round(progress)}%
         </div>
       </div>
 

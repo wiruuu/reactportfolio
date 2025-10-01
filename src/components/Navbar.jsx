@@ -69,7 +69,6 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
       )}
     >
       <div className="container flex items-center justify-between pt-3">
-        {/* Logo */}
         <a
           className="text-xl font-bold text-primary flex items-center gap-2"
           href="/"
@@ -86,7 +85,7 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
 
 
         {/* Desktop nav */}
-        <div className="hidden md:flex w-full justify-between items-center bg-background/80">
+        <div className="hidden md:flex w-full justify-between items-center bg-background/80 mb-2">
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             {navItems.map((item) => (
               <a
@@ -117,18 +116,14 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
           </div>
         </div>
 
-        {/* Mobile nav controls (right aligned) */}
-        {/* Navbar Right Controls */}
+        {/* Mobile nav controls  */}
         <div className="ml-auto flex items-center gap-4 relative md:hidden">
-          {/* Mobile toggle button (aligned right) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 rounded-md text-foreground hover:text-primary"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-
-          {/* Full-width dropdown */}
           <div
             className={cn(
               "fixed top-[64px] left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
@@ -148,7 +143,6 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
           </div>
 
 
-          {/* Other buttons (right side, always visible) */}
           {isDark && (
             <button
               onClick={() => setStarsEnabled((prev) => !prev)}

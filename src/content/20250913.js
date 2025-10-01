@@ -66,9 +66,7 @@ How do we differentiate between students who are genuinely passionate in engagin
 
 What is success? Success in school is not success in life. There is plenty of room for comparison in one's formative years, and even beyond one's formative years. Students take no hesitation in flocking to internship applications as early as their freshman year of college. Rich Handler, CEO of middle-market investment bank Jefferies, once advised that it is never too early to start networking for one's career, and that high-school students could do so too. 
 
-While this is important, we should simultaneously be building a system that instills virtuous moral values in a student's most formative and impressionable years instead of building a system that encourages dismantling it. We are factilitating the trend of training high-performing students on a feedback loop involving extrinsic reward, where if students don't succeed by someone arbitrary, poor-defined metric at any point in their formative years, they are a failure. Happiness is solely conditional on success and failure. 
-
-<a href="https://www.wikiwand.com/en/articles/MediSafe_controversy"> It's high time we put a stop to this toxic trend. </a>
+While this is important, we should simultaneously be building a system that instills virtuous moral values in a student's most formative and impressionable years instead of building a system that encourages dismantling it. We are factilitating the trend of training high-performing students on a feedback loop involving extrinsic reward, whereby if students don't succeed by some arbitrary, poor-defined metric at any point in their formative years, they are a failure. Happiness is solely conditional on success and failure. 
 
 We teach our students Rudyard Kipling's poetry. We should also take a leaf out of Rudyard Kipling's poetry and teach students that:
 
@@ -89,7 +87,9 @@ We teach our students Rudyard Kipling's poetry. We should also take a leaf out o
 
 <p className="mb-4"></p>
 
-In society, once competition has boiled to a certain point, underhand or immoral tactics will inevitably arise. The applications system does not penalise this phenomenon; in fact, the system even <a href="https://www.wikiwand.com/en/articles/MediSafe_controversy" className="underline hover:text-primary">encourages</a> it in some scenarios. Fortunately these scenarios are often representative of immoral character rather than the intrinsic immorality of the system itself.
+In society, once competition has boiled to a certain point, underhand or immoral tactics will inevitably arise. The applications system does not penalise this phenomenon; in fact, the system even encourages it in some scenarios. Fortunately these scenarios are often representative of immoral character rather than the intrinsic immorality of the system itself.
+
+Regardless, <a href="https://www.wikiwand.com/en/articles/MediSafe_controversy" className="underline"> it's high time we put a stop to this toxic trend. </a>
 
 In the university application process, success is individual. Students might be involved in their local communities and virtue signal from time to time, but they ultimately understand that to the victor belong the spoils. In life, success is a collaborative endeavour. Those who enter the workforce with the vitriolic, comparative mindset characteristic of many students in the applications game will soon face the wicked slap of reality. In most cases, successful people have found work that matches their strengths, and can inspire others, serve, and lead. It still puzzles me why universities segregate students by metrics completely different from those required from them once they exit university. A reasonable yet unsatisfying answer: "what else can we do"?
 
