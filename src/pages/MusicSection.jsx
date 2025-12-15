@@ -29,7 +29,7 @@ const books = [
   },
   {
     title: "Over the Rainbow",
-    description: "A capella arrangement (~2:15)",
+    description: "A cappella arrangement (~2:15)",
     image: "/projects/music-otr.png",
     demoUrl: "https://drive.google.com/drive/folders/1S48gKqxJYfk_Q_Eq_KYgnFTAh2M7dHlZ?usp=drive_link",
   },
