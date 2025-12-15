@@ -25,55 +25,51 @@ export const HeroSection = () => {
             style={{ overflow: "visible" }}
           >
             <path
-              d="M 500 0
-     Q 550 -150, 700 -100 
-     T 1000 -200 
-     T 1800 -250"
+              d="M 500 0 Q 550 -150, 700 -100 T 1000 -200 T 1800 -250"
               stroke="hsl(var(--primary) / 0.4)"
               strokeWidth="6"
               fill="none"
             />
 
             <path
-  d="M 300 0
-     Q 200 -50, 100 -150
+              d="M 300 0 Q 200 -50, 100 -150
      T 0 -300
      T -900 -450
      T -1200 -600"
-  stroke="hsl(var(--primary) / 0.4)"
-  strokeWidth="6"
-  fill="none"
-/>
-<path
-  d="M 1000 300
+              stroke="hsl(var(--primary) / 0.4)"
+              strokeWidth="6"
+              fill="none"
+            />
+            <path
+              d="M 1000 300
      Q 1150 250, 1300 150
      T 1600 0
      T 1900 150
      T 2200 300"
-  stroke="hsl(var(--primary) / 0.4)"
-  strokeWidth="6"
-  fill="none"
-/>
-<path
-  d="M 0 200
+              stroke="hsl(var(--primary) / 0.4)"
+              strokeWidth="6"
+              fill="none"
+            />
+            <path
+              d="M 0 200
      Q -150 350, -300 450
      T -600 600
      T -900 750
      T -1200 900"
-  stroke="hsl(var(--primary) / 0.4)"
-  strokeWidth="6"
-  fill="none"
-/>
-<path
-  d="M 150 1000
+              stroke="hsl(var(--primary) / 0.4)"
+              strokeWidth="6"
+              fill="none"
+            />
+            <path
+              d="M 150 1000
      Q 200 1100, 400 1200
      T 800 1400
      T 1200 1600
      T 1600 1800"
-  stroke="hsl(var(--primary) / 0.4)"
-  strokeWidth="6"
-  fill="none"
-/>
+              stroke="hsl(var(--primary) / 0.4)"
+              strokeWidth="6"
+              fill="none"
+            />
 
 
 
@@ -138,11 +134,7 @@ export const HeroSection = () => {
 
             {/* Bottom left */}
             <path
-              d="M 0 1000
-     Q -150 1150, -300 1100 
-     T -600 1200 
-     T -900 1150 
-     T -1200 1250"
+              d="M 0 1000 Q -150 1150, -300 1100 T -600 1200 T -900 1150 T -1200 1250"
               stroke="hsl(var(--primary) / 0.4)"
               strokeWidth="6"
               fill="none"
@@ -150,9 +142,7 @@ export const HeroSection = () => {
 
             {/* Bottom right */}
             <path
-              d="M 1000 900
-     Q 1150 1150, 1300 1100 
-     T 1600 800, 1800 700"
+              d="M 1000 900 Q 1150 1150, 1300 1100 T 1600 800, 1800 700"
               stroke="hsl(var(--primary) / 0.4)"
               strokeWidth="6"
               fill="none"
@@ -194,38 +184,33 @@ export const HeroSection = () => {
               </a>
             </div>
 
-            {/* Links */}
-            <div className="border-t-2 border-muted-foreground/40 pt-6 mt-6 text-sm md:text-base text-foreground/90">
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                <a
-                  href="/about"
-                  className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md hover:underline font-medium"
-                >
-                  about
-                </a>
-                <span className="text-muted-foreground/40">•</span>
-                <a
-                  href="/blog"
-                  className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md hover:underline font-medium"
-                >
-                  blog
-                </a>
-                <span className="text-muted-foreground/40">•</span>
-                <a
-                  href="/projects"
-                  className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md hover:underline font-medium"
-                >
-                  projects
-                </a>
-                <span className="text-muted-foreground/40">•</span>
-                <a
-                  href="/contact"
-                  className="hover:text-primary transition-colors duration-300 px-2 hover:bg-muted/30 rounded-md hover:underline font-medium"
-                >
-                  contact
-                </a>
-              </div>
-            </div>
+{/* Links */}
+<div className="border-t-2 border-muted-foreground/40 pt-6 mt-6 text-sm font-medium md:text-base text-foreground/90">
+  <div className="flex flex-col items-center gap-2">
+
+    <div className="flex justify-center gap-3 md:gap-4">
+      <a href="/about" className="link">about</a>
+      <span className="dot">•</span>
+
+      <a href="/blog" className="link">blog</a>
+      <span className="dot">•</span>
+
+      <a href="/projects" className="link">projects</a>
+
+      <span className="dot hidden min-[530px]:inline">•</span>
+      <a href="/contact" className="link hidden min-[530px]:inline">contact</a>
+      <span className="dot hidden min-[530px]:inline">•</span>
+      <a href="/music" className="link hidden min-[530px]:inline">music</a>
+    </div>
+
+    <div className="flex justify-center gap-3 md:gap-4 min-[530px]:hidden">
+      <a href="/contact" className="link">contact</a>
+      <span className="dot">•</span>
+      <a href="/music" className="link">music</a>
+    </div>
+
+  </div>
+</div>
 
           </div>
         </div>

@@ -11,7 +11,7 @@ import { content as blog10 } from '../content/20250913';
 import { content as blog11 } from '../content/20250916';
 import { content as blog12 } from '../content/20250924';
 import { content as blog13 } from '../content/20251006';
-import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield, Sword, TrendingUp} from 'lucide-react';
+import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield, Sword, TrendingUp, HandHelping} from 'lucide-react';
 import { ThumbsUp } from 'lucide-react';
 import { ArrowLeftRight } from 'lucide-react';
 
@@ -108,13 +108,13 @@ export const blogPosts = [
   },
   {
     id: 9,
-    title: "Celebrating death, and moral collapse",
-    excerpt: "Is it acceptable to celebrate a person's death?",
+    title: "Poise as self-recognition and respect",
+    excerpt: "?",
     content: blog9,
     date: "2025-09-11",
-    category: "Philosophy",
-    slug: "celebrating-death",
-    image: Skull
+    category: "Essays",
+    slug: "poise",
+    image: HandHelping
   },
   {
     id: 10,

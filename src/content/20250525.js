@@ -69,7 +69,7 @@ $$
 \\end{aligned}
 $$
 
-Taking $\\frac{\\partial}{\\partial a}$ on $(1)$ and $(2)$, we get 
+Taking $\\frac{\\partial}{\\partial a}$ on $(1)$ and $(2)$ and setting $a=1$ (noting that the original equivalence between $(1)$ and $(2)$ contains a trivial zero at $a=1$), we get 
 $$
 \\begin{aligned} \\prod\\limits_{n\\geq 1}(1-x^n)^3 &= \\prod\\limits_{n\\geq 1} (1+x^{4n-3})(1+x^{4n-1})(1-x^{4n})\\\\ &\\cdot \\left(1 - 4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1+x^{4n-3}}-\\frac{x^{4n-1}}{1+x^{4n-1}} \\right) \\right)\\\\
 &= \\prod\\limits_{n\\geq 1} (1+x^n)^2(1-x^n)\\\\ &\\cdot \\left(1 - 4\\sum\\limits_{n\\geq 1} \\left(\\frac{x^{4n-3}}{1+x^{4n-3}}-\\frac{x^{4n-1}}{1+x^{4n-1}} \\right) \\right).

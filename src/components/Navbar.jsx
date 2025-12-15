@@ -10,6 +10,7 @@ const navItems = [
   { name: "Blog", href: "/blog" },
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  { name: "Music", href: "/music" },
 ];
 
 export const Navbar = ({ starsEnabled, setStarsEnabled }) => {

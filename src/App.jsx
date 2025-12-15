@@ -12,9 +12,11 @@ import { BlogPage } from "@/pages/BlogPage";
 import { BlogPostPage } from "@/pages/BlogPostPage";
 import { NotFound } from "@/pages/NotFound";
 import { WhyIWrite } from "@/pages/WhyIWrite";
+import { MusicSection } from '@/pages/MusicSection';
 import { Labubu } from './components/Labubu';
 import { StarBackground } from './components/StarBackground';
 import { ScrollManager } from "./components/ScrollManager";
+
 
 
 function App() {
@@ -44,6 +46,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/whyiwrite" element={<WhyIWrite />} />
+            <Route path="/music" element={<MusicSection />} />
           </Routes>
         </main>
       </BrowserRouter>

@@ -92,7 +92,7 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {book.description}
                 </p>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-center items-center">
                   <div className="flex space-x-3">
                     <a
                       href={book.demoUrl}
