@@ -69,6 +69,7 @@ export const BlogPage = () => {
   const [showAllCategories, setShowAllCategories] = useState(false);
 
   const months = [
+    { value: "2025-12", label: "Dec 2025" },
     { value: "2025-10", label: "Oct 2025" },
     { value: "2025-09", label: "Sep 2025" },
     { value: "2025-08", label: "Aug 2025" },

@@ -11,6 +11,7 @@ import { content as blog10 } from '../content/20250913';
 import { content as blog11 } from '../content/20250916';
 import { content as blog12 } from '../content/20250924';
 import { content as blog13 } from '../content/20251006';
+import { content as blog14 } from '../content/20251225';
 import { Flower2, Pi, Gem, Infinity, Leaf, Skull, SquareActivity, BookOpen, Shield, Sword, TrendingUp, HandHelping} from 'lucide-react';
 import { ThumbsUp } from 'lucide-react';
 import { ArrowLeftRight } from 'lucide-react';
@@ -154,6 +155,16 @@ export const blogPosts = [
     date: "2025-10-06",
     category: "Literature",
     slug: "medea",
+    image: Sword
+  },
+  {
+    id: 14,
+    title: "More infinite sums",
+    excerpt: "Involving sin(n) / n",
+    content: blog14,
+    date: "2025-12-25",
+    category: "Mathematics",
+    slug: "infsumsine",
     image: Sword
   },
   
