@@ -102,8 +102,6 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 bg-background",
         isScrolled && !isMenuOpen ? "" : "py-1",
-        // only on small screens: add *padding-bottom* (visual "bottom margin")
-        // progress bar will still be correct because it keys off measured height
         "pb-2 md:pb-0"
       )}
     >
@@ -168,7 +166,6 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          {/* Mobile menu: appears BELOW navbar + extra small-screen gap */}
           <div
             className={cn(
               "fixed left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
