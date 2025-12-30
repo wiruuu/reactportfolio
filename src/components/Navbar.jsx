@@ -39,26 +39,35 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     };
   }, []);
 
+  // Keep CSS vars in sync:
+  // --nav-h: actual navbar height
+  // --nav-gap: extra "bottom margin" (visual space) for small screens only
   useEffect(() => {
     if (!navRef.current) return;
 
-    const setVar = () => {
-      const h = navRef.current.getBoundingClientRect().height;
-      document.documentElement.style.setProperty("--nav-h", `${h}px`);
+    const setVars = () => {
+      const navH = navRef.current.getBoundingClientRect().height;
+
+      // control the "extra space under navbar" on small screens only
+      const isSmall = window.matchMedia("(max-width: 767px)").matches;
+      const gap = isSmall ? 10 : 0; // <-- tweak this (px)
+
+      document.documentElement.style.setProperty("--nav-h", `${navH}px`);
+      document.documentElement.style.setProperty("--nav-gap", `${gap}px`);
     };
 
-    setVar();
+    setVars();
 
-    const ro = new ResizeObserver(() => setVar());
+    const ro = new ResizeObserver(() => setVars());
     ro.observe(navRef.current);
 
-    window.addEventListener("resize", setVar);
-    window.addEventListener("scroll", setVar);
+    window.addEventListener("resize", setVars);
+    window.addEventListener("scroll", setVars);
 
     return () => {
       ro.disconnect();
-      window.removeEventListener("resize", setVar);
-      window.removeEventListener("scroll", setVar);
+      window.removeEventListener("resize", setVars);
+      window.removeEventListener("scroll", setVars);
     };
   }, []);
 
@@ -73,33 +82,13 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     myCanvas.style.zIndex = "9999";
     document.body.appendChild(myCanvas);
 
-    const myConfetti = confetti.create(myCanvas, {
-      resize: true,
-      useWorker: true,
-    });
+    const myConfetti = confetti.create(myCanvas, { resize: true, useWorker: true });
 
-    myConfetti({
-      particleCount: 150,
-      spread: 70,
-      startVelocity: 60,
-      origin: { y: 0.9 },
-    });
+    myConfetti({ particleCount: 150, spread: 70, startVelocity: 60, origin: { y: 0.9 } });
 
     setTimeout(() => {
-      myConfetti({
-        particleCount: 80,
-        angle: 60,
-        spread: 55,
-        startVelocity: 60,
-        origin: { x: 0, y: 0.9 },
-      });
-      myConfetti({
-        particleCount: 80,
-        angle: 120,
-        spread: 55,
-        startVelocity: 60,
-        origin: { x: 1, y: 0.9 },
-      });
+      myConfetti({ particleCount: 80, angle: 60, spread: 55, startVelocity: 60, origin: { x: 0, y: 0.9 } });
+      myConfetti({ particleCount: 80, angle: 120, spread: 55, startVelocity: 60, origin: { x: 1, y: 0.9 } });
     }, 250);
 
     setTimeout(() => {
@@ -112,14 +101,14 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
       ref={navRef}
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 bg-background",
-        isScrolled && !isMenuOpen ? "" : "py-1"
+        isScrolled && !isMenuOpen ? "" : "py-1",
+        // only on small screens: add *padding-bottom* (visual "bottom margin")
+        // progress bar will still be correct because it keys off measured height
+        "pb-2 md:pb-0"
       )}
     >
       <div className="container flex items-center justify-between pt-3">
-        <a
-          className="text-xl font-bold text-primary flex items-center gap-2"
-          href="/"
-        >
+        <a className="text-xl font-bold text-primary flex items-center gap-2" href="/">
           <span className="relative z-10">
             <span className="text-glow text-foreground">wiru</span>
           </span>
@@ -167,7 +156,7 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
           </div>
         </div>
 
-        {/* Mobile nav */}
+        {/* Mobile nav controls */}
         <div className="ml-auto flex items-center gap-4 relative md:hidden">
           <button
             onClick={() => setIsMenuOpen((v) => !v)}
@@ -179,6 +168,7 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
+          {/* Mobile menu: appears BELOW navbar + extra small-screen gap */}
           <div
             className={cn(
               "fixed left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
@@ -186,7 +176,7 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
                 ? "opacity-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 -translate-y-2 pointer-events-none"
             )}
-            style={{ top: "calc(var(--nav-h, 64px))" }}
+            style={{ top: "calc(var(--nav-h, 64px) + var(--nav-gap, 0px))" }}
           >
             {navItems.map((item) => (
               <a
