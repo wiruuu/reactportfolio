@@ -49,12 +49,16 @@ export const BlogPostPage = () => {
 
   return (
     <article className="pt-20 pb-10 px-4 min-h-screen relative">
-      <div className="fixed top-0 left-0 w-screen h-1 bg-muted z-50 translate-y-16">
-        <div
-          className="h-1 bg-primary transition-all duration-150"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
+      <div
+  className="fixed left-0 w-screen h-1 bg-muted z-50"
+  style={{ top: "calc(var(--nav-h, 64px) + env(safe-area-inset-top, 0px))" }}
+>
+  <div
+    className="h-1 bg-primary transition-all duration-150"
+    style={{ width: `${progress}%` }}
+  />
+</div>
+
 
 
       <div className="max-w-4xl mx-auto">

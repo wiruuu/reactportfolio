@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X, Star, PartyPopper, Check } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
@@ -14,6 +14,8 @@ const navItems = [
 ];
 
 export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
+  const navRef = useRef(null);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -37,6 +39,29 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!navRef.current) return;
+
+    const setVar = () => {
+      const h = navRef.current.getBoundingClientRect().height;
+      document.documentElement.style.setProperty("--nav-h", `${h}px`);
+    };
+
+    setVar();
+
+    const ro = new ResizeObserver(() => setVar());
+    ro.observe(navRef.current);
+
+    window.addEventListener("resize", setVar);
+    window.addEventListener("scroll", setVar);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", setVar);
+      window.removeEventListener("scroll", setVar);
+    };
+  }, []);
+
   const launchConfetti = () => {
     const myCanvas = document.createElement("canvas");
     myCanvas.style.position = "fixed";
@@ -48,13 +73,33 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
     myCanvas.style.zIndex = "9999";
     document.body.appendChild(myCanvas);
 
-    const myConfetti = confetti.create(myCanvas, { resize: true, useWorker: true });
+    const myConfetti = confetti.create(myCanvas, {
+      resize: true,
+      useWorker: true,
+    });
 
-    myConfetti({ particleCount: 150, spread: 70, startVelocity: 60, origin: { y: 0.9 } });
+    myConfetti({
+      particleCount: 150,
+      spread: 70,
+      startVelocity: 60,
+      origin: { y: 0.9 },
+    });
 
     setTimeout(() => {
-      myConfetti({ particleCount: 80, angle: 60, spread: 55, startVelocity: 60, origin: { x: 0, y: 0.9 } });
-      myConfetti({ particleCount: 80, angle: 120, spread: 55, startVelocity: 60, origin: { x: 1, y: 0.9 } });
+      myConfetti({
+        particleCount: 80,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.9 },
+      });
+      myConfetti({
+        particleCount: 80,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.9 },
+      });
     }, 250);
 
     setTimeout(() => {
@@ -64,9 +109,10 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
 
   return (
     <nav
+      ref={navRef}
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled && !isMenuOpen ? "bg-background" : "py-1 bg-background"
+        "fixed top-0 w-full z-50 transition-all duration-300 bg-background",
+        isScrolled && !isMenuOpen ? "" : "py-1"
       )}
     >
       <div className="container flex items-center justify-between pt-3">
@@ -84,7 +130,6 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
           </div>
         </a>
 
-
         {/* Desktop nav */}
         <div className="hidden md:flex w-full justify-between items-center bg-background/80 mb-2">
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
@@ -98,38 +143,50 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
               </a>
             ))}
           </div>
+
           <div className="ml-auto flex items-center gap-4">
             {isDark && (
               <button
                 onClick={() => setStarsEnabled((prev) => !prev)}
                 className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
+                type="button"
               >
                 {starsEnabled ? <X /> : <Check />} <Star className="h-4 w-4" />
               </button>
             )}
+
             <button
               onClick={launchConfetti}
               className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
+              type="button"
             >
               <PartyPopper className="h-5 w-5" />
             </button>
+
             <ThemeToggle />
           </div>
         </div>
 
-        {/* Mobile nav controls  */}
+        {/* Mobile nav */}
         <div className="ml-auto flex items-center gap-4 relative md:hidden">
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMenuOpen((v) => !v)}
             className="p-2 rounded-md text-foreground hover:text-primary"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
           <div
             className={cn(
-              "fixed top-[64px] left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
-              isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+              "fixed left-0 w-full bg-background/95 text-body backdrop-blur-md shadow-lg flex flex-col p-6 space-y-6 transition-all duration-300 md:hidden",
+              isMenuOpen
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 -translate-y-2 pointer-events-none"
             )}
+            style={{ top: "calc(var(--nav-h, 64px))" }}
           >
             {navItems.map((item) => (
               <a
@@ -143,26 +200,27 @@ export const Navbar = ({ starsEnabled, setStarsEnabled }) => {
             ))}
           </div>
 
-
           {isDark && (
             <button
               onClick={() => setStarsEnabled((prev) => !prev)}
               className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-1"
+              type="button"
             >
               {starsEnabled ? <X /> : <Check />} <Star className="h-4 w-4" />
             </button>
           )}
+
           <button
             onClick={launchConfetti}
             className="p-3 rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform inline-flex items-center gap-2"
+            type="button"
           >
             <PartyPopper className="h-5 w-5" />
           </button>
+
           <ThemeToggle />
         </div>
-
       </div>
-
     </nav>
   );
 };
