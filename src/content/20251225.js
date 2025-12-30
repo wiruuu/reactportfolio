@@ -198,14 +198,64 @@ $$
 \\sum\\limits_{n=-\\infty,\\ n\\neq0 }^\\infty \\frac{(-1)^n\\sin(nx)}{n^3}=\\frac{x^3-\\pi^2 x}{6}.
 $$ 
 
-Shift $x$ to $x-\\pi$ to and divide by two to get $\\sum\\limits_{n=1}^\\infty \\frac{\\sin(nx)}{n^3}=\\frac{\\pi^2}{6}x-\\frac{\\pi}{4}x^2+\\frac{1}{12}x^3$, as desired. 
+Shift $x$ to $x-\\pi$ to and divide by two to get 
+
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\sin(nx)}{n^3}=\\frac{\\pi^2}{6}x-\\frac{\\pi}{4}x^2+\\frac{1}{12}x^3,
+$$
+
+as desired. 
 
 (n.b. the shift $x \\to x-\\pi$) is a common trick to turn an alternating sum into a regular sum by using the properties of $\\sin$.
 
 ### Case 3: $\\alpha>1$, $\\alpha$ even
 
+The case for the even integers is very much analogous to that of the odd integers. We first consider 
 
+$$
+\\begin{align*}
+    \\sum\\limits_{n=1}^\\infty \\frac{\\sin^2(n)}{n^2}&=\\sum\\limits_{n=1}^\\infty \\frac{1-\\cos(2n)}{2n^2} \\\\ &= \\frac{1}{2} \\left(\\sum\\limits_{n=1}^\\infty \\frac{1}{n^2}-\\sum\\limits_{n=1}^\\infty \\frac{\\cos(2n)}{n^2}\\right) \\\\ &= \\frac{1}{2}\\left(\\frac{\\pi^2} {6} - \\left(\\frac{\\pi^2}{6}-\\pi+1 \\right)\\right) \\\\ &= \\frac{\\pi-1}{2}
+\\end{align*}
+$$
 
+in which the closed form for $\\sum\\limits_{n=1}^\\infty \\frac{\\cos(2n)}{n^2}$ comes from evaluating the Fourier series of the function $f(x)=x^2.$
+
+Integrating the $\\cos(2n)$ expression and using the values for $\\zeta(4)$ and $\\zeta(6)$, we get that 
+
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\cos(4n)}{n^4}=\\frac{\\pi^4}{90}+\\frac{\\pi^2x^2}{12}-\\frac{\\pi x^3}{12}+\\frac{x^4}{48}
+$$ 
+
+and 
+
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\cos(6n)}{n^6}=\\frac{\\pi^6}{945}+\\frac{\\pi^4x^2}{360}-\\frac{\\pi^2x^4}{144}+\\frac{x^6}{720}
+$$ 
+
+and thus 
+
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\cos(8n)}{n^8}=\\frac{\\pi^8}{9450}+\\frac{\\pi^6x^2}{15120}-\\frac{\\pi^4x^4}{4320}-\\frac{\\pi^2x^6}{8640}-\\frac{x^8}{40320}
+$$
+
+Using a similar process as the odd-power case, we employ formulae to represent $\\frac{\\sin^k(n)}{n^k}$ in terms of $\\frac{\\cos(\\gamma_in)}{n^k}$ where $\\gamma_i<k$, yielding us 
+
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\sin^4(n)}{n^4}=\\frac{2\\pi-3}{6}
+$$ 
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\sin^6(n)}{n^6}=\\frac{11\\pi-20}{40}
+$$
+
+which, as expected, is linear in $\\pi.$ 
+
+Furthermore we have that 
+
+$$
+\\sum\\limits_{n=1}^\\infty \\frac{\\sin^8(n)}{n^8}=\\frac{-\\pi^8}{5040} + \\frac{\\pi^7}{180} - \\frac{\\pi^6}{15} + \\frac{4\\pi^5}{9} - \\frac{16\\pi^4}{9} + \\frac{64\\pi^3}{15} - \\frac{256\\pi^2}{45} + \\frac{733\\pi}{210} - \\frac{1}{2}.
+$$
+
+Coming to think of it, perhaps a nice upshot of this series of calculations is that $6<2\\pi < 7.$
 
 
 `
